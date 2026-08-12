@@ -4262,12 +4262,14 @@ Responsive Styles
     }
 
     .contact-layout {
-        grid-template-columns: 1fr;
-        gap: var(--space-5);
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: var(--space-4);
+        align-items: stretch;
     }
 
-    .contact-form-wrap {
-        order: -1;
+    .contact-form-wrap,
+    .contact-info {
+        padding: var(--space-5);
     }
 }
 
@@ -4754,7 +4756,12 @@ Responsive Styles
     }
 
     .contact-layout {
+        grid-template-columns: 1fr;
         gap: var(--space-4);
+    }
+
+    .contact-form-wrap {
+        order: -1;
     }
 
     .contact-form-wrap,
