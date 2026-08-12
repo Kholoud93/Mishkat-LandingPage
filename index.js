@@ -41,6 +41,10 @@ function applyTheme(theme) {
         }
 
         toggle.setAttribute("data-theme-state", nextTheme);
+        toggle.setAttribute("aria-label", isDark ? "التبديل إلى الوضع الفاتح" : "التبديل إلى الوضع الداكن");
+        toggle.innerHTML = isDark
+            ? '<i class="ri-moon-line" aria-hidden="true"></i>'
+            : '<i class="ri-sun-line" aria-hidden="true"></i>';
     });
 }
 

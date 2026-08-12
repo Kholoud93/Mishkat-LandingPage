@@ -1112,6 +1112,11 @@ Landing Page
     border-radius: 999px;
 }
 
+.theme-toggle i {
+    font-size: 1.15rem;
+    line-height: 1;
+}
+
 .hero {
     display: grid;
     row-gap: 4rem;
@@ -3349,12 +3354,15 @@ Landing Page
     display: grid;
     justify-items: center;
     gap: var(--space-8);
+    width: 100%;
+    min-width: 0;
     text-align: center;
 }
 
 .register-heading {
     margin: 0;
     max-width: 28rem;
+    width: 100%;
     color: var(--color-text-primary);
     font-size: var(--font-size-display);
     font-weight: var(--font-weight-bold);
@@ -3365,11 +3373,16 @@ Landing Page
     box-sizing: border-box;
     width: 418px;
     max-width: 100%;
+    min-width: 0;
     padding: 1.25rem;
     border: 1px solid var(--color-border);
     border-radius: 8px;
     background: color-mix(in srgb, var(--color-card) 92%, var(--color-surface-muted) 8%);
     text-align: right;
+}
+
+[data-theme="light"] .register-card {
+    box-shadow: 0px 12px 40px 0px #00000066;
 }
 
 .register-card__header {
@@ -4215,10 +4228,24 @@ Responsive Styles
 
     .register-section__inner {
         gap: var(--space-6);
+        width: 100%;
+    }
+
+    .register-heading {
+        max-width: 100%;
+        font-size: var(--font-size-h1);
+        padding-inline: 0.25rem;
     }
 
     .register-card {
+        width: 100%;
+        max-width: 26.125rem;
         padding: var(--space-5);
+    }
+
+    .otp-input {
+        width: 2.75rem;
+        height: 2.75rem;
     }
 
     .contact-layout {
@@ -4288,6 +4315,19 @@ Responsive Styles
 
     .stats-strip .metric {
         padding: 0.85rem 0.5rem;
+    }
+
+    .account-type-options {
+        grid-template-columns: 1fr;
+    }
+
+    .otp-input {
+        width: 2.35rem;
+        height: 2.35rem;
+    }
+
+    .register-heading {
+        font-size: 1.2rem;
     }
 }
 
@@ -4731,21 +4771,113 @@ Responsive Styles
     }
 
     .register-section {
-        padding-block: 3rem;
+        padding-block: 2.5rem 3rem;
+    }
+
+    .register-section__inner {
+        gap: var(--space-5);
+    }
+
+    .register-heading {
+        font-size: var(--font-size-h2);
+        line-height: 1.35;
     }
 
     .register-card {
-        padding: var(--space-4);
-        border-radius: 1rem;
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem;
+        border-radius: 0.75rem;
+    }
+
+    .register-card__header {
+        margin-bottom: 0.85rem;
+    }
+
+    .register-card__title {
+        font-size: var(--font-size-h4);
+    }
+
+    .register-card__subtitle {
+        font-size: var(--font-size-caption);
+    }
+
+    .register-form {
+        gap: 0.65rem;
+    }
+
+    .register-page .field,
+    .register-page .register-form .field {
+        min-height: 2.65rem;
     }
 
     .register-form__actions {
         flex-direction: column;
+        gap: 0.65rem;
     }
 
-    .register-form__back {
+    .register-form__submit,
+    .register-form__back,
+    .forgot-password-page .register-form__submit,
+    .forgot-password-page .register-form__back {
         flex: 1 1 auto;
         width: 100%;
+        min-height: 2.75rem;
+    }
+
+    .register-form__submit--full {
+        width: 100%;
+    }
+
+    .account-type-options {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.65rem;
+    }
+
+    .account-type-option {
+        min-height: 5.75rem;
+        padding: 0.85rem 0.5rem;
+    }
+
+    .account-type-option__icon {
+        width: 2.15rem;
+        height: 2.15rem;
+        font-size: 1.1rem;
+    }
+
+    .account-type-teacher {
+        width: 100%;
+        min-height: 2.75rem;
+    }
+
+    .otp-inputs {
+        gap: 0.5rem;
+    }
+
+    .otp-input {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: var(--font-size-h4);
+    }
+
+    .login-card__logo {
+        width: 3rem;
+    }
+
+    .login-forgot {
+        text-align: left;
+        font-size: var(--font-size-helper);
+    }
+
+    .success-card__icon {
+        width: 2.75rem;
+        height: 2.75rem;
+        font-size: 1.5rem;
+    }
+
+    .verify-form__hint,
+    .account-type-login {
+        font-size: var(--font-size-caption);
     }
 
     .pricing-section .pricing-card .btn {
