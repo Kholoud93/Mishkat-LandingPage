@@ -296,7 +296,7 @@ function initDropdowns() {
 // Sidebar
 // =================================
 
-const SIDEBAR_BREAKPOINT = 767;
+const SIDEBAR_BREAKPOINT = 1199;
 
 function getSidebar() {
     return document.querySelector("[data-sidebar]");
@@ -416,13 +416,27 @@ function setCarouselSlide(carousel, index) {
     }
 
     const nextIndex = ((index % slides.length) + slides.length) % slides.length;
+    const isPeek = carousel.hasAttribute("data-carousel-peek");
+    const prevIndex = (nextIndex - 1 + slides.length) % slides.length;
+    const followingIndex = (nextIndex + 1) % slides.length;
 
     carousel.setAttribute("data-carousel-index", String(nextIndex));
 
     slides.forEach((slide, slideIndex) => {
         const isActive = slideIndex === nextIndex;
+        const isPrev = isPeek && slideIndex === prevIndex && !isActive;
+        const isNext = isPeek && slideIndex === followingIndex && !isActive;
 
         slide.classList.toggle("is-active", isActive);
+        slide.classList.toggle("is-prev", isPrev);
+        slide.classList.toggle("is-next", isNext);
+
+        if (isPeek) {
+            slide.removeAttribute("hidden");
+            slide.setAttribute("aria-hidden", String(!isActive));
+            return;
+        }
+
         slide.toggleAttribute("hidden", !isActive);
         slide.setAttribute("aria-hidden", String(!isActive));
     });
