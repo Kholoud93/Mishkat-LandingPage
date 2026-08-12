@@ -622,6 +622,53 @@ function initGlobalEvents() {
     });
 }
 
+function initOtpInputs() {
+    document.querySelectorAll("[data-otp]").forEach((group) => {
+        const inputs = Array.from(group.querySelectorAll(".otp-input"));
+
+        inputs.forEach((input, index) => {
+            input.addEventListener("input", () => {
+                input.value = input.value.replace(/\D/g, "").slice(0, 1);
+                if (input.value && index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                }
+            });
+
+            input.addEventListener("keydown", (event) => {
+                if (event.key === "Backspace" && !input.value && index > 0) {
+                    inputs[index - 1].focus();
+                }
+            });
+
+            input.addEventListener("paste", (event) => {
+                event.preventDefault();
+                const digits = (event.clipboardData.getData("text") || "").replace(/\D/g, "").slice(0, inputs.length);
+                digits.split("").forEach((digit, digitIndex) => {
+                    if (inputs[digitIndex]) {
+                        inputs[digitIndex].value = digit;
+                    }
+                });
+                const focusIndex = Math.min(digits.length, inputs.length - 1);
+                inputs[focusIndex]?.focus();
+            });
+        });
+    });
+}
+
+function initAccountTypeOptions() {
+    document.querySelectorAll("[data-account-type]").forEach((group) => {
+        const options = Array.from(group.querySelectorAll(".account-type-option"));
+
+        options.forEach((option) => {
+            option.addEventListener("change", () => {
+                options.forEach((item) => {
+                    item.classList.toggle("is-selected", item.querySelector("input")?.checked);
+                });
+            });
+        });
+    });
+}
+
 function initApp() {
     initTheme();
     initModals();
@@ -629,6 +676,8 @@ function initApp() {
     initSidebar();
     initCarousels();
     initAccordions();
+    initOtpInputs();
+    initAccountTypeOptions();
     initGlobalEvents();
 }
 

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مشكاة | إنشاء حساب</title>
+    <title>مشكاة | نوع الحساب</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
     <link rel="stylesheet" href="./index.css">
 </head>
-<body class="landing-page register-page app-shell">
+<body class="landing-page register-page account-type-page app-shell">
     <aside class="sidebar" id="mobile-menu" data-sidebar aria-hidden="true">
         <a class="landing-brand landing-brand--image" href="./index.html">
             <img class="landing-logo" src="./assets/logo.png" alt="شعار مشكاة">
@@ -57,43 +57,46 @@
     </header>
 
     <main class="app-main">
-        <section class="register-section" id="register">
+        <section class="register-section" id="account-type">
             <div class="container register-section__inner">
                 <h1 class="register-heading">منصة تعليمية متكاملة برؤية عصرية</h1>
 
                 <div class="register-card">
                     <div class="register-card__header">
                         <h2 class="register-card__title">إنشاء حساب جديد بالمنصة</h2>
-                        <p class="register-card__subtitle">أدخل بياناتك للمتابعة</p>
+                        <p class="register-card__subtitle">الرجاء تحديد نوع الحساب للمتابعة</p>
                     </div>
 
-                    <form class="register-form" action="./verify.html" method="get">
-                        <div class="form-group">
-                            <label class="label" for="register-name">الاسم بالكامل</label>
-                            <input class="field" id="register-name" name="name" type="text" placeholder="أحمد ممدوح" required>
+                    <form class="register-form account-type-form" action="./register.html" method="get">
+                        <div class="account-type-options" data-account-type>
+                            <label class="account-type-option is-selected">
+                                <input type="radio" name="account_type" value="student" checked>
+                                <span class="account-type-option__icon" aria-hidden="true">
+                                    <i class="ri-graduation-cap-fill"></i>
+                                </span>
+                                <span class="account-type-option__label">طالب</span>
+                            </label>
+
+                            <label class="account-type-option">
+                                <input type="radio" name="account_type" value="parent">
+                                <span class="account-type-option__icon" aria-hidden="true">
+                                    <i class="ri-heart-fill"></i>
+                                </span>
+                                <span class="account-type-option__label">ولي أمر</span>
+                            </label>
                         </div>
 
-                        <div class="form-group">
-                            <label class="label" for="register-email">البريد الإلكتروني</label>
-                            <input class="field" id="register-email" name="email" type="email" placeholder="name@email.com" dir="ltr" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="label" for="register-phone">رقم الهاتف الجوال</label>
-                            <input class="field" id="register-phone" name="phone" type="tel" placeholder="05XXXXXXXX" dir="ltr" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="label" for="register-grade">الصف الدراسي / العام الدراسي</label>
-                            <input class="field" id="register-grade" name="grade" type="text" placeholder="مثال: الصف الثاني الثانوي - مسار علمي" required>
-                        </div>
-
-                        <div class="register-form__actions">
-                            <button class="btn btn-primary btn-md btn-nav register-form__submit" type="submit">
-                                إرسال رمز التفعيل
+                        <div class="account-type-actions">
+                            <button class="btn btn-primary btn-md btn-nav register-form__submit register-form__submit--full" type="submit">
+                                متابعة التسجيل
                             </button>
-                            <a class="btn btn-md register-form__back" href="./account-type.html">رجوع</a>
+                            <a class="btn btn-md account-type-teacher" href="./contact.html">طلب الانضمام كمعلم</a>
                         </div>
+
+                        <p class="account-type-login">
+                            لديك حساب بالمنصة؟
+                            <a href="./login.html">تسجيل الدخول</a>
+                        </p>
                     </form>
                 </div>
             </div>
