@@ -3350,6 +3350,10 @@ Landing Page
     background: var(--color-background);
 }
 
+.register-page .form-group {
+    min-width: 0;
+}
+
 .register-section__inner {
     display: grid;
     justify-items: center;
@@ -4223,7 +4227,7 @@ Responsive Styles
     }
 
     .register-section {
-        padding-block: 3.5rem;
+        padding-block: 3rem 3.5rem;
     }
 
     .register-section__inner {
@@ -4232,13 +4236,13 @@ Responsive Styles
     }
 
     .register-heading {
-        max-width: 100%;
+        max-width: 22rem;
         font-size: var(--font-size-h1);
         padding-inline: 0.25rem;
     }
 
     .register-card {
-        width: 100%;
+        width: min(100%, 26.125rem);
         max-width: 26.125rem;
         padding: var(--space-5);
     }
@@ -4246,6 +4250,15 @@ Responsive Styles
     .otp-input {
         width: 2.75rem;
         height: 2.75rem;
+    }
+
+    .register-page .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .register-page .footer-brand {
+        grid-column: 1 / -1;
+        max-width: 100%;
     }
 
     .contact-layout {
@@ -4315,19 +4328,6 @@ Responsive Styles
 
     .stats-strip .metric {
         padding: 0.85rem 0.5rem;
-    }
-
-    .account-type-options {
-        grid-template-columns: 1fr;
-    }
-
-    .otp-input {
-        width: 2.35rem;
-        height: 2.35rem;
-    }
-
-    .register-heading {
-        font-size: 1.2rem;
     }
 }
 
@@ -4776,18 +4776,20 @@ Responsive Styles
 
     .register-section__inner {
         gap: var(--space-5);
+        padding-inline: 0.75rem;
     }
 
     .register-heading {
         font-size: var(--font-size-h2);
         line-height: 1.35;
+        padding-inline: 0.15rem;
     }
 
     .register-card {
-        width: 100%;
-        max-width: 100%;
-        padding: 1rem;
-        border-radius: 0.75rem;
+        width: 418px;
+        max-width: min(418px, 100%);
+        padding: 1.25rem;
+        border-radius: 8px;
     }
 
     .register-card__header {
@@ -4804,25 +4806,35 @@ Responsive Styles
 
     .register-form {
         gap: 0.65rem;
+        width: 100%;
+        min-width: 0;
     }
 
     .register-page .field,
     .register-page .register-form .field {
         min-height: 2.65rem;
+        max-width: 100%;
     }
 
     .register-form__actions {
         flex-direction: column;
         gap: 0.65rem;
+        width: 100%;
     }
 
     .register-form__submit,
     .register-form__back,
     .forgot-password-page .register-form__submit,
-    .forgot-password-page .register-form__back {
+    .forgot-password-page .register-form__back,
+    .account-type-teacher,
+    .success-card .register-form__submit {
         flex: 1 1 auto;
         width: 100%;
         min-height: 2.75rem;
+        padding-inline: 0.85rem;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.3;
     }
 
     .register-form__submit--full {
@@ -4851,10 +4863,14 @@ Responsive Styles
     }
 
     .otp-inputs {
-        gap: 0.5rem;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 0.45rem;
+        width: 100%;
     }
 
     .otp-input {
+        flex: 0 0 auto;
         width: 2.5rem;
         height: 2.5rem;
         font-size: var(--font-size-h4);
@@ -4937,5 +4953,153 @@ Responsive Styles
 
     100% {
         background-position: -200% 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-heading {
+        font-size: 1.15rem;
+    }
+
+    .register-card {
+        width: 100%;
+        max-width: 100%;
+        margin-inline: auto;
+        padding: 0.85rem;
+        border-radius: 0.75rem;
+    }
+
+    .register-card__title {
+        font-size: 0.95rem;
+    }
+
+    .register-card__subtitle {
+        font-size: 0.65rem;
+    }
+
+    .account-type-options {
+        grid-template-columns: 1fr;
+    }
+
+    .account-type-option {
+        min-height: 5rem;
+    }
+
+    .otp-input {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 0.95rem;
+    }
+
+    .register-form__submit,
+    .register-form__back,
+    .account-type-teacher {
+        font-size: 0.75rem;
+        min-height: 2.6rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .register-page .container {
+        padding-inline: 0.75rem;
+    }
+
+    .register-section {
+        padding-block: 1.5rem 2rem;
+    }
+
+    .register-section__inner {
+        gap: 0.85rem;
+        padding-inline: 0.5rem;
+    }
+
+    .register-heading {
+        font-size: 1rem;
+        padding-inline: 0.25rem;
+    }
+
+    .register-card {
+        width: 100%;
+        max-width: 100%;
+        margin-inline: auto;
+        padding: 0.7rem;
+        border-radius: 0.65rem;
+    }
+
+    .register-card__header {
+        margin-bottom: 0.65rem;
+        gap: 0.25rem;
+    }
+
+    .register-card__title {
+        font-size: 0.875rem;
+    }
+
+    .register-card__subtitle {
+        font-size: 0.6rem;
+        line-height: 1.5;
+    }
+
+    .register-form {
+        gap: 0.55rem;
+    }
+
+    .register-page .label {
+        font-size: 0.65rem;
+    }
+
+    .register-page .field,
+    .register-page .register-form .field {
+        min-height: 2.35rem;
+        padding-inline: 0.7rem;
+        font-size: 0.75rem;
+    }
+
+    .otp-inputs {
+        gap: 0.35rem;
+    }
+
+    .otp-input {
+        flex: 0 0 2rem;
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.85rem;
+        border-radius: 6px;
+    }
+
+    .register-form__submit,
+    .register-form__back,
+    .account-type-teacher,
+    .success-card .register-form__submit {
+        min-height: 2.4rem;
+        padding-inline: 0.65rem;
+        font-size: 0.7rem;
+    }
+
+    .account-type-option {
+        min-height: 4.5rem;
+        padding: 0.65rem 0.4rem;
+        gap: 0.35rem;
+    }
+
+    .account-type-option__icon {
+        width: 1.85rem;
+        height: 1.85rem;
+        font-size: 0.95rem;
+    }
+
+    .account-type-option__label {
+        font-size: 0.75rem;
+    }
+
+    .login-card__logo {
+        width: 2.5rem;
+    }
+
+    .verify-card__icon,
+    .success-card__icon {
+        width: 2.35rem;
+        height: 2.35rem;
+        font-size: 1.2rem;
     }
 }
