@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشكاة | الاختبارات الآمنة</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body class="student-dashboard student-exams app-shell">
+    <div class="app-layout">
+        <aside class="sidebar" id="mobile-menu" data-sidebar aria-hidden="true">
+            <a class="dash-brand landing-brand landing-brand--image" href="./dashboard.html">
+                <img class="landing-logo" src="./assets/logo.png" alt="شعار مشكاة">
+            </a>
+
+            <nav class="sidebar-nav" aria-label="تنقل بوابة الطالب">
+                <a class="sidebar-link" href="./dashboard.html">
+                    <i class="ri-apps-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الرئيسية</span>
+                </a>
+                <a class="sidebar-link" href="./course.html">
+                    <i class="ri-book-open-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">موادي الدراسية</span>
+                </a>
+                <a class="sidebar-link" href="./classroom.html">
+                    <i class="ri-vidicon-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الفصل الافتراضي</span>
+                </a>
+                <a class="sidebar-link is-active" href="./exams.html" aria-current="page">
+                    <i class="ri-shield-check-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الاختبارات الآمنة</span>
+                </a>
+                <a class="sidebar-link" href="./dashboard.html#sessions">
+                    <i class="ri-calendar-schedule-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الحصص الخاصة</span>
+                </a>
+                <a class="sidebar-link" href="./dashboard.html#reports">
+                    <i class="ri-bar-chart-2-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">التقارير الدراسية</span>
+                </a>
+            </nav>
+
+            <div class="dash-profile">
+                <div class="dash-profile__info">
+                    <span class="avatar dash-profile__avatar" aria-hidden="true">AE</span>
+                    <div class="dash-profile__copy">
+                        <p class="dash-profile__name">عبدالله الشرقاوي</p>
+                        <p class="dash-profile__role">طالب</p>
+                    </div>
+                </div>
+                <a class="btn btn-ghost btn-sm dash-profile__logout" href="./login.html">
+                    <i class="ri-logout-box-r-line" aria-hidden="true"></i>
+                    تسجيل الخروج
+                </a>
+            </div>
+        </aside>
+
+        <div class="dash-shell">
+            <header class="dash-header exams-header">
+                <button class="btn btn-ghost btn-md sidebar-toggle" type="button" data-sidebar-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="فتح القائمة">
+                    <i class="ri-menu-line" aria-hidden="true"></i>
+                </button>
+                <h1 class="dash-header__title">بوابة الطالب الأكاديمية</h1>
+                <div class="dash-header__actions">
+                    <button class="dash-icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="تبديل الوضع">
+                        <i class="ri-moon-line" aria-hidden="true"></i>
+                    </button>
+                    <a class="nav-language" href="./index.html" lang="en" dir="ltr" aria-label="تبديل اللغة إلى الإنجليزية">
+                        <i class="ri-global-line" aria-hidden="true"></i>
+                        EN
+                    </a>
+                </div>
+            </header>
+
+            <main class="dash-content exams-content">
+                <div class="exams-layout">
+                    <aside class="card exams-side" aria-label="المراقبة والملاحة">
+                        <section class="exams-monitor">
+                            <h2 class="exams-side__title">المراقبة الحية بالذكاء الاصطناعي</h2>
+                            <div class="exams-monitor__feed">
+                                <p class="exams-monitor__status">
+                                    <span class="exams-monitor__dot" aria-hidden="true"></span>
+                                    المراقبة: لا توجد عيون خارجية بالخلفية
+                                </p>
+                                <img src="./assets/classroom-student.png" alt="بث كاميرا الطالب">
+                            </div>
+                            <p class="exams-monitor__hint">يرجى التواجد أمام الكاميرا طوال فترة خوض الاختبار.</p>
+                        </section>
+
+                        <section class="exams-nav" aria-labelledby="exams-nav-title">
+                            <h2 id="exams-nav-title" class="exams-side__title">ملاحة الأسئلة</h2>
+                            <div class="exams-nav__list" role="list">
+                                <button class="exams-nav__item is-current" type="button" aria-current="true">1</button>
+                                <button class="exams-nav__item is-answered" type="button">2</button>
+                                <button class="exams-nav__item is-flagged" type="button">3</button>
+                                <button class="exams-nav__item" type="button">4</button>
+                                <button class="exams-nav__item" type="button">5</button>
+                            </div>
+                            <ul class="exams-nav__legend">
+                                <li><span class="exams-nav__swatch exams-nav__swatch--answered" aria-hidden="true"></span> محلول</li>
+                                <li><span class="exams-nav__swatch exams-nav__swatch--flagged" aria-hidden="true"></span> معلق للمراجعة</li>
+                                <li><span class="exams-nav__swatch exams-nav__swatch--pending" aria-hidden="true"></span> غير محلول</li>
+                            </ul>
+                        </section>
+                    </aside>
+
+                    <section class="card exams-paper" aria-label="ورقة الاختبار">
+                        <div class="exams-paper__top">
+                            <div class="exams-paper__heading">
+                                <h2>
+                                    <i class="ri-pencil-fill" aria-hidden="true"></i>
+                                    الاختبار الأكاديمي الموحد - مقرر الكيمياء العضوية
+                                </h2>
+                                <p>الاختبار محمي بنظام الذكاء الاصطناعي لرصد الانحرافات والوجوه الخارجية.</p>
+                            </div>
+                            <p class="exams-timer">
+                                <i class="ri-time-line" aria-hidden="true"></i>
+                                المتبقي: 44:00
+                            </p>
+                        </div>
+
+                        <p class="exams-progress">السؤال 1 من أصل 5</p>
+
+                        <form class="exams-question" action="#" method="post">
+                            <h3 class="exams-question__title">ما هي الصيغة الكيميائية الصحيحة لغاز ثاني أكسيد الكربون؟</h3>
+
+                            <div class="exams-options">
+                                <label class="exams-option">
+                                    <input type="radio" name="answer" value="h2o">
+                                    <span>(الماء) H2O</span>
+                                </label>
+                                <label class="exams-option">
+                                    <input type="radio" name="answer" value="co2">
+                                    <span>(ثاني أكسيد الكربون) CO2</span>
+                                </label>
+                                <label class="exams-option">
+                                    <input type="radio" name="answer" value="nacl">
+                                    <span>(ملح الطعام) NaCl</span>
+                                </label>
+                                <label class="exams-option">
+                                    <input type="radio" name="answer" value="ch4">
+                                    <span>(غاز الميثان) CH4</span>
+                                </label>
+                            </div>
+
+                            <div class="exams-actions">
+                                <button class="exams-flag" type="button">
+                                    <i class="ri-flag-line" aria-hidden="true"></i>
+                                    تعليق السؤال للمراجعة
+                                </button>
+                                <p class="exams-saved">
+                                    <i class="ri-heart-fill" aria-hidden="true"></i>
+                                    تم حفظ إجابتك تلقائياً
+                                </p>
+                                <button class="btn btn-primary exams-submit" type="submit">
+                                    تسليم ورقة الاختبار
+                                </button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
