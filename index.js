@@ -302,6 +302,10 @@ function initDropdowns() {
 
 const SIDEBAR_BREAKPOINT = 1199;
 
+function isDashboardBottomNav() {
+    return document.body.classList.contains("student-dashboard") && window.innerWidth <= SIDEBAR_BREAKPOINT;
+}
+
 function getSidebar() {
     return document.querySelector("[data-sidebar]");
 }
@@ -327,11 +331,25 @@ function getSidebarBackdrop() {
 function syncSidebarState(isOpen) {
     const sidebar = getSidebar();
     const backdrop = getSidebarBackdrop();
-    const shouldOpen = Boolean(isOpen);
 
     if (!sidebar) {
         return;
     }
+
+    if (isDashboardBottomNav()) {
+        sidebar.classList.remove("is-open");
+        sidebar.setAttribute("aria-hidden", "false");
+        backdrop.hidden = true;
+        backdrop.classList.remove("is-visible");
+        document.body.classList.remove("has-sidebar-open");
+        document.querySelectorAll("[data-sidebar-toggle]").forEach((toggle) => {
+            toggle.setAttribute("aria-expanded", "false");
+            toggle.setAttribute("hidden", "");
+        });
+        return;
+    }
+
+    const shouldOpen = Boolean(isOpen);
 
     sidebar.classList.toggle("is-open", shouldOpen);
     sidebar.setAttribute("aria-hidden", String(!shouldOpen && window.innerWidth <= SIDEBAR_BREAKPOINT));
@@ -341,6 +359,7 @@ function syncSidebarState(isOpen) {
     document.body.classList.toggle("has-sidebar-open", shouldOpen);
 
     document.querySelectorAll("[data-sidebar-toggle]").forEach((toggle) => {
+        toggle.removeAttribute("hidden");
         toggle.setAttribute("aria-expanded", String(shouldOpen));
     });
 }
@@ -356,7 +375,7 @@ function openSidebar() {
 function toggleSidebar() {
     const sidebar = getSidebar();
 
-    if (!sidebar) {
+    if (!sidebar || isDashboardBottomNav()) {
         return;
     }
 
@@ -374,6 +393,10 @@ function initSidebar() {
     syncSidebarState(false);
 
     document.addEventListener("click", (event) => {
+        if (isDashboardBottomNav()) {
+            return;
+        }
+
         const toggle = event.target.closest("[data-sidebar-toggle]");
 
         if (toggle) {
@@ -393,7 +416,7 @@ function initSidebar() {
     });
 
     window.addEventListener("resize", () => {
-        if (window.innerWidth > SIDEBAR_BREAKPOINT) {
+        if (isDashboardBottomNav() || window.innerWidth > SIDEBAR_BREAKPOINT) {
             closeSidebar();
         }
     });

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشكاة | بوابة الطالب الأكاديمية</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body class="student-dashboard app-shell">
+    <div class="app-layout">
+        <aside class="sidebar" id="mobile-menu" data-sidebar aria-hidden="true">
+            <a class="dash-brand landing-brand landing-brand--image" href="./dashboard.html">
+                <img class="landing-logo" src="./assets/logo.png" alt="شعار مشكاة">
+            </a>
+
+            <nav class="sidebar-nav" aria-label="تنقل بوابة الطالب">
+                <a class="sidebar-link is-active" href="./dashboard.html" aria-current="page">
+                    <i class="ri-apps-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الرئيسية</span>
+                </a>
+                <a class="sidebar-link" href="#courses">
+                    <i class="ri-book-open-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">موادي الدراسية</span>
+                </a>
+                <a class="sidebar-link" href="#classroom">
+                    <i class="ri-vidicon-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الفصل الافتراضي</span>
+                </a>
+                <a class="sidebar-link" href="#exams">
+                    <i class="ri-shield-check-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الاختبارات الآمنة</span>
+                </a>
+                <a class="sidebar-link" href="#sessions">
+                    <i class="ri-calendar-schedule-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الحصص الخاصة</span>
+                </a>
+                <a class="sidebar-link" href="#reports">
+                    <i class="ri-bar-chart-2-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">التقارير الدراسية</span>
+                </a>
+            </nav>
+
+            <div class="dash-profile">
+                <div class="dash-profile__info">
+                    <span class="avatar dash-profile__avatar" aria-hidden="true">AE</span>
+                    <div class="dash-profile__copy">
+                        <p class="dash-profile__name">عبدالله الشرقاوي</p>
+                        <p class="dash-profile__role">طالب</p>
+                    </div>
+                </div>
+                <a class="btn btn-ghost btn-sm dash-profile__logout" href="./login.html">
+                    <i class="ri-logout-box-r-line" aria-hidden="true"></i>
+                    تسجيل الخروج
+                </a>
+            </div>
+        </aside>
+
+        <div class="dash-shell">
+            <header class="dash-header">
+                <button class="btn btn-ghost btn-md sidebar-toggle" type="button" data-sidebar-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="فتح القائمة">
+                    <i class="ri-menu-line" aria-hidden="true"></i>
+                </button>
+
+                <form class="search dash-header__search" role="search" action="./dashboard.html" method="get">
+                    <i class="ri-search-line search-icon" aria-hidden="true"></i>
+                    <label class="visually-hidden" for="dashboard-search">بحث</label>
+                    <input class="search-field" id="dashboard-search" name="q" type="search" placeholder="بحث...">
+                </form>
+
+                <h1 class="dash-header__title">بوابة الطالب الأكاديمية</h1>
+
+                <div class="dash-header__actions">
+                    <button class="dash-icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="تبديل الوضع">
+                        <i class="ri-moon-line" aria-hidden="true"></i>
+                    </button>
+                    <a class="nav-language" href="./index.html" lang="en" dir="ltr" aria-label="تبديل اللغة إلى الإنجليزية">EN</a>
+                    <button class="dash-icon-btn" type="button" aria-label="الإشعارات">
+                        <i class="ri-notification-3-line" aria-hidden="true"></i>
+                        <span class="dash-icon-btn__dot" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </header>
+
+            <main class="dash-content">
+                <p class="dash-kicker">نظرة عامة</p>
+
+                <section class="card dash-welcome" aria-label="ترحيب الطالب">
+                    <div class="dash-welcome__identity">
+                        <span class="avatar dash-welcome__avatar" aria-hidden="true">يا</span>
+                        <div class="dash-welcome__copy">
+                            <p class="dash-welcome__hello">
+                                <i class="ri-sun-fill" aria-hidden="true"></i>
+                                صباح الخير
+                            </p>
+                            <h2 class="dash-welcome__name">
+                                ياسر القحطاني
+                                <span class="dash-welcome__wave" aria-hidden="true">👋</span>
+                            </h2>
+                            <p class="dash-welcome__meta">الفصل الدراسي الثاني، السنة الثالثة - قسم العلوم الطبيعية</p>
+                        </div>
+                    </div>
+                    <div class="dash-welcome__badges">
+                        <p class="dash-pill dash-pill--date">
+                            <i class="ri-calendar-event-line" aria-hidden="true"></i>
+                            الإثنين، 22 يونيو 2026
+                        </p>
+                        <p class="dash-pill dash-pill--fire">
+                            <i class="ri-fire-fill" aria-hidden="true"></i>
+                            14 يوم متواصل
+                        </p>
+                    </div>
+                </section>
+
+                <section class="dash-stats" aria-label="المؤشرات الدراسية">
+                    <article class="card dash-stat dash-stat--plain dash-stat--with-ring dash-stat--accent-green dash-stat--gpa">
+                        <div class="dash-stat__top">
+                            <span class="dash-stat__badge dash-stat__badge--green" aria-hidden="true">
+                                <i class="ri-medal-line"></i>
+                            </span>
+                            <div class="dash-ring-wrap" aria-hidden="true">
+                                <svg class="dash-ring" viewBox="0 0 48 48">
+                                    <circle class="dash-ring__track" cx="24" cy="24" r="18"></circle>
+                                    <circle class="dash-ring__value dash-ring__value--green" cx="24" cy="24" r="18" pathLength="100" stroke-dasharray="96 100"></circle>
+                                </svg>
+                                <span class="dash-ring__pct">96%</span>
+                            </div>
+                        </div>
+                        <p class="dash-stat__value dash-stat__value--green">3.85</p>
+                        <p class="dash-stat__label">المعدل التراكمي</p>
+                        <div class="dash-stat__divider"></div>
+                        <p class="dash-stat__meta dash-stat__meta--info">
+                            <i class="ri-arrow-up-s-fill" aria-hidden="true"></i>
+                            +0.15 هذا الفصل
+                        </p>
+                    </article>
+
+                    <article class="card dash-stat dash-stat--plain dash-stat--with-ring dash-stat--accent-blue">
+                        <div class="dash-stat__top">
+                            <span class="dash-stat__badge dash-stat__badge--blue" aria-hidden="true">
+                                <i class="ri-group-line"></i>
+                            </span>
+                            <div class="dash-ring-wrap" aria-hidden="true">
+                                <svg class="dash-ring" viewBox="0 0 48 48">
+                                    <circle class="dash-ring__track" cx="24" cy="24" r="18"></circle>
+                                    <circle class="dash-ring__value dash-ring__value--blue" cx="24" cy="24" r="18" pathLength="100" stroke-dasharray="96.4 100"></circle>
+                                </svg>
+                                <span class="dash-ring__pct">96.4%</span>
+                            </div>
+                        </div>
+                        <p class="dash-stat__value dash-stat__value--blue">96.4%</p>
+                        <p class="dash-stat__label">نسبة الحضور</p>
+                        <div class="dash-stat__divider"></div>
+                        <p class="dash-stat__meta dash-stat__meta--up">
+                            <i class="ri-arrow-up-s-fill" aria-hidden="true"></i>
+                            غياب واحد فقط
+                        </p>
+                    </article>
+
+                    <article class="card dash-stat dash-stat--plain dash-stat--with-ring dash-stat--accent-yellow">
+                        <div class="dash-stat__top">
+                            <span class="dash-stat__badge dash-stat__badge--yellow" aria-hidden="true">
+                                <i class="ri-book-open-line"></i>
+                            </span>
+                            <div class="dash-ring-wrap" aria-hidden="true">
+                                <svg class="dash-ring" viewBox="0 0 48 48">
+                                    <circle class="dash-ring__track" cx="24" cy="24" r="18"></circle>
+                                    <circle class="dash-ring__value dash-ring__value--yellow" cx="24" cy="24" r="18" pathLength="100" stroke-dasharray="87.2 100"></circle>
+                                </svg>
+                                <span class="dash-ring__pct">87%</span>
+                            </div>
+                        </div>
+                        <p class="dash-stat__value dash-stat__value--yellow">87.2%</p>
+                        <p class="dash-stat__label">إنجاز المناهج</p>
+                        <div class="dash-stat__divider"></div>
+                        <p class="dash-stat__meta dash-stat__meta--muted">
+                            <i class="ri-subtract-line" aria-hidden="true"></i>
+                            3 دروس متبقية
+                        </p>
+                    </article>
+
+                    <article class="card dash-stat dash-stat--plain dash-stat--accent-orange">
+                        <div class="dash-stat__top">
+                            <span class="dash-stat__badge dash-stat__badge--orange" aria-hidden="true">
+                                <i class="ri-clipboard-line"></i>
+                            </span>
+                            <p class="dash-stat__value dash-stat__value--orange">2</p>
+                        </div>
+                        <p class="dash-stat__highlight dash-stat__highlight--orange">2 معلّق</p>
+                        <p class="dash-stat__label">الواجبات المعلقة</p>
+                        <div class="dash-stat__divider"></div>
+                        <p class="dash-stat__meta dash-stat__meta--danger">
+                            <i class="ri-error-warning-fill" aria-hidden="true"></i>
+                            موعد قريب الليلة
+                        </p>
+                    </article>
+
+                    <article class="card dash-stat dash-stat--plain dash-stat--accent-green">
+                        <div class="dash-stat__top">
+                            <span class="dash-stat__badge dash-stat__badge--green" aria-hidden="true">
+                                <i class="ri-trophy-line"></i>
+                            </span>
+                            <p class="dash-stat__value dash-stat__value--green">8</p>
+                        </div>
+                        <p class="dash-stat__highlight dash-stat__highlight--green">8 وسام</p>
+                        <p class="dash-stat__label">الإنجازات المحرزة</p>
+                        <div class="dash-stat__divider"></div>
+                        <p class="dash-stat__meta dash-stat__meta--up">
+                            <i class="ri-arrow-up-s-fill" aria-hidden="true"></i>
+                            +2 هذا الشهر
+                        </p>
+                    </article>
+
+                    <article class="card dash-stat dash-stat--plain dash-stat--accent-blue">
+                        <div class="dash-stat__top">
+                            <span class="dash-stat__badge dash-stat__badge--blue" aria-hidden="true">
+                                <i class="ri-flashlight-line"></i>
+                            </span>
+                            <p class="dash-stat__value dash-stat__value--blue">14</p>
+                        </div>
+                        <p class="dash-stat__highlight dash-stat__highlight--blue">14 يوم</p>
+                        <p class="dash-stat__label">سلسلة الدراسة</p>
+                        <div class="dash-stat__divider"></div>
+                        <p class="dash-stat__meta dash-stat__meta--fire">
+                            <i class="ri-fire-fill" aria-hidden="true"></i>
+                            رقم قياسي شخصي!
+                        </p>
+                    </article>
+                </section>
+
+                <div class="dash-grid">
+                    <div class="dash-grid__primary">
+                        <section class="card dash-panel dash-panel--schedule" id="classroom" aria-labelledby="schedule-title">
+                            <header class="dash-panel__head">
+                                <h2 id="schedule-title">
+                                    <i class="ri-calendar-check-line" aria-hidden="true"></i>
+                                    جدول اليوم
+                                </h2>
+                                <p class="dash-pill dash-pill--compact">الأحد، 22 يونيو</p>
+                            </header>
+                            <ol class="dash-timeline">
+                                <li class="dash-schedule-item dash-schedule-item--live">
+                                    <div class="dash-schedule-item__time">
+                                        <time datetime="10:00">10:00 ص</time>
+                                    </div>
+                                    <div class="dash-schedule-item__rail" aria-hidden="true">
+                                        <span class="dash-timeline-dot dash-timeline-dot--live"></span>
+                                    </div>
+                                    <article class="dash-schedule-item__main">
+                                        <div class="dash-schedule-item__copy">
+                                            <span class="dash-schedule-badge dash-schedule-badge--live">مباشر الآن</span>
+                                            <h3>الفيزياء الميكانيكية والكهرباء</h3>
+                                            <p>أ.د. عبد الرحمن آل سعود - 60 دقيقة</p>
+                                        </div>
+                                        <a class="btn btn-primary dash-schedule-item__action dash-schedule-item__action--join" href="#classroom">
+                                            انضم الآن
+                                            <i class="ri-arrow-left-s-line" aria-hidden="true"></i>
+                                        </a>
+                                    </article>
+                                </li>
+                                <li class="dash-schedule-item">
+                                    <div class="dash-schedule-item__time">
+                                        <time datetime="12:30">12:30 م</time>
+                                    </div>
+                                    <div class="dash-schedule-item__rail" aria-hidden="true">
+                                        <span class="dash-timeline-dot dash-timeline-dot--recorded"></span>
+                                    </div>
+                                    <article class="dash-schedule-item__main">
+                                        <div class="dash-schedule-item__copy">
+                                            <span class="dash-schedule-badge dash-schedule-badge--recorded">محاضرة مسجلة</span>
+                                            <h3>الرياضيات: قواعد الاشتقاق التطبيقية</h3>
+                                            <p>أ. محمد الغامدي - 45 دقيقة</p>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li class="dash-schedule-item" id="sessions">
+                                    <div class="dash-schedule-item__time">
+                                        <time datetime="17:00">05:00 م</time>
+                                    </div>
+                                    <div class="dash-schedule-item__rail" aria-hidden="true">
+                                        <span class="dash-timeline-dot dash-timeline-dot--private"></span>
+                                    </div>
+                                    <article class="dash-schedule-item__main">
+                                        <div class="dash-schedule-item__copy">
+                                            <span class="dash-schedule-badge dash-schedule-badge--private">حصة خاصة</span>
+                                            <h3>جلسة توجيه فردية - الفيزياء</h3>
+                                            <p>د. سارة محمود - 30 دقيقة</p>
+                                        </div>
+                                        <a class="btn dash-schedule-item__action dash-schedule-item__action--manage" href="#sessions">إدارة الحجز</a>
+                                    </article>
+                                </li>
+                                <li class="dash-schedule-item dash-schedule-item--exam" id="exams">
+                                    <div class="dash-schedule-item__time">
+                                        <time datetime="09:00">09:00 ص</time>
+                                        <span class="dash-schedule-item__when">غداً</span>
+                                    </div>
+                                    <div class="dash-schedule-item__rail" aria-hidden="true">
+                                        <span class="dash-timeline-dot dash-timeline-dot--exam"></span>
+                                    </div>
+                                    <article class="dash-schedule-item__main">
+                                        <div class="dash-schedule-item__copy">
+                                            <span class="dash-schedule-badge dash-schedule-badge--exam">اختبار</span>
+                                            <h3>اختبار منتصف الفصل - الكيمياء العضوية</h3>
+                                            <p>أ. إيلينا روستوفا - 90 دقيقة مراقبة إلكترونية</p>
+                                        </div>
+                                        <a class="btn dash-schedule-item__action dash-schedule-item__action--exam" href="#exams">ابدأ الاستعداد</a>
+                                    </article>
+                                </li>
+                            </ol>
+                            <footer class="dash-panel__foot">
+                                <a class="dash-panel__link" href="#classroom">عرض الكل</a>
+                            </footer>
+                        </section>
+
+                        <section class="card dash-panel dash-panel--courses" id="courses" aria-labelledby="courses-title">
+                            <header class="dash-panel__head">
+                                <h2 id="courses-title">
+                                    <i class="ri-stack-line" aria-hidden="true"></i>
+                                    مقرراتي الدراسية
+                                </h2>
+                                <a class="dash-panel__link" href="#courses">عرض الكل</a>
+                            </header>
+                            <div class="dash-courses">
+                                <article class="dash-course">
+                                    <span class="dash-course__icon dash-course__icon--green" aria-hidden="true">
+                                        <i class="ri-calculator-fill"></i>
+                                    </span>
+                                    <div class="dash-course__body">
+                                        <h3>الرياضيات وحساب التفاضل</h3>
+                                        <div class="dash-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="92" aria-label="تقدم الرياضيات">
+                                            <span class="dash-bar__fill dash-bar__fill--green" style="width: 92%"></span>
+                                        </div>
+                                        <p>الفصل الثالث: التكامل المحدد • 5 دروس متبقية</p>
+                                    </div>
+                                    <strong class="dash-course__pct dash-course__pct--green">92%</strong>
+                                </article>
+                                <article class="dash-course">
+                                    <span class="dash-course__icon dash-course__icon--blue" aria-hidden="true">
+                                        <i class="ri-flashlight-fill"></i>
+                                    </span>
+                                    <div class="dash-course__body">
+                                        <h3>الفيزياء الميكانيكية والكهرباء</h3>
+                                        <div class="dash-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="78" aria-label="تقدم الفيزياء">
+                                            <span class="dash-bar__fill dash-bar__fill--blue" style="width: 78%"></span>
+                                        </div>
+                                        <p>الفصل الثاني: الدوائر الكهربائية • 8 دروس متبقية</p>
+                                    </div>
+                                    <strong class="dash-course__pct dash-course__pct--blue">78%</strong>
+                                </article>
+                                <article class="dash-course">
+                                    <span class="dash-course__icon dash-course__icon--orange" aria-hidden="true">
+                                        <i class="ri-test-tube-fill"></i>
+                                    </span>
+                                    <div class="dash-course__body">
+                                        <h3>الكيمياء العضوية</h3>
+                                        <div class="dash-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65" aria-label="تقدم الكيمياء">
+                                            <span class="dash-bar__fill dash-bar__fill--orange" style="width: 65%"></span>
+                                        </div>
+                                        <p>الفصل الأول: الهيدروكربونات وتسميتها • 12 درساً متبقياً</p>
+                                    </div>
+                                    <strong class="dash-course__pct dash-course__pct--orange">65%</strong>
+                                </article>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="dash-grid__secondary">
+                        <section class="card dash-panel dash-panel--actions" id="assistant" aria-labelledby="actions-title">
+                            <header class="dash-panel__head">
+                                <h2 id="actions-title">
+                                    <i class="ri-flashlight-line" aria-hidden="true"></i>
+                                    إجراءات سريعة
+                                </h2>
+                            </header>
+                            <div class="dash-actions">
+                                <a class="dash-action" href="#classroom">
+                                    <span class="dash-action__icon dash-action__icon--green" aria-hidden="true">
+                                        <i class="ri-vidicon-line"></i>
+                                    </span>
+                                    الفصل المباشر
+                                </a>
+                                <a class="dash-action" href="#courses">
+                                    <span class="dash-action__icon dash-action__icon--blue" aria-hidden="true">
+                                        <i class="ri-play-circle-fill"></i>
+                                    </span>
+                                    المحاضرات
+                                </a>
+                                <a class="dash-action" href="#exams">
+                                    <span class="dash-action__icon dash-action__icon--red" aria-hidden="true">
+                                        <i class="ri-shield-flash-line"></i>
+                                    </span>
+                                    الاختبارات
+                                </a>
+                                <a class="dash-action" href="#sessions">
+                                    <span class="dash-action__icon dash-action__icon--orange" aria-hidden="true">
+                                        <i class="ri-calendar-event-line"></i>
+                                    </span>
+                                    احجز حصة
+                                </a>
+                                <a class="dash-action" href="#reports">
+                                    <span class="dash-action__icon dash-action__icon--lime" aria-hidden="true">
+                                        <i class="ri-bar-chart-2-line"></i>
+                                    </span>
+                                    التقارير
+                                </a>
+                                <a class="dash-action" href="#assistant">
+                                    <span class="dash-action__icon dash-action__icon--cyan" aria-hidden="true">
+                                        <i class="ri-sparkling-2-line"></i>
+                                    </span>
+                                    مشكاة AI
+                                </a>
+                            </div>
+                        </section>
+
+                        <section class="card dash-panel dash-panel--homework" aria-labelledby="homework-title">
+                            <header class="dash-panel__head dash-panel__head--homework">
+                                <div class="dash-panel__title-row">
+                                    <h2 id="homework-title">
+                                        <i class="ri-clipboard-line" aria-hidden="true"></i>
+                                        متابعة الواجبات
+                                    </h2>
+                                    <span class="dash-homework-badge">2 معلق</span>
+                                </div>
+                            </header>
+                            <ul class="dash-homework">
+                                <li class="dash-task dash-task--danger">
+                                    <button class="dash-task__submit" type="button">تسليم</button>
+                                    <div class="dash-task__copy">
+                                        <h3>تقرير معمل الكيمياء العضوية</h3>
+                                        <p>موعد التسليم: الليلة 11:59 م</p>
+                                    </div>
+                                    <span class="dash-task__badge dash-task__badge--danger" aria-hidden="true"></span>
+                                </li>
+                                <li class="dash-task dash-task--warn">
+                                    <button class="dash-task__submit" type="button">تسليم</button>
+                                    <div class="dash-task__copy">
+                                        <h3>تمارين الاشتقاق - الفصل الثالث</h3>
+                                        <p>موعد التسليم: الأحد، 22 يونيو</p>
+                                    </div>
+                                    <span class="dash-task__badge dash-task__badge--warn" aria-hidden="true"></span>
+                                </li>
+                                <li class="dash-task dash-task--done">
+                                    <span class="dash-task__done">
+                                        <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
+                                        مكتمل
+                                    </span>
+                                    <div class="dash-task__copy">
+                                        <h3>واجب النهايات والاتصال</h3>
+                                        <p>تم التسليم · النتيجة: <span class="dash-task__score">98/100</span></p>
+                                    </div>
+                                    <span class="dash-task__badge dash-task__badge--success" aria-hidden="true"></span>
+                                </li>
+                                <li class="dash-task dash-task--done">
+                                    <span class="dash-task__done">
+                                        <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
+                                        مكتمل
+                                    </span>
+                                    <div class="dash-task__copy">
+                                        <h3>ورقة عمل: قانون كولوم</h3>
+                                        <p>تم التسليم · النتيجة: <span class="dash-task__score">90/100</span></p>
+                                    </div>
+                                    <span class="dash-task__badge dash-task__badge--success" aria-hidden="true"></span>
+                                </li>
+                            </ul>
+                            <footer class="dash-panel__foot">
+                                <a class="dash-homework-more" href="#courses">عرض الكل</a>
+                            </footer>
+                        </section>
+
+                        <section class="card dash-panel dash-panel--achievements" id="achievements" aria-labelledby="achievements-title">
+                            <header class="dash-panel__head">
+                                <h2 id="achievements-title">
+                                    <i class="ri-trophy-line" aria-hidden="true"></i>
+                                    الإنجازات والأوسمة
+                                </h2>
+                                <a class="dash-achievements-more" href="#achievements">عرض الكل</a>
+                            </header>
+                            <ul class="dash-badges">
+                                <li class="dash-badge-card">
+                                    <span class="dash-medal dash-medal--gold" aria-hidden="true">
+                                        <i class="ri-trophy-fill"></i>
+                                    </span>
+                                    <span class="dash-badge-card__label">متفوق</span>
+                                </li>
+                                <li class="dash-badge-card">
+                                    <span class="dash-medal dash-medal--fire" aria-hidden="true">
+                                        <i class="ri-fire-fill"></i>
+                                    </span>
+                                    <span class="dash-badge-card__label">14 يوم</span>
+                                </li>
+                                <li class="dash-badge-card">
+                                    <span class="dash-medal dash-medal--attend" aria-hidden="true">
+                                        <i class="ri-check-fill"></i>
+                                    </span>
+                                    <span class="dash-badge-card__label">حضور كامل</span>
+                                </li>
+                                <li class="dash-badge-card">
+                                    <span class="dash-medal dash-medal--bolt" aria-hidden="true">
+                                        <i class="ri-flashlight-fill"></i>
+                                    </span>
+                                    <span class="dash-badge-card__label">سباق الواجبات</span>
+                                </li>
+                                <li class="dash-badge-card">
+                                    <span class="dash-medal dash-medal--rocket" aria-hidden="true">
+                                        <i class="ri-rocket-fill"></i>
+                                    </span>
+                                    <span class="dash-badge-card__label">يوم المحاضرات</span>
+                                </li>
+                                <li class="dash-badge-card">
+                                    <span class="dash-medal dash-medal--star" aria-hidden="true">
+                                        <i class="ri-star-fill"></i>
+                                    </span>
+                                    <span class="dash-badge-card__label">نجم الاختبار</span>
+                                </li>
+                                <li class="dash-badge-card is-locked">
+                                    <span class="dash-medal dash-medal--books" aria-hidden="true">
+                                        <i class="ri-book-open-fill"></i>
+                                    </span>
+                                    <span class="dash-badge-card__label">القارئ النهم</span>
+                                </li>
+                                <li class="dash-badge-card is-locked">
+                                    <span class="dash-medal dash-medal--target" aria-hidden="true">
+                                        <i class="ri-focus-3-fill"></i>
+                                    </span>
+                                    <span class="dash-badge-card__label">المتدرب</span>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section class="card dash-panel dash-panel--activity" id="reports" aria-labelledby="activity-title">
+                            <header class="dash-panel__head dash-panel__head--activity">
+                                <h2 id="activity-title">
+                                    <span class="dash-activity-dot" aria-hidden="true"></span>
+                                    آخر النشاطات
+                                </h2>
+                            </header>
+                            <ul class="dash-activity">
+                                <li class="dash-activity__item">
+                                    <span class="dash-activity__icon dash-activity__icon--green" aria-hidden="true">
+                                        <i class="ri-checkbox-circle-fill"></i>
+                                    </span>
+                                    <div class="dash-activity__copy">
+                                        <h3>أكملت درس المحاضرة 2: النهايات الرياضية</h3>
+                                        <p>منذ 20 دقيقة</p>
+                                    </div>
+                                </li>
+                                <li class="dash-activity__item">
+                                    <span class="dash-activity__icon dash-activity__icon--blue" aria-hidden="true">
+                                        <i class="ri-upload-2-line"></i>
+                                    </span>
+                                    <div class="dash-activity__copy">
+                                        <h3>سلّمت واجب النهايات والاتصال — نتيجة: 98/100</h3>
+                                        <p>منذ 2 ساعة</p>
+                                    </div>
+                                </li>
+                                <li class="dash-activity__item">
+                                    <span class="dash-activity__icon dash-activity__icon--orange" aria-hidden="true">
+                                        <i class="ri-calendar-event-line"></i>
+                                    </span>
+                                    <div class="dash-activity__copy">
+                                        <h3>حجزت حصة خاصة مع د. سارة محمود</h3>
+                                        <p>اليوم، 8:30 صباحاً</p>
+                                    </div>
+                                </li>
+                                <li class="dash-activity__item">
+                                    <span class="dash-activity__icon dash-activity__icon--award" aria-hidden="true">
+                                        <i class="ri-medal-line"></i>
+                                    </span>
+                                    <div class="dash-activity__copy">
+                                        <h3>حصلت على وسام نجم الاختبار</h3>
+                                        <p>أمس، 11:00 ص</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
