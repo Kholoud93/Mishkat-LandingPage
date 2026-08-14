@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشكاة | الرياضيات وحساب التفاضل</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body class="student-dashboard student-course app-shell">
+    <div class="app-layout">
+        <aside class="sidebar" id="mobile-menu" data-sidebar aria-hidden="true">
+            <a class="dash-brand landing-brand landing-brand--image" href="./dashboard.html">
+                <img class="landing-logo" src="./assets/logo.png" alt="شعار مشكاة">
+            </a>
+
+            <nav class="sidebar-nav" aria-label="تنقل بوابة الطالب">
+                <a class="sidebar-link" href="./dashboard.html">
+                    <i class="ri-apps-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الرئيسية</span>
+                </a>
+                <a class="sidebar-link is-active" href="./course.html" aria-current="page">
+                    <i class="ri-book-open-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">موادي الدراسية</span>
+                </a>
+                <a class="sidebar-link" href="./dashboard.html#classroom">
+                    <i class="ri-vidicon-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الفصل الافتراضي</span>
+                </a>
+                <a class="sidebar-link" href="./dashboard.html#exams">
+                    <i class="ri-shield-check-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الاختبارات الآمنة</span>
+                </a>
+                <a class="sidebar-link" href="./dashboard.html#sessions">
+                    <i class="ri-calendar-schedule-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الحصص الخاصة</span>
+                </a>
+                <a class="sidebar-link" href="./dashboard.html#reports">
+                    <i class="ri-bar-chart-2-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">التقارير الدراسية</span>
+                </a>
+            </nav>
+
+            <div class="dash-profile">
+                <div class="dash-profile__info">
+                    <span class="avatar dash-profile__avatar" aria-hidden="true">AE</span>
+                    <div class="dash-profile__copy">
+                        <p class="dash-profile__name">عبدالله الشرقاوي</p>
+                        <p class="dash-profile__role">طالب</p>
+                    </div>
+                </div>
+                <a class="btn btn-ghost btn-sm dash-profile__logout" href="./login.html">
+                    <i class="ri-logout-box-r-line" aria-hidden="true"></i>
+                    تسجيل الخروج
+                </a>
+            </div>
+        </aside>
+
+        <div class="dash-shell">
+            <header class="dash-header course-header">
+                <button class="btn btn-ghost btn-md sidebar-toggle" type="button" data-sidebar-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="فتح القائمة">
+                    <i class="ri-menu-line" aria-hidden="true"></i>
+                </button>
+                <h1 class="dash-header__title">بوابة الطالب الأكاديمية</h1>
+                <div class="dash-header__actions">
+                    <button class="dash-icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="تبديل الوضع">
+                        <i class="ri-moon-line" aria-hidden="true"></i>
+                    </button>
+                    <a class="nav-language" href="./index.html" lang="en" dir="ltr" aria-label="تبديل اللغة إلى الإنجليزية">
+                        <i class="ri-global-line" aria-hidden="true"></i>
+                        EN
+                    </a>
+                </div>
+            </header>
+
+            <main class="dash-content course-content">
+                <div class="course-layout">
+                    <aside class="card course-curriculum" aria-labelledby="curriculum-title">
+                        <h2 id="curriculum-title" class="course-curriculum__title">مناهج المقررات</h2>
+                        <label class="course-curriculum__label" for="course-select">اختر المقرر الدراسي</label>
+                        <div class="course-select-wrap">
+                            <select class="field course-select" id="course-select">
+                                <option selected>الرياضيات وحساب التفاضل</option>
+                                <option>الفيزياء الميكانيكية والكهرباء</option>
+                                <option>الكيمياء العضوية</option>
+                            </select>
+                            <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="course-chapters" id="course-chapters"></div>
+                    </aside>
+
+                    <section class="card course-main" aria-label="محتوى الدرس">
+                        <nav class="course-tabs" aria-label="أقسام الدرس">
+                            <a class="course-tabs__item is-active" href="#player" data-course-tab>مشغل الدرس</a>
+                            <a class="course-tabs__item" href="#homework" data-course-tab>تسليم الواجبات</a>
+                            <a class="course-tabs__item" href="#files" data-course-tab>ملفات المادة</a>
+                            <a class="course-tabs__item" href="#discussions" data-course-tab>المناقشات الأكاديمية</a>
+                        </nav>
+
+                        <div class="course-section" id="player">
+                            <h2 class="course-lesson-title" id="active-lesson-title">المحاضرة 1: مقدمة في حساب التفاضل والتكامل</h2>
+
+                            <div class="course-player" data-course-player>
+                                <div class="course-player__stage" aria-hidden="true"></div>
+                                <div class="course-player__controls">
+                                    <button class="course-player__play" type="button" aria-label="تشغيل">
+                                        <i class="ri-play-fill" aria-hidden="true"></i>
+                                    </button>
+                                    <button class="course-player__mute" type="button" aria-label="الصوت">
+                                        <i class="ri-volume-up-line" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="course-player__progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="18" aria-label="تقدم الفيديو">
+                                        <span class="course-player__progress-fill" style="width: 18%"></span>
+                                    </div>
+                                    <time class="course-player__time">00:00 / 24:00</time>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary course-complete-btn" type="button" data-complete-lesson>
+                                <i class="ri-checkbox-circle-line" aria-hidden="true"></i>
+                                تحديد الدرس كمكتمل
+                            </button>
+                        </div>
+
+                        <div class="course-section" id="homework">
+                            <h3 class="course-section__title">تسليم التكليفات والواجبات المنزلية</h3>
+                            <p class="course-section__text">يرجى إرفاق ملف الحل (بصيغة PDF أو صور) للتقييم الفوري من المعلم.</p>
+
+                            <label class="course-dropzone" data-dropzone>
+                                <input class="visually-hidden" type="file" accept=".pdf,.png,.jpg,.jpeg" data-homework-file>
+                                <span class="course-dropzone__icon" aria-hidden="true">
+                                    <i class="ri-upload-cloud-2-line"></i>
+                                </span>
+                                <span class="course-dropzone__title">اسحب وأفلت ملف الحل هنا أو اضغط للتصفح</span>
+                                <span class="course-dropzone__hint">الملفات المسموحة: PDF, PNG, JPG (الحد الأقصى 10MB)</span>
+                                <span class="course-dropzone__file" data-file-name hidden></span>
+                            </label>
+
+                            <button class="btn btn-primary course-submit-btn" type="button" data-submit-homework>
+                                إرسال الواجب وتأكيد التسليم
+                            </button>
+                        </div>
+
+                        <div class="course-section" id="files">
+                            <h3 class="course-section__title">الملفات والمراجع الدراسية الملحقة</h3>
+                            <div class="course-files" id="course-files"></div>
+                        </div>
+
+                        <div class="course-section" id="discussions">
+                            <h3 class="course-section__title">مناقشات الدرس والأسئلة الأكاديمية</h3>
+                            <p class="course-section__text">اطرح سؤالك هنا وسيجيب معلم المادة أو زملائك بردود عليه مباشرة.</p>
+
+                            <div class="course-chat" id="course-chat"></div>
+
+                            <form class="course-chat__composer" data-chat-form>
+                                <label class="visually-hidden" for="chat-input">اكتب سؤالك الأكاديمي هنا</label>
+                                <input class="field course-chat__input" id="chat-input" type="text" placeholder="اكتب سؤالك الأكاديمي هنا..." autocomplete="off">
+                                <button class="course-chat__send" type="submit" aria-label="إرسال السؤال">
+                                    <i class="ri-send-plane-fill" aria-hidden="true"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+    <script src="./course.js"></script>
+</body>
+</html>
