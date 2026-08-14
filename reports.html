@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشكاة | التقارير الدراسية</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body class="student-dashboard student-reports app-shell">
+    <div class="app-layout">
+        <aside class="sidebar" id="mobile-menu" data-sidebar aria-hidden="true">
+            <a class="dash-brand landing-brand landing-brand--image" href="./dashboard.html">
+                <img class="landing-logo" src="./assets/logo.png" alt="شعار مشكاة">
+            </a>
+
+            <nav class="sidebar-nav" aria-label="تنقل بوابة الطالب">
+                <a class="sidebar-link" href="./dashboard.html">
+                    <i class="ri-apps-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الرئيسية</span>
+                </a>
+                <a class="sidebar-link" href="./course.html">
+                    <i class="ri-book-open-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">موادي الدراسية</span>
+                </a>
+                <a class="sidebar-link" href="./classroom.html">
+                    <i class="ri-vidicon-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الفصل الافتراضي</span>
+                </a>
+                <a class="sidebar-link" href="./exams.html">
+                    <i class="ri-shield-check-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الاختبارات الآمنة</span>
+                </a>
+                <a class="sidebar-link" href="./sessions.html">
+                    <i class="ri-calendar-schedule-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الحصص الخاصة</span>
+                </a>
+                <a class="sidebar-link is-active" href="./reports.html" aria-current="page">
+                    <i class="ri-bar-chart-2-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">التقارير الدراسية</span>
+                </a>
+            </nav>
+
+            <div class="dash-profile">
+                <div class="dash-profile__info">
+                    <span class="avatar dash-profile__avatar" aria-hidden="true">AE</span>
+                    <div class="dash-profile__copy">
+                        <p class="dash-profile__name">عبدالله الشرقاوي</p>
+                        <p class="dash-profile__role">طالب</p>
+                    </div>
+                </div>
+                <a class="btn btn-ghost btn-sm dash-profile__logout" href="./login.html">
+                    <i class="ri-logout-box-r-line" aria-hidden="true"></i>
+                    تسجيل الخروج
+                </a>
+            </div>
+        </aside>
+
+        <div class="dash-shell">
+            <header class="dash-header reports-header">
+                <button class="btn btn-ghost btn-md sidebar-toggle" type="button" data-sidebar-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="فتح القائمة">
+                    <i class="ri-menu-line" aria-hidden="true"></i>
+                </button>
+                <h1 class="dash-header__title">بوابة الطالب الأكاديمية</h1>
+                <div class="dash-header__actions">
+                    <button class="dash-icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="تبديل الوضع">
+                        <i class="ri-moon-line" aria-hidden="true"></i>
+                    </button>
+                    <a class="nav-language" href="./index.html" lang="en" dir="ltr" aria-label="تبديل اللغة إلى الإنجليزية">
+                        <i class="ri-global-line" aria-hidden="true"></i>
+                        EN
+                    </a>
+                </div>
+            </header>
+
+            <main class="dash-content reports-content">
+                <div class="reports-layout">
+                    <section class="card reports-chart reports-chart--gpa" aria-labelledby="reports-gpa-title">
+                        <h2 id="reports-gpa-title">
+                            <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
+                            منحنى تقدم الدرجات التراكمي (GPA) خلال الشهور
+                        </h2>
+                        <div class="reports-gpa" role="img" aria-label="منحنى GPA من 1.7 في يناير إلى 3.8 في يونيو">
+                            <div class="reports-gpa__y" aria-hidden="true">
+                                <span>4.0</span>
+                                <span>3.0</span>
+                                <span>2.0</span>
+                                <span>1.0</span>
+                            </div>
+                            <div class="reports-gpa__plot">
+                                <svg class="reports-gpa__svg" viewBox="0 0 560 220" preserveAspectRatio="none" aria-hidden="true">
+                                    <line x1="0" y1="10" x2="560" y2="10" class="reports-gpa__grid"></line>
+                                    <line x1="0" y1="70" x2="560" y2="70" class="reports-gpa__grid"></line>
+                                    <line x1="0" y1="130" x2="560" y2="130" class="reports-gpa__grid"></line>
+                                    <line x1="0" y1="190" x2="560" y2="190" class="reports-gpa__grid"></line>
+                                    <polyline
+                                        class="reports-gpa__line"
+                                        fill="none"
+                                        points="20,148 120,130 220,94 320,82 420,34 540,22"
+                                    ></polyline>
+                                    <circle cx="20" cy="148" r="5" class="reports-gpa__dot"></circle>
+                                    <circle cx="120" cy="130" r="5" class="reports-gpa__dot"></circle>
+                                    <circle cx="220" cy="94" r="5" class="reports-gpa__dot"></circle>
+                                    <circle cx="320" cy="82" r="5" class="reports-gpa__dot"></circle>
+                                    <circle cx="420" cy="34" r="5" class="reports-gpa__dot"></circle>
+                                    <circle cx="540" cy="22" r="5" class="reports-gpa__dot"></circle>
+                                </svg>
+                                <div class="reports-gpa__x" aria-hidden="true">
+                                    <span>يناير</span>
+                                    <span>فبراير</span>
+                                    <span>مارس</span>
+                                    <span>أبريل</span>
+                                    <span>مايو</span>
+                                    <span>يونيو</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="card reports-chart" aria-labelledby="reports-submit-title">
+                        <h2 id="reports-submit-title">معدل تسليم الواجبات الشهرية</h2>
+                        <div class="reports-bars" role="img" aria-label="معدل التسليم: أبريل 100٪، مارس 95٪، فبراير 90٪، يناير 80٪">
+                            <div class="reports-bar">
+                                <span class="reports-bar__value">100%</span>
+                                <div class="reports-bar__track">
+                                    <span class="reports-bar__fill reports-bar__fill--active" style="--bar: 100%"></span>
+                                </div>
+                                <span class="reports-bar__label">أبريل</span>
+                            </div>
+                            <div class="reports-bar">
+                                <span class="reports-bar__value">95%</span>
+                                <div class="reports-bar__track">
+                                    <span class="reports-bar__fill" style="--bar: 95%"></span>
+                                </div>
+                                <span class="reports-bar__label">مارس</span>
+                            </div>
+                            <div class="reports-bar">
+                                <span class="reports-bar__value">90%</span>
+                                <div class="reports-bar__track">
+                                    <span class="reports-bar__fill" style="--bar: 90%"></span>
+                                </div>
+                                <span class="reports-bar__label">فبراير</span>
+                            </div>
+                            <div class="reports-bar">
+                                <span class="reports-bar__value">80%</span>
+                                <div class="reports-bar__track">
+                                    <span class="reports-bar__fill" style="--bar: 80%"></span>
+                                </div>
+                                <span class="reports-bar__label">يناير</span>
+                            </div>
+                        </div>
+                        <p class="reports-bars__foot">إجمالي التكليفات المسلّمة: 28 واجب / 28 واجب</p>
+                    </section>
+
+                    <section class="card reports-grades" aria-labelledby="reports-grades-title">
+                        <div class="reports-grades__top">
+                            <h2 id="reports-grades-title">كشف الدرجات الأكاديمي الموحد</h2>
+                            <form class="search reports-search" role="search" action="#" method="get">
+                                <i class="ri-search-line search-icon" aria-hidden="true"></i>
+                                <label class="visually-hidden" for="reports-search">البحث باسم التكليف أو المادة</label>
+                                <input class="search-field" id="reports-search" name="q" type="search" placeholder="البحث باسم التكليف أو المادة...">
+                            </form>
+                        </div>
+
+                        <div class="table-wrap reports-table-wrap">
+                            <table class="table reports-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">المقرر الدراسي</th>
+                                        <th scope="col">بند التقييم</th>
+                                        <th scope="col">تاريخ التسليم</th>
+                                        <th scope="col">الدرجة المستحقة</th>
+                                        <th scope="col">الحالة النهائية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>الرياضيات وحساب التفاضل</td>
+                                        <td>واجب النهايات والاتصال</td>
+                                        <td>2026-06-12</td>
+                                        <td>98 / 100</td>
+                                        <td><span class="badge reports-status reports-status--excellent">ممتاز</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>الرياضيات وحساب التفاضل</td>
+                                        <td>الاختبار القصير الأول</td>
+                                        <td>2026-06-05</td>
+                                        <td>92 / 100</td>
+                                        <td><span class="badge reports-status reports-status--excellent">ممتاز</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>الفيزياء الميكانيكية والكهرباء</td>
+                                        <td>واجب حركة المقذوفات</td>
+                                        <td>2026-05-28</td>
+                                        <td>90 / 100</td>
+                                        <td><span class="badge reports-status reports-status--excellent">ممتاز</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>الكيمياء العضوية</td>
+                                        <td>واجب التفاعلات العضوية</td>
+                                        <td>2026-05-20</td>
+                                        <td>95 / 100</td>
+                                        <td><span class="badge reports-status reports-status--excellent">ممتاز</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>الفيزياء الميكانيكية والكهرباء</td>
+                                        <td>تقرير معمل التيار الكهربائي</td>
+                                        <td>2026-05-15</td>
+                                        <td>88 / 100</td>
+                                        <td><span class="badge reports-status reports-status--good">جيد جداً</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشكاة | الحصص الخاصة</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body class="student-dashboard student-sessions app-shell">
+    <div class="app-layout">
+        <aside class="sidebar" id="mobile-menu" data-sidebar aria-hidden="true">
+            <a class="dash-brand landing-brand landing-brand--image" href="./dashboard.html">
+                <img class="landing-logo" src="./assets/logo.png" alt="شعار مشكاة">
+            </a>
+
+            <nav class="sidebar-nav" aria-label="تنقل بوابة الطالب">
+                <a class="sidebar-link" href="./dashboard.html">
+                    <i class="ri-apps-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الرئيسية</span>
+                </a>
+                <a class="sidebar-link" href="./course.html">
+                    <i class="ri-book-open-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">موادي الدراسية</span>
+                </a>
+                <a class="sidebar-link" href="./classroom.html">
+                    <i class="ri-vidicon-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الفصل الافتراضي</span>
+                </a>
+                <a class="sidebar-link" href="./exams.html">
+                    <i class="ri-shield-check-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الاختبارات الآمنة</span>
+                </a>
+                <a class="sidebar-link is-active" href="./sessions.html" aria-current="page">
+                    <i class="ri-calendar-schedule-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الحصص الخاصة</span>
+                </a>
+                <a class="sidebar-link" href="./reports.html">
+                    <i class="ri-bar-chart-2-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">التقارير الدراسية</span>
+                </a>
+            </nav>
+
+            <div class="dash-profile">
+                <div class="dash-profile__info">
+                    <span class="avatar dash-profile__avatar" aria-hidden="true">AE</span>
+                    <div class="dash-profile__copy">
+                        <p class="dash-profile__name">عبدالله الشرقاوي</p>
+                        <p class="dash-profile__role">طالب</p>
+                    </div>
+                </div>
+                <a class="btn btn-ghost btn-sm dash-profile__logout" href="./login.html">
+                    <i class="ri-logout-box-r-line" aria-hidden="true"></i>
+                    تسجيل الخروج
+                </a>
+            </div>
+        </aside>
+
+        <div class="dash-shell">
+            <header class="dash-header sessions-header">
+                <button class="btn btn-ghost btn-md sidebar-toggle" type="button" data-sidebar-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="فتح القائمة">
+                    <i class="ri-menu-line" aria-hidden="true"></i>
+                </button>
+                <h1 class="dash-header__title">بوابة الطالب الأكاديمية</h1>
+                <div class="dash-header__actions">
+                    <button class="dash-icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="تبديل الوضع">
+                        <i class="ri-moon-line" aria-hidden="true"></i>
+                    </button>
+                    <a class="nav-language" href="./index.html" lang="en" dir="ltr" aria-label="تبديل اللغة إلى الإنجليزية">
+                        <i class="ri-global-line" aria-hidden="true"></i>
+                        EN
+                    </a>
+                </div>
+            </header>
+
+            <main class="dash-content sessions-content">
+                <div class="sessions-layout">
+                    <section class="card sessions-teachers" aria-labelledby="sessions-teachers-title">
+                        <div class="sessions-teachers__top">
+                            <h2 id="sessions-teachers-title">تفقد المعلمين المتاحين للدعم</h2>
+                            <label class="visually-hidden" for="sessions-specialty">كل التخصصات</label>
+                            <select class="sessions-filter" id="sessions-specialty" name="specialty">
+                                <option selected>كل التخصصات</option>
+                                <option>الفيزياء</option>
+                                <option>الرياضيات</option>
+                                <option>الكيمياء</option>
+                            </select>
+                        </div>
+
+                        <div class="sessions-teachers__list">
+                            <article class="sessions-teacher is-featured">
+                                <img class="sessions-teacher__avatar" src="./assets/session-teacher-1.png" alt="أ.د. عبد الرحمن آل سعود">
+                                <div class="sessions-teacher__copy">
+                                    <h3>أ.د. عبد الرحمن آل سعود</h3>
+                                    <p>أستاذ الفيزياء المتقدمة والكهرباء بالجامعة</p>
+                                    <p class="sessions-teacher__rating">
+                                        <i class="ri-star-fill" aria-hidden="true"></i>
+                                        5.0 (148 تقييم)
+                                    </p>
+                                </div>
+                                <div class="sessions-teacher__action">
+                                    <p class="sessions-teacher__price">45 ريال / ساعة</p>
+                                    <button class="sessions-teacher__pick" type="button">اختيار المعلم</button>
+                                </div>
+                            </article>
+
+                            <article class="sessions-teacher">
+                                <img class="sessions-teacher__avatar" src="./assets/session-teacher-2.png" alt="أ. إيلينا روستوفا">
+                                <div class="sessions-teacher__copy">
+                                    <h3>أ. إيلينا روستوفا</h3>
+                                    <p>معلمة معتمدة للرياضيات وحساب التفاضل</p>
+                                    <p class="sessions-teacher__rating">
+                                        <i class="ri-star-fill" aria-hidden="true"></i>
+                                        4.9 (95 تقييم)
+                                    </p>
+                                </div>
+                                <div class="sessions-teacher__action">
+                                    <p class="sessions-teacher__price">40 ريال / ساعة</p>
+                                    <button class="sessions-teacher__pick" type="button">اختيار المعلم</button>
+                                </div>
+                            </article>
+
+                            <article class="sessions-teacher">
+                                <img class="sessions-teacher__avatar" src="./assets/session-teacher-3.png" alt="أ. ياسين التونسي">
+                                <div class="sessions-teacher__copy">
+                                    <h3>أ. ياسين التونسي</h3>
+                                    <p>خبير الكيمياء العضوية والتحليلية</p>
+                                    <p class="sessions-teacher__rating">
+                                        <i class="ri-star-fill" aria-hidden="true"></i>
+                                        4.8 (54 تقييم)
+                                    </p>
+                                </div>
+                                <div class="sessions-teacher__action">
+                                    <p class="sessions-teacher__price">38 ريال / ساعة</p>
+                                    <button class="sessions-teacher__pick" type="button">اختيار المعلم</button>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="card sessions-booking" aria-labelledby="sessions-booking-title">
+                        <h2 id="sessions-booking-title">حجز الجلسة والتقويم الخاص</h2>
+                        <p class="sessions-booking__intro">اختر معلماً من القائمة لتفقد المواعيد وتأكيد الحجز</p>
+
+                        <form class="sessions-booking__form" action="#" method="post">
+                            <div class="form-group">
+                                <label class="label" for="selected-teacher">المعلم المختار حالياً</label>
+                                <input class="field" id="selected-teacher" name="teacher" type="text" placeholder="يرجى تحديد معلم أولاً" readonly>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="label" for="session-date">اختر تاريخ الجلسة (التقويم المتاح)</label>
+                                <input class="field" id="session-date" name="date" type="date">
+                            </div>
+
+                            <div class="sessions-booking__slots">
+                                <p class="label">الأوقات المتاحة لهذا اليوم</p>
+                                <p class="sessions-booking__hint">يرجى تحديد اليوم والتاريخ أولاً لمشاهدة الساعات</p>
+                            </div>
+
+                            <button class="btn btn-primary sessions-booking__submit" type="submit">
+                                تأكيد الحجز والدفع الفوري
+                            </button>
+                        </form>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

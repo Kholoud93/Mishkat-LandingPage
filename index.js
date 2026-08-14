@@ -696,6 +696,50 @@ function initAccountTypeOptions() {
     });
 }
 
+function initSessionsTeacherPick() {
+    const input = document.getElementById("selected-teacher");
+    if (!input) {
+        return;
+    }
+
+    document.querySelectorAll(".sessions-teacher__pick").forEach((button) => {
+        button.addEventListener("click", () => {
+            const card = button.closest(".sessions-teacher");
+            const name = card?.querySelector("h3")?.textContent?.trim();
+            if (!name) {
+                return;
+            }
+
+            input.value = name;
+            document.querySelectorAll(".sessions-teacher").forEach((item) => {
+                item.classList.toggle("is-featured", item === card);
+            });
+        });
+    });
+}
+
+function initReportsSearch() {
+    const input = document.getElementById("reports-search");
+    const rows = Array.from(document.querySelectorAll(".reports-table tbody tr"));
+    if (!input || !rows.length) {
+        return;
+    }
+
+    const filterRows = () => {
+        const query = input.value.trim().toLowerCase();
+        rows.forEach((row) => {
+            const text = row.textContent?.toLowerCase() || "";
+            row.classList.toggle("is-hidden", Boolean(query) && !text.includes(query));
+        });
+    };
+
+    input.addEventListener("input", filterRows);
+    document.querySelector(".reports-search")?.addEventListener("submit", (event) => {
+        event.preventDefault();
+        filterRows();
+    });
+}
+
 function initApp() {
     initTheme();
     initModals();
@@ -705,6 +749,8 @@ function initApp() {
     initAccordions();
     initOtpInputs();
     initAccountTypeOptions();
+    initSessionsTeacherPick();
+    initReportsSearch();
     initGlobalEvents();
 }
 
