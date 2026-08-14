@@ -5160,6 +5160,7 @@ Responsive Styles
     gap: var(--space-5);
     background: var(--color-surface);
     border-inline-end: 1px solid var(--color-border);
+    overflow: hidden;
 }
 
 .student-dashboard .dash-brand {
@@ -5175,9 +5176,11 @@ Responsive Styles
 .student-dashboard .sidebar-nav {
     flex: 1;
     align-content: start;
+    gap: 0.2rem;
 }
 
 .student-dashboard .sidebar-link {
+    min-height: 2.4rem;
     color: var(--color-text-secondary);
     font-size: var(--font-size-nav);
     font-weight: var(--font-weight-medium);
@@ -7913,5 +7916,396 @@ Responsive Styles
     .course-select {
         min-height: 2.45rem;
         font-size: 0.82rem;
+    }
+}
+
+.student-classroom .classroom-header {
+    gap: var(--space-3);
+}
+
+.student-classroom .classroom-content {
+    padding-block: var(--space-4);
+}
+
+.classroom-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(18rem, 0.85fr);
+    gap: var(--space-4);
+    align-items: stretch;
+    min-height: calc(100vh - 6.5rem);
+}
+
+.classroom-stage,
+.classroom-chat {
+    display: grid;
+    min-width: 0;
+    border-radius: 1rem;
+    background: var(--color-surface);
+}
+
+.classroom-stage {
+    gap: var(--space-4);
+    padding: var(--space-4);
+    align-content: start;
+}
+
+.classroom-stage__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-3);
+}
+
+.classroom-stage__meta {
+    display: grid;
+    gap: 0.45rem;
+    min-width: 0;
+}
+
+.classroom-live {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    width: fit-content;
+    min-height: 1.6rem;
+    padding-inline: 0.7rem;
+    border-radius: var(--radius-pill);
+    background: color-mix(in srgb, var(--color-accent-purple, #7c6cff) 22%, transparent);
+    color: #c4b5fd;
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-semibold);
+}
+
+.classroom-stage__title {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-bold);
+}
+
+.classroom-stage__count {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-body-sm);
+    white-space: nowrap;
+}
+
+.classroom-board {
+    position: relative;
+    display: grid;
+    place-items: end center;
+    min-height: 16rem;
+    padding: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: 0.9rem;
+    background:
+        linear-gradient(180deg, color-mix(in srgb, var(--color-surface-muted) 70%, transparent), transparent),
+        color-mix(in srgb, var(--color-background) 88%, var(--color-surface) 12%);
+}
+
+.classroom-board__tools {
+    position: absolute;
+    inset-block-start: 0.85rem;
+    inset-inline-start: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.classroom-tool {
+    width: 1.15rem;
+    height: 1.15rem;
+    border: 0;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.classroom-tool--blue {
+    background: #5b8def;
+}
+
+.classroom-tool--green {
+    background: var(--color-primary);
+}
+
+.classroom-tool--icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.65rem;
+    height: 1.65rem;
+    border-radius: 0.4rem;
+    background: color-mix(in srgb, var(--color-surface) 80%, transparent);
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+.classroom-board__hint {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-body-sm);
+    text-align: center;
+}
+
+.classroom-videos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-3);
+}
+
+.classroom-video {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-border);
+    background: var(--color-background);
+    aspect-ratio: 16 / 10;
+}
+
+.classroom-video img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.classroom-video__label {
+    position: absolute;
+    inset-block-end: 0.55rem;
+    inset-inline-end: 0.55rem;
+    max-width: calc(100% - 1.1rem);
+    padding: 0.3rem 0.55rem;
+    border-radius: 0.45rem;
+    background: rgb(0 0 0 / 62%);
+    color: #ffffff;
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-medium);
+    overflow-wrap: anywhere;
+}
+
+.classroom-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.classroom-control {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    min-height: 2.4rem;
+    padding-inline: 0.95rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    background: color-mix(in srgb, var(--color-surface-muted) 70%, var(--color-surface) 30%);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-body-sm);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+}
+
+.classroom-control:hover {
+    border-color: var(--color-border-strong);
+    background: var(--color-hover);
+}
+
+.classroom-control--leave {
+    margin-inline-start: auto;
+    border-color: transparent;
+    background: #e11d48;
+    color: #ffffff;
+}
+
+.classroom-control--leave:hover {
+    background: #be123c;
+    color: #ffffff;
+}
+
+.classroom-chat {
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    height: 100%;
+}
+
+.classroom-chat__header {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.classroom-chat__header h2 {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-body-lg);
+    font-weight: var(--font-weight-bold);
+}
+
+.classroom-chat__header h2 i {
+    color: var(--color-primary);
+}
+
+.classroom-chat__header p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-caption);
+}
+
+.classroom-chat__messages {
+    display: grid;
+    align-content: start;
+    gap: var(--space-3);
+    min-height: 12rem;
+    overflow-y: auto;
+    padding-inline-end: 0.15rem;
+}
+
+.classroom-msg {
+    display: grid;
+    gap: 0.35rem;
+    padding: 0.75rem 0.85rem;
+    border: 1px solid transparent;
+    border-radius: 0.75rem;
+    background: color-mix(in srgb, var(--color-background) 70%, var(--color-surface) 30%);
+    border-inline-start-width: 3px;
+}
+
+.classroom-msg p {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-body-sm);
+    line-height: 1.7;
+}
+
+.classroom-msg strong {
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-bold);
+}
+
+.classroom-msg--teacher {
+    background: #50659A33;
+    border-color: color-mix(in srgb, #3b82f6 55%, transparent);
+    border-inline-start-color: #3b82f6;
+}
+
+.classroom-msg--teacher strong {
+    color: var(--color-text-primary);
+}
+
+.classroom-msg--student {
+    background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+    border-color: color-mix(in srgb, var(--color-primary) 55%, transparent);
+    border-inline-start-width: 1px;
+    border-inline-start-color: color-mix(in srgb, var(--color-primary) 55%, transparent);
+    border-inline-end-width: 3px;
+    border-inline-end-color: var(--color-primary);
+}
+
+.classroom-msg--student strong {
+    color: var(--color-primary);
+}
+
+.classroom-msg--system {
+    justify-self: center;
+    width: fit-content;
+    max-width: 100%;
+    padding: 0.45rem 0.85rem;
+    border: 1px solid var(--color-border);
+    border-inline-start-width: 1px;
+    border-radius: 0.65rem;
+    background: color-mix(in srgb, var(--color-text-primary) 10%, transparent);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-caption);
+    text-align: center;
+}
+
+.classroom-chat__composer {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+}
+
+.classroom-chat__composer .field {
+    min-height: 2.5rem;
+}
+
+.classroom-chat__send {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #0a111d;
+    cursor: pointer;
+}
+
+.classroom-chat__send:hover {
+    background: var(--color-primary-hover);
+    color: #ffffff;
+}
+
+@media (max-width: 1199px) {
+    .classroom-layout {
+        grid-template-columns: minmax(0, 1.35fr) minmax(16rem, 0.9fr);
+        min-height: auto;
+    }
+
+    .classroom-board {
+        min-height: 14rem;
+    }
+}
+
+@media (max-width: 1023px) {
+    .classroom-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .classroom-chat {
+        order: 1;
+        min-height: 22rem;
+    }
+
+    .classroom-controls {
+        justify-content: stretch;
+    }
+
+    .classroom-control {
+        flex: 1 1 auto;
+    }
+
+    .classroom-control--leave {
+        margin-inline-start: 0;
+        width: 100%;
+        order: 1;
+    }
+}
+
+@media (max-width: 767px) {
+    .classroom-stage__top {
+        flex-direction: column;
+    }
+
+    .classroom-videos {
+        grid-template-columns: 1fr;
+    }
+
+    .classroom-board {
+        min-height: 12rem;
+    }
+
+    .classroom-control {
+        width: 100%;
     }
 }
