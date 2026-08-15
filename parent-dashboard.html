@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشكاة | بوابة ولي الأمر</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body class="student-dashboard parent-dashboard app-shell">
+    <div class="app-layout">
+        <aside class="sidebar" id="mobile-menu" data-sidebar aria-hidden="true">
+            <a class="dash-brand landing-brand landing-brand--image" href="./parent-dashboard.html">
+                <img class="landing-logo" src="./assets/logo.png" alt="شعار مشكاة">
+            </a>
+
+            <nav class="sidebar-nav" aria-label="تنقل بوابة ولي الأمر">
+                <a class="sidebar-link is-active" href="./parent-dashboard.html" aria-current="page">
+                    <i class="ri-apps-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الرئيسية</span>
+                </a>
+                <a class="sidebar-link" href="./parent-children.html">
+                    <i class="ri-user-heart-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">أطفالي</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-line-chart-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">التقدم الأكاديمي</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-clipboard-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الواجبات</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-shield-check-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الاختبارات</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-calendar-check-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الحضور</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-calendar-schedule-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الجلسات الخاصة</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-wallet-3-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">المدفوعات</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-file-chart-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">التقارير</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-chat-3-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الرسائل</span>
+                </a>
+            </nav>
+
+            <div class="dash-profile">
+                <div class="parent-sidebar-child">
+                    <span class="avatar parent-sidebar-child__avatar" aria-hidden="true">أ</span>
+                    <div class="parent-sidebar-child__copy">
+                        <p class="parent-sidebar-child__name">أحمد</p>
+                        <p class="parent-sidebar-child__meta">الصف العاشر</p>
+                    </div>
+                    <span class="parent-badge parent-badge--warn">يحتاج متابعة</span>
+                </div>
+                <a class="dash-profile__info" href="#">
+                    <span class="avatar dash-profile__avatar" aria-hidden="true">AE</span>
+                    <div class="dash-profile__copy">
+                        <p class="dash-profile__name">عبدالله الشرقاوي</p>
+                    </div>
+                </a>
+                <a class="btn btn-ghost btn-sm dash-profile__logout" href="./login.html">
+                    <i class="ri-logout-box-r-line" aria-hidden="true"></i>
+                    تسجيل الخروج
+                </a>
+            </div>
+        </aside>
+
+        <div class="dash-shell">
+            <header class="dash-header">
+                <button class="btn btn-ghost btn-md sidebar-toggle" type="button" data-sidebar-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="فتح القائمة">
+                    <i class="ri-menu-line" aria-hidden="true"></i>
+                </button>
+
+                <h1 class="dash-header__title">بوابة ولي الأمر</h1>
+
+                <div class="dash-header__actions">
+                    <button class="dash-icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="تبديل الوضع">
+                        <i class="ri-moon-line" aria-hidden="true"></i>
+                    </button>
+                    <a class="nav-language" href="./index.html" lang="en" dir="ltr" aria-label="تبديل اللغة إلى الإنجليزية">
+                        <i class="ri-global-line" aria-hidden="true"></i>
+                        EN
+                    </a>
+                    <button class="dash-icon-btn" type="button" aria-label="الإشعارات">
+                        <i class="ri-notification-3-line" aria-hidden="true"></i>
+                        <span class="dash-icon-btn__dot" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </header>
+
+            <p class="parent-live">
+                <i class="ri-vidicon-fill" aria-hidden="true"></i>
+                أحمد في حصة الرياضيات المباشرة الآن
+                <span>أ. أحمد الراشدي • بدأ منذ 14 دقيقة</span>
+            </p>
+
+            <div class="parent-toolbar">
+                <div class="parent-toolbar__row">
+                    <div class="parent-toolbar__start">
+                        <p class="dash-kicker parent-toolbar__kicker">نظرة عامة</p>
+                        <div class="parent-kids" role="group" aria-label="الأبناء">
+                            <button class="parent-kid is-active" type="button">
+                                <span class="avatar parent-kid__avatar parent-kid__avatar--ahmed" aria-hidden="true">
+                                    أ
+                                    <span class="parent-kid__dot"></span>
+                                </span>
+                                أحمد
+                            </button>
+                            <button class="parent-kid" type="button">
+                                <span class="avatar parent-kid__avatar parent-kid__avatar--layla" aria-hidden="true">ل</span>
+                                ليلى
+                            </button>
+                            <button class="parent-kid" type="button">
+                                <span class="avatar parent-kid__avatar parent-kid__avatar--omar" aria-hidden="true">ع</span>
+                                عمر
+                            </button>
+                        </div>
+                    </div>
+                    <form class="search parent-search" role="search" action="./parent-dashboard.html" method="get">
+                        <i class="ri-search-line search-icon" aria-hidden="true"></i>
+                        <label class="visually-hidden" for="parent-search">بحث</label>
+                        <input class="search-field" id="parent-search" name="q" type="search" placeholder="بحث...">
+                    </form>
+                </div>
+            </div>
+
+            <main class="dash-content parent-content">
+                <section class="card parent-alert" aria-label="تنبيه متابعة">
+                    <span class="parent-alert__icon" aria-hidden="true">
+                        <i class="ri-error-warning-fill"></i>
+                    </span>
+                    <div class="parent-alert__copy">
+                        <h2>يحتاج متابعة — أحمد</h2>
+                        <p>غاب عن حصة الإنجليزية اليوم. درجات العلوم في تراجع.</p>
+                    </div>
+                    <div class="parent-alert__actions">
+                        <a class="btn btn-ghost btn-sm" href="#">عرض الحضور</a>
+                        <a class="btn btn-primary btn-sm" href="#">حجز جلسة</a>
+                    </div>
+                </section>
+
+                <div class="parent-overview">
+                    <section class="card dash-panel parent-family" aria-labelledby="parent-family-title">
+                        <header class="dash-panel__head">
+                            <h2 id="parent-family-title">نظرة عائلية</h2>
+                            <a class="dash-panel__link" href="#">كل الأطفال &gt;</a>
+                        </header>
+                        <ul class="parent-family__list">
+                            <li class="parent-family__item">
+                                <div class="parent-family__info">
+                                    <span class="avatar parent-kid__avatar parent-kid__avatar--ahmed" aria-hidden="true">أ</span>
+                                    <div class="parent-family__copy">
+                                        <h3>الصف العاشر أحمد</h3>
+                                        <p>2/3 حصص - 2 مهمة مستحقة</p>
+                                    </div>
+                                </div>
+                                <div class="parent-family__status">
+                                    <span class="parent-badge parent-badge--warn">
+                                        <i class="ri-error-warning-fill" aria-hidden="true"></i>
+                                        يحتاج متابعة
+                                    </span>
+                                    <i class="ri-arrow-left-s-line parent-family__chevron" aria-hidden="true"></i>
+                                </div>
+                            </li>
+                            <li class="parent-family__item">
+                                <div class="parent-family__info">
+                                    <span class="avatar parent-kid__avatar parent-kid__avatar--layla" aria-hidden="true">ل</span>
+                                    <div class="parent-family__copy">
+                                        <h3>الصف الثامن ليلى</h3>
+                                        <p>3/3 حصص - 1 مهمة مستحقة</p>
+                                    </div>
+                                </div>
+                                <div class="parent-family__status">
+                                    <span class="parent-badge parent-badge--ok">
+                                        <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
+                                        على المسار
+                                    </span>
+                                    <i class="ri-arrow-left-s-line parent-family__chevron" aria-hidden="true"></i>
+                                </div>
+                            </li>
+                            <li class="parent-family__item">
+                                <div class="parent-family__info">
+                                    <span class="avatar parent-kid__avatar parent-kid__avatar--omar" aria-hidden="true">ع</span>
+                                    <div class="parent-family__copy">
+                                        <h3>الصف السادس عمر</h3>
+                                        <p>1/3 حصص - 4 مهمة مستحقة</p>
+                                    </div>
+                                </div>
+                                <div class="parent-family__status">
+                                    <span class="parent-badge parent-badge--danger">
+                                        <i class="ri-error-warning-fill" aria-hidden="true"></i>
+                                        يتطلب إجراء
+                                    </span>
+                                    <i class="ri-arrow-left-s-line parent-family__chevron" aria-hidden="true"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="dash-stats parent-stats" aria-label="مؤشرات سريعة">
+                        <article class="card dash-stat dash-stat--plain dash-stat--accent-green">
+                            <div class="dash-stat__top">
+                                <span class="dash-stat__badge dash-stat__badge--green" aria-hidden="true">
+                                    <i class="ri-calendar-check-line"></i>
+                                </span>
+                                <p class="dash-stat__value dash-stat__value--green">88%</p>
+                            </div>
+                            <p class="dash-stat__label">الحضور</p>
+                        </article>
+                        <article class="card dash-stat dash-stat--plain dash-stat--accent-blue">
+                            <div class="dash-stat__top">
+                                <span class="dash-stat__badge dash-stat__badge--blue" aria-hidden="true">
+                                    <i class="ri-medal-line"></i>
+                                </span>
+                                <p class="dash-stat__value dash-stat__value--blue">3.6</p>
+                            </div>
+                            <p class="dash-stat__label">المعدل</p>
+                        </article>
+                        <article class="card dash-stat dash-stat--plain dash-stat--accent-orange">
+                            <div class="dash-stat__top">
+                                <span class="dash-stat__badge dash-stat__badge--orange" aria-hidden="true">
+                                    <i class="ri-clipboard-line"></i>
+                                </span>
+                                <p class="dash-stat__value dash-stat__value--orange">41</p>
+                            </div>
+                            <p class="dash-stat__label">الواجبات</p>
+                        </article>
+                        <article class="card dash-stat dash-stat--plain dash-stat--accent-green">
+                            <div class="dash-stat__top">
+                                <span class="dash-stat__badge dash-stat__badge--green" aria-hidden="true">
+                                    <i class="ri-vidicon-line"></i>
+                                </span>
+                                <p class="dash-stat__value dash-stat__value--green">2</p>
+                            </div>
+                            <p class="dash-stat__label">الجلسات</p>
+                        </article>
+                    </section>
+                </div>
+
+                <div class="parent-layout">
+                    <div class="parent-layout__main">
+                        <section class="card dash-panel parent-today" aria-labelledby="parent-today-title">
+                            <header class="dash-panel__head">
+                                <h2 id="parent-today-title">
+                                    <span class="parent-today__mark" aria-hidden="true"></span>
+                                    اليوم — أحمد
+                                </h2>
+                                <a class="dash-panel__link" href="#">كل الواجبات</a>
+                            </header>
+                            <ol class="parent-today__list">
+                                <li class="parent-today__item parent-today__item--math">
+                                    <div class="parent-today__info">
+                                        <h3>ورقة عمل المشتقات</h3>
+                                        <div class="parent-today__tags">
+                                            <span class="parent-today__subject parent-today__subject--math">رياضيات</span>
+                                            <span class="parent-badge parent-badge--warn">قيد الانتظار</span>
+                                        </div>
+                                    </div>
+                                    <p class="parent-today__when">اليوم 5:00 م</p>
+                                </li>
+                                <li class="parent-today__item parent-today__item--science">
+                                    <div class="parent-today__info">
+                                        <h3>تقرير مختبر بيولوجيا الخلية</h3>
+                                        <div class="parent-today__tags">
+                                            <span class="parent-today__subject parent-today__subject--science">العلوم</span>
+                                            <span class="parent-badge parent-badge--info">قيد التنفيذ</span>
+                                        </div>
+                                    </div>
+                                    <p class="parent-today__when">28 يونيو</p>
+                                </li>
+                                <li class="parent-today__item parent-today__item--english">
+                                    <div class="parent-today__info">
+                                        <h3>المقال الوصفي</h3>
+                                        <div class="parent-today__tags">
+                                            <span class="parent-today__subject parent-today__subject--english">اللغة الإنجليزية</span>
+                                            <span class="parent-badge parent-badge--ok">مُسلّم</span>
+                                        </div>
+                                    </div>
+                                    <p class="parent-today__when">مُسلّم</p>
+                                </li>
+                                <li class="parent-today__item parent-today__item--history">
+                                    <div class="parent-today__info">
+                                        <h3>تحليل الحرب العالمية الثانية</h3>
+                                        <div class="parent-today__tags">
+                                            <span class="parent-today__subject parent-today__subject--history">التاريخ</span>
+                                            <span class="parent-badge parent-badge--ok">مصحح</span>
+                                        </div>
+                                    </div>
+                                    <p class="parent-today__when">15 يونيو 88%</p>
+                                </li>
+                            </ol>
+                        </section>
+
+                        <section class="parent-subjects" aria-labelledby="parent-subjects-title">
+                            <header class="dash-panel__head">
+                                <h2 id="parent-subjects-title">
+                                    <span class="parent-today__mark" aria-hidden="true"></span>
+                                    أداء المواد — أحمد
+                                </h2>
+                                <a class="dash-panel__link" href="#">التقرير الكامل &gt;</a>
+                            </header>
+                    <div class="parent-subjects__grid">
+                        <article class="card parent-subject">
+                            <div class="parent-subject__top">
+                                <span class="parent-subject__icon parent-subject__icon--green" aria-hidden="true">#</span>
+                                <h3>الرياضيات</h3>
+                                <i class="ri-line-chart-line parent-subject__trend" aria-hidden="true"></i>
+                            </div>
+                            <strong>87%</strong>
+                            <div class="parent-subject__track">
+                                <span class="parent-subject__bar" aria-hidden="true">
+                                    <span class="parent-subject__fill parent-subject__fill--green parent-subject__fill--87"></span>
+                                </span>
+                                <span class="parent-subject__goal">90%</span>
+                            </div>
+                        </article>
+                        <article class="card parent-subject">
+                            <div class="parent-subject__top">
+                                <span class="parent-subject__icon parent-subject__icon--orange" aria-hidden="true">#</span>
+                                <h3>اللغة العربية</h3>
+                                <i class="ri-line-chart-line parent-subject__trend" aria-hidden="true"></i>
+                            </div>
+                            <strong>91%</strong>
+                            <div class="parent-subject__track">
+                                <span class="parent-subject__bar" aria-hidden="true">
+                                    <span class="parent-subject__fill parent-subject__fill--orange parent-subject__fill--91"></span>
+                                </span>
+                            </div>
+                        </article>
+                        <article class="card parent-subject">
+                            <div class="parent-subject__top">
+                                <span class="parent-subject__icon parent-subject__icon--blue" aria-hidden="true">#</span>
+                                <h3>العلوم</h3>
+                                <i class="ri-line-chart-line parent-subject__trend" aria-hidden="true"></i>
+                            </div>
+                            <strong>74%</strong>
+                            <div class="parent-subject__track">
+                                <span class="parent-subject__bar" aria-hidden="true">
+                                    <span class="parent-subject__fill parent-subject__fill--blue parent-subject__fill--74"></span>
+                                </span>
+                            </div>
+                        </article>
+                        <article class="card parent-subject">
+                            <div class="parent-subject__top">
+                                <span class="parent-subject__icon parent-subject__icon--cyan" aria-hidden="true">#</span>
+                                <h3>اللغة الإنجليزية</h3>
+                                <i class="ri-line-chart-line parent-subject__trend" aria-hidden="true"></i>
+                            </div>
+                            <strong>79%</strong>
+                            <div class="parent-subject__track">
+                                <span class="parent-subject__bar" aria-hidden="true">
+                                    <span class="parent-subject__fill parent-subject__fill--cyan parent-subject__fill--79"></span>
+                                </span>
+                            </div>
+                        </article>
+                        <article class="card parent-subject">
+                            <div class="parent-subject__top">
+                                <span class="parent-subject__icon parent-subject__icon--purple" aria-hidden="true">#</span>
+                                <h3>التربية الفنية</h3>
+                                <i class="ri-line-chart-line parent-subject__trend" aria-hidden="true"></i>
+                            </div>
+                            <strong>88%</strong>
+                            <div class="parent-subject__track">
+                                <span class="parent-subject__bar" aria-hidden="true">
+                                    <span class="parent-subject__fill parent-subject__fill--purple parent-subject__fill--88"></span>
+                                </span>
+                            </div>
+                        </article>
+                        <article class="card parent-subject parent-subject--alert">
+                            <div class="parent-subject__top">
+                                <span class="parent-subject__icon parent-subject__icon--red" aria-hidden="true">#</span>
+                                <h3>التاريخ</h3>
+                                <i class="ri-line-chart-line parent-subject__trend" aria-hidden="true"></i>
+                            </div>
+                            <strong>68%</strong>
+                            <div class="parent-subject__track">
+                                <span class="parent-subject__bar" aria-hidden="true">
+                                    <span class="parent-subject__fill parent-subject__fill--red parent-subject__fill--68"></span>
+                                </span>
+                            </div>
+                            <p class="parent-subject__warn">
+                                <i class="ri-error-warning-fill" aria-hidden="true"></i>
+                                أقل من 75%
+                            </p>
+                        </article>
+                    </div>
+                </section>
+                    </div>
+
+                    <div class="parent-layout__side">
+                        <section class="card dash-panel parent-path" aria-labelledby="parent-path-title">
+                            <header class="dash-panel__head">
+                                <h2 id="parent-path-title">مسار الدرجات</h2>
+                            </header>
+                            <div class="parent-path__plot" role="img" aria-label="مسار الدرجات">
+                                <svg class="parent-path__svg" viewBox="0 0 320 88" preserveAspectRatio="none" aria-hidden="true">
+                                    <polyline class="parent-path__line" points="8,64 62,58 116,42 170,38 224,22 312,16" fill="none"></polyline>
+                                </svg>
+                            </div>
+                        </section>
+
+                        <section class="card dash-panel parent-session" aria-labelledby="parent-session-title">
+                            <header class="dash-panel__head">
+                                <h2 id="parent-session-title">الجلسة الخاصة القادمة</h2>
+                            </header>
+                            <div class="parent-session__person">
+                                <span class="avatar parent-session__avatar" aria-hidden="true">أ</span>
+                                <div class="parent-session__copy">
+                                    <p class="parent-session__teacher">أ. أحمد الراشدي</p>
+                                    <span class="parent-today__subject parent-today__subject--math">
+                                        <span class="parent-session__dot" aria-hidden="true"></span>
+                                        الرياضيات
+                                    </span>
+                                </div>
+                            </div>
+                            <p class="parent-session__meta">
+                                <i class="ri-time-line" aria-hidden="true"></i>
+                                اليوم، 4:00 م • 60 دقيقة
+                            </p>
+                            <div class="parent-session__actions">
+                                <a class="btn btn-primary btn-sm parent-session__join" href="#">عرض الجلسة</a>
+                                <a class="btn btn-ghost btn-sm parent-session__book" href="#">
+                                    <i class="ri-add-line" aria-hidden="true"></i>
+                                    احجز
+                                </a>
+                            </div>
+                        </section>
+
+                        <section class="card dash-panel parent-msgs" aria-labelledby="parent-msgs-title">
+                            <header class="dash-panel__head">
+                                <h2 id="parent-msgs-title">الرسائل</h2>
+                                <a class="dash-panel__link" href="#">عرض الكل</a>
+                            </header>
+                            <ul class="parent-msgs__list">
+                                <li class="parent-msgs__item">
+                                    <span class="parent-msgs__status" aria-hidden="true"></span>
+                                    <span class="avatar parent-msgs__avatar" aria-hidden="true">أ</span>
+                                    <div class="parent-msgs__copy">
+                                        <div class="parent-msgs__row">
+                                            <p>أ. أحمد</p>
+                                            <time datetime="2026-08-15T11:00">منذ ساعتين</time>
+                                        </div>
+                                        <p class="parent-msgs__preview">كيف يجد أحمد فصل المشتقات؟</p>
+                                    </div>
+                                </li>
+                                <li class="parent-msgs__item">
+                                    <span class="parent-msgs__status" aria-hidden="true"></span>
+                                    <span class="avatar parent-msgs__avatar" aria-hidden="true">س</span>
+                                    <div class="parent-msgs__copy">
+                                        <div class="parent-msgs__row">
+                                            <p>د. سارة</p>
+                                            <time datetime="2026-08-14">أمس</time>
+                                        </div>
+                                        <p class="parent-msgs__preview">تقرير أحمد في العلوم يحتاج مراجعة</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

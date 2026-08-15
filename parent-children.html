@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشكاة | أطفالي</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body class="student-dashboard parent-dashboard parent-children-page app-shell">
+    <div class="app-layout">
+        <aside class="sidebar" id="mobile-menu" data-sidebar aria-hidden="true">
+            <a class="dash-brand landing-brand landing-brand--image" href="./parent-dashboard.html">
+                <img class="landing-logo" src="./assets/logo.png" alt="شعار مشكاة">
+            </a>
+
+            <nav class="sidebar-nav" aria-label="تنقل بوابة ولي الأمر">
+                <a class="sidebar-link" href="./parent-dashboard.html">
+                    <i class="ri-apps-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الرئيسية</span>
+                </a>
+                <a class="sidebar-link is-active" href="./parent-children.html" aria-current="page">
+                    <i class="ri-user-heart-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">أطفالي</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-line-chart-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">التقدم الأكاديمي</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-clipboard-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الواجبات</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-shield-check-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الاختبارات</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-calendar-check-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الحضور</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-calendar-schedule-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الجلسات الخاصة</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-wallet-3-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">المدفوعات</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-file-chart-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">التقارير</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-chat-3-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الرسائل</span>
+                </a>
+            </nav>
+
+            <div class="dash-profile">
+                <div class="parent-sidebar-child">
+                    <span class="avatar parent-sidebar-child__avatar" aria-hidden="true">أ</span>
+                    <div class="parent-sidebar-child__copy">
+                        <p class="parent-sidebar-child__name">أحمد</p>
+                        <p class="parent-sidebar-child__meta">الصف العاشر</p>
+                    </div>
+                    <span class="parent-badge parent-badge--warn">يحتاج متابعة</span>
+                </div>
+                <a class="dash-profile__info" href="#">
+                    <span class="avatar dash-profile__avatar" aria-hidden="true">AE</span>
+                    <div class="dash-profile__copy">
+                        <p class="dash-profile__name">عبدالله الشرقاوي</p>
+                    </div>
+                </a>
+                <a class="btn btn-ghost btn-sm dash-profile__logout" href="./login.html">
+                    <i class="ri-logout-box-r-line" aria-hidden="true"></i>
+                    تسجيل الخروج
+                </a>
+            </div>
+        </aside>
+
+        <div class="dash-shell">
+            <header class="dash-header">
+                <button class="btn btn-ghost btn-md sidebar-toggle" type="button" data-sidebar-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="فتح القائمة">
+                    <i class="ri-menu-line" aria-hidden="true"></i>
+                </button>
+
+                <h1 class="dash-header__title">بوابة ولي الأمر</h1>
+
+                <div class="dash-header__actions">
+                    <button class="dash-icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="تبديل الوضع">
+                        <i class="ri-moon-line" aria-hidden="true"></i>
+                    </button>
+                    <a class="nav-language" href="./index.html" lang="en" dir="ltr" aria-label="تبديل اللغة إلى الإنجليزية">
+                        <i class="ri-global-line" aria-hidden="true"></i>
+                        EN
+                    </a>
+                    <button class="dash-icon-btn" type="button" aria-label="الإشعارات">
+                        <i class="ri-notification-3-line" aria-hidden="true"></i>
+                        <span class="dash-icon-btn__dot" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </header>
+
+            <main class="dash-content parent-children">
+                <div class="parent-children__head">
+                    <div class="parent-children__intro">
+                        <h2>أطفالي</h2>
+                        <p>3 أطفال مرتبطون بحسابك</p>
+                    </div>
+                    <a class="btn btn-primary btn-sm parent-children__link" href="#">
+                        <i class="ri-add-line" aria-hidden="true"></i>
+                        ربط طفل
+                    </a>
+                </div>
+
+                <div class="parent-children__grid">
+                    <article class="card parent-child-card parent-child-card--ahmed">
+                        <div class="parent-child-card__top">
+                            <span class="avatar parent-kid__avatar parent-kid__avatar--ahmed" aria-hidden="true">أ</span>
+                            <div class="parent-child-card__who">
+                                <h3>أحمد</h3>
+                                <p>الصف العاشر</p>
+                            </div>
+                            <span class="parent-badge parent-badge--warn">يحتاج متابعة</span>
+                        </div>
+                        <dl class="parent-child-card__stats">
+                            <div>
+                                <dt>المعدل</dt>
+                                <dd>3.6</dd>
+                            </div>
+                            <div>
+                                <dt>الحضور</dt>
+                                <dd>88%</dd>
+                            </div>
+                            <div>
+                                <dt>المهام</dt>
+                                <dd>2</dd>
+                            </div>
+                        </dl>
+                        <ul class="parent-child-card__subjects">
+                            <li>
+                                <span class="parent-child-card__dot parent-child-card__dot--green" aria-hidden="true"></span>
+                                <span>الرياضيات</span>
+                                <span class="parent-child-card__bar" aria-hidden="true">
+                                    <span class="parent-child-card__fill parent-child-card__fill--green parent-subject__fill--87"></span>
+                                </span>
+                                <strong>87%</strong>
+                            </li>
+                            <li>
+                                <span class="parent-child-card__dot parent-child-card__dot--blue" aria-hidden="true"></span>
+                                <span>العلوم</span>
+                                <span class="parent-child-card__bar" aria-hidden="true">
+                                    <span class="parent-child-card__fill parent-child-card__fill--blue parent-subject__fill--74"></span>
+                                </span>
+                                <strong>74%</strong>
+                            </li>
+                            <li>
+                                <span class="parent-child-card__dot parent-child-card__dot--orange" aria-hidden="true"></span>
+                                <span>اللغة العربية</span>
+                                <span class="parent-child-card__bar" aria-hidden="true">
+                                    <span class="parent-child-card__fill parent-child-card__fill--orange parent-subject__fill--91"></span>
+                                </span>
+                                <strong>91%</strong>
+                            </li>
+                            <li>
+                                <span class="parent-child-card__dot parent-child-card__dot--cyan" aria-hidden="true"></span>
+                                <span>اللغة الإنجليزية</span>
+                                <span class="parent-child-card__bar" aria-hidden="true">
+                                    <span class="parent-child-card__fill parent-child-card__fill--cyan parent-subject__fill--79"></span>
+                                </span>
+                                <strong>79%</strong>
+                            </li>
+                        </ul>
+                        <div class="parent-child-card__foot">
+                            <a class="btn btn-sm parent-child-card__progress" href="#">عرض التقدم</a>
+                            <a class="parent-child-card__msg" href="#" aria-label="الرسائل">
+                                <i class="ri-chat-3-line" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="card parent-child-card parent-child-card--layla">
+                        <div class="parent-child-card__top">
+                            <span class="avatar parent-kid__avatar parent-kid__avatar--layla" aria-hidden="true">ل</span>
+                            <div class="parent-child-card__who">
+                                <h3>ليلى</h3>
+                                <p>الصف الثامن</p>
+                            </div>
+                            <span class="parent-badge parent-badge--ok">على المسار</span>
+                        </div>
+                        <dl class="parent-child-card__stats">
+                            <div>
+                                <dt>المعدل</dt>
+                                <dd>3.8</dd>
+                            </div>
+                            <div>
+                                <dt>الحضور</dt>
+                                <dd>96%</dd>
+                            </div>
+                            <div>
+                                <dt>المهام</dt>
+                                <dd>1</dd>
+                            </div>
+                        </dl>
+                        <ul class="parent-child-card__subjects">
+                            <li>
+                                <span class="parent-child-card__dot parent-child-card__dot--green" aria-hidden="true"></span>
+                                <span>الرياضيات</span>
+                                <span class="parent-child-card__bar" aria-hidden="true">
+                                    <span class="parent-child-card__fill parent-child-card__fill--green"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="parent-child-card__dot parent-child-card__dot--blue" aria-hidden="true"></span>
+                                <span>العلوم</span>
+                                <span class="parent-child-card__bar" aria-hidden="true">
+                                    <span class="parent-child-card__fill parent-child-card__fill--blue"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="parent-child-card__dot parent-child-card__dot--orange" aria-hidden="true"></span>
+                                <span>اللغة العربية</span>
+                                <span class="parent-child-card__bar" aria-hidden="true">
+                                    <span class="parent-child-card__fill parent-child-card__fill--orange"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="parent-child-card__dot parent-child-card__dot--cyan" aria-hidden="true"></span>
+                                <span>اللغة الإنجليزية</span>
+                                <span class="parent-child-card__bar" aria-hidden="true">
+                                    <span class="parent-child-card__fill parent-child-card__fill--cyan"></span>
+                                </span>
+                            </li>
+                        </ul>
+                        <div class="parent-child-card__foot">
+                            <a class="btn btn-sm parent-child-card__progress" href="#">عرض التقدم</a>
+                            <a class="parent-child-card__msg" href="#" aria-label="الرسائل">
+                                <i class="ri-chat-3-line" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="card parent-child-card parent-child-card--omar">
+                        <div class="parent-child-card__top">
+                            <span class="avatar parent-kid__avatar parent-kid__avatar--omar" aria-hidden="true">ع</span>
+                            <div class="parent-child-card__who">
+                                <h3>عمر</h3>
+                                <p>الصف السادس</p>
+                            </div>
+                            <span class="parent-badge parent-badge--danger">يتطلب إجراء</span>
+                        </div>
+                        <dl class="parent-child-card__stats">
+                            <div>
+                                <dt>المعدل</dt>
+                                <dd>2.9</dd>
+                            </div>
+                            <div>
+                                <dt>الحضور</dt>
+                                <dd>72%</dd>
+                            </div>
+                            <div>
+                                <dt>المهام</dt>
+                                <dd>4</dd>
+                            </div>
+                        </dl>
+                        <ul class="parent-child-card__subjects">
+                            <li>
+                                <span class="parent-child-card__dot parent-child-card__dot--green" aria-hidden="true"></span>
+                                <span>الرياضيات</span>
+                                <span class="parent-child-card__bar" aria-hidden="true">
+                                    <span class="parent-child-card__fill parent-child-card__fill--green"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="parent-child-card__dot parent-child-card__dot--blue" aria-hidden="true"></span>
+                                <span>العلوم</span>
+                                <span class="parent-child-card__bar" aria-hidden="true">
+                                    <span class="parent-child-card__fill parent-child-card__fill--blue"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="parent-child-card__dot parent-child-card__dot--orange" aria-hidden="true"></span>
+                                <span>اللغة العربية</span>
+                                <span class="parent-child-card__bar" aria-hidden="true">
+                                    <span class="parent-child-card__fill parent-child-card__fill--orange"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="parent-child-card__dot parent-child-card__dot--cyan" aria-hidden="true"></span>
+                                <span>اللغة الإنجليزية</span>
+                                <span class="parent-child-card__bar" aria-hidden="true">
+                                    <span class="parent-child-card__fill parent-child-card__fill--cyan"></span>
+                                </span>
+                            </li>
+                        </ul>
+                        <div class="parent-child-card__foot">
+                            <a class="btn btn-sm parent-child-card__progress" href="#">عرض التقدم</a>
+                            <a class="parent-child-card__msg" href="#" aria-label="الرسائل">
+                                <i class="ri-chat-3-line" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

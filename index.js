@@ -685,14 +685,40 @@ function initOtpInputs() {
 function initAccountTypeOptions() {
     document.querySelectorAll("[data-account-type]").forEach((group) => {
         const options = Array.from(group.querySelectorAll(".account-type-option"));
+        const form = group.closest("[data-login-form]");
+        const requestedType = new URLSearchParams(window.location.search).get("account_type");
+
+        const applyLoginRoute = () => {
+            if (!form) {
+                return;
+            }
+
+            const selected = group.querySelector("input:checked");
+            form.setAttribute("action", selected?.value === "parent" ? "./parent-dashboard.html" : "./dashboard.html");
+        };
+
+        if (requestedType) {
+            options.forEach((option) => {
+                const input = option.querySelector("input");
+                if (!input) {
+                    return;
+                }
+
+                input.checked = input.value === requestedType;
+                option.classList.toggle("is-selected", input.checked);
+            });
+        }
 
         options.forEach((option) => {
             option.addEventListener("change", () => {
                 options.forEach((item) => {
                     item.classList.toggle("is-selected", item.querySelector("input")?.checked);
                 });
+                applyLoginRoute();
             });
         });
+
+        applyLoginRoute();
     });
 }
 
