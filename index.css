@@ -886,7 +886,7 @@ Dropdown
     width: 2.1rem;
     height: 2.1rem;
     flex: none;
-    font-size: 0.95rem;
+    font-size: var(--font-size-h4);
 }
 
 .dash-notify__icon--live {
@@ -1155,7 +1155,7 @@ Landing Page
 }
 
 .nav-language__icon {
-    font-size: 0.9rem;
+    font-size: var(--font-size-body-lg);
     line-height: 1;
 }
 
@@ -1179,7 +1179,7 @@ Landing Page
 }
 
 .theme-toggle i {
-    font-size: 1.15rem;
+    font-size: var(--font-size-h3);
     line-height: 1;
 }
 
@@ -1276,7 +1276,7 @@ Landing Page
 .hero-title--focused {
     max-width: 25rem;
     font-size: var(--font-size-display);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     letter-spacing: -0.03em;
     line-height: var(--line-height-tight);
 }
@@ -1510,7 +1510,7 @@ Landing Page
     border-radius: 0.95rem;
     border: 1px solid var(--color-border);
     background: color-mix(in srgb, var(--color-surface) 94%, transparent);
-    font-size: 1.15rem;
+    font-size: var(--font-size-h3);
     justify-self: start;
 }
 
@@ -1580,7 +1580,7 @@ Landing Page
     border-radius: 0.8rem;
     border: 1px solid var(--color-border);
     background: color-mix(in srgb, var(--color-surface) 94%, transparent);
-    font-size: 1rem;
+    font-size: var(--font-size-h4);
 }
 
 .step-icon-box--green {
@@ -1610,7 +1610,7 @@ Landing Page
     justify-content: center;
     border-radius: 50%;
     color: #0b1119;
-    font-size: 0.52rem;
+    font-size: var(--font-size-badge);
     font-weight: var(--font-weight-bold);
     box-shadow: 0 0 0 2px var(--color-background);
 }
@@ -1773,7 +1773,7 @@ Landing Page
 
 .material-meta i {
     color: var(--color-primary);
-    font-size: 0.95rem;
+    font-size: var(--font-size-h4);
 }
 
 .material-card__cta {
@@ -1883,13 +1883,13 @@ Landing Page
 }
 
 .teachers-section .teacher-rating i {
-    font-size: 0.9rem;
+    font-size: var(--font-size-body-lg);
     color: var(--color-primary);
 }
 
 .teachers-section .teacher-students i {
     color: var(--color-primary);
-    font-size: 0.95rem;
+    font-size: var(--font-size-h4);
 }
 
 .teacher-card__cta,
@@ -1990,7 +1990,7 @@ Landing Page
     border-radius: 0.85rem;
     border: 1px solid var(--color-border);
     background: color-mix(in srgb, var(--color-surface) 94%, transparent);
-    font-size: 1.15rem;
+    font-size: var(--font-size-h3);
 }
 
 .session-step__icon--green {
@@ -2020,7 +2020,7 @@ Landing Page
     justify-content: center;
     border-radius: 50%;
     color: #0b1119;
-    font-size: 0.55rem;
+    font-size: var(--font-size-badge);
     font-weight: var(--font-weight-bold);
     box-shadow: 0 0 0 2px var(--color-background);
 }
@@ -2151,7 +2151,7 @@ Landing Page
     border-radius: 50%;
     border: 1px solid var(--color-border);
     background: color-mix(in srgb, var(--color-surface) 92%, transparent);
-    font-size: 1rem;
+    font-size: var(--font-size-h4);
 }
 
 .live-feature__icon--green {
@@ -2268,7 +2268,7 @@ Landing Page
     border-radius: 50%;
     border: 1px solid var(--color-border);
     background: color-mix(in srgb, var(--color-surface) 92%, transparent);
-    font-size: 1rem;
+    font-size: var(--font-size-h4);
 }
 
 .parent-feature__icon--green {
@@ -2431,7 +2431,7 @@ Landing Page
     flex: none;
     margin-top: 0.05rem;
     color: var(--color-accent-blue);
-    font-size: 1rem;
+    font-size: var(--font-size-h4);
 }
 
 .pricing-card--featured .pricing-features i {
@@ -2540,7 +2540,7 @@ Landing Page
 
 .hero-stat strong,
 .metric strong {
-    font-size: 1.5rem;
+    font-size: var(--font-size-h2);
 }
 
 .hero-chart,
@@ -2743,7 +2743,7 @@ Landing Page
         linear-gradient(135deg, var(--color-primary), color-mix(in srgb, var(--color-primary) 70%, #ffffff 30%));
     color: #ffffff;
     font-weight: var(--font-weight-bold);
-    font-size: 1.125rem;
+    font-size: var(--font-size-h3);
 }
 
 .teacher-rating {
@@ -2871,7 +2871,7 @@ Landing Page
 }
 
 .price strong {
-    font-size: 2.6rem;
+    font-size: var(--font-size-display);
     line-height: 1;
 }
 
@@ -2901,7 +2901,7 @@ Landing Page
     border-radius: 50%;
     background: var(--color-secondary);
     color: var(--color-primary);
-    font-size: 0.8rem;
+    font-size: var(--font-size-body);
     font-weight: var(--font-weight-bold);
 }
 
@@ -2955,7 +2955,7 @@ Landing Page
 }
 
 .testimonials-nav i {
-    font-size: 1.25rem;
+    font-size: var(--font-size-h3);
     line-height: 1;
 }
 
@@ -3052,7 +3052,7 @@ Landing Page
 }
 
 .testimonial-card__play i {
-    font-size: 1.25rem;
+    font-size: var(--font-size-h3);
     line-height: 1;
     margin-inline-start: 0.1rem;
 }
@@ -3067,7 +3067,7 @@ Landing Page
 
 .testimonial-card__quote-icon {
     color: var(--color-primary);
-    font-size: 1.65rem;
+    font-size: var(--font-size-h2);
     line-height: 1;
     opacity: 0.55;
 }
@@ -3080,7 +3080,7 @@ Landing Page
 }
 
 .testimonial-card__stars i {
-    font-size: 0.75rem;
+    font-size: var(--font-size-body-sm);
     line-height: 1;
 }
 
@@ -3368,7 +3368,7 @@ Landing Page
     border-radius: 50%;
     border: 1px solid var(--color-border);
     background: color-mix(in srgb, var(--color-surface) 90%, transparent);
-    font-size: 1rem;
+    font-size: var(--font-size-h4);
 }
 
 .contact-info__icon--green {
@@ -3438,7 +3438,7 @@ Landing Page
 
 .contact-map i {
     color: inherit;
-    font-size: 1.25rem;
+    font-size: var(--font-size-h3);
     line-height: 1;
 }
 
@@ -3604,7 +3604,7 @@ Landing Page
     border-radius: 50%;
     background: color-mix(in srgb, var(--color-primary) 18%, transparent);
     color: var(--color-primary);
-    font-size: 1.35rem;
+    font-size: var(--font-size-h2);
 }
 
 .success-card {
@@ -3614,7 +3614,7 @@ Landing Page
 .success-card__icon {
     width: 3.25rem;
     height: 3.25rem;
-    font-size: 1.75rem;
+    font-size: var(--font-size-h1);
 }
 
 .success-card .register-form__actions {
@@ -3710,7 +3710,7 @@ Landing Page
     border-radius: 50%;
     background: color-mix(in srgb, var(--color-primary) 16%, transparent);
     color: var(--color-primary);
-    font-size: 1.25rem;
+    font-size: var(--font-size-h3);
 }
 
 .account-type-option__label {
@@ -3816,7 +3816,7 @@ Landing Page
     background: transparent;
     color: var(--color-text-muted);
     flex: none;
-    font-size: 1.25rem;
+    font-size: var(--font-size-h3);
     line-height: 1;
     transition:
         transform var(--transition-base),
@@ -3904,7 +3904,7 @@ Landing Page
 
 .footer-contact i {
     color: var(--color-primary);
-    font-size: 1rem;
+    font-size: var(--font-size-h4);
     line-height: 1;
 }
 
@@ -4984,7 +4984,7 @@ Responsive Styles
     .account-type-option__icon {
         width: 2.15rem;
         height: 2.15rem;
-        font-size: 1.1rem;
+        font-size: var(--font-size-h3);
     }
 
     .account-type-teacher {
@@ -5018,7 +5018,7 @@ Responsive Styles
     .success-card__icon {
         width: 2.75rem;
         height: 2.75rem;
-        font-size: 1.5rem;
+        font-size: var(--font-size-h2);
     }
 
     .verify-form__hint,
@@ -5088,7 +5088,7 @@ Responsive Styles
 
 @media (max-width: 480px) {
     .register-heading {
-        font-size: 1.15rem;
+        font-size: var(--font-size-h3);
     }
 
     .register-card {
@@ -5100,11 +5100,11 @@ Responsive Styles
     }
 
     .register-card__title {
-        font-size: 0.95rem;
+        font-size: var(--font-size-h4);
     }
 
     .register-card__subtitle {
-        font-size: 0.65rem;
+        font-size: var(--font-size-badge);
     }
 
     .account-type-options {
@@ -5118,13 +5118,13 @@ Responsive Styles
     .otp-input {
         width: 2.25rem;
         height: 2.25rem;
-        font-size: 0.95rem;
+        font-size: var(--font-size-h4);
     }
 
     .register-form__submit,
     .register-form__back,
     .account-type-teacher {
-        font-size: 0.75rem;
+        font-size: var(--font-size-body-sm);
         min-height: 2.6rem;
     }
 }
@@ -5144,7 +5144,7 @@ Responsive Styles
     }
 
     .register-heading {
-        font-size: 1rem;
+        font-size: var(--font-size-h4);
         padding-inline: 0.25rem;
     }
 
@@ -5162,11 +5162,11 @@ Responsive Styles
     }
 
     .register-card__title {
-        font-size: 0.875rem;
+        font-size: var(--font-size-body-lg);
     }
 
     .register-card__subtitle {
-        font-size: 0.6rem;
+        font-size: var(--font-size-badge);
         line-height: 1.5;
     }
 
@@ -5175,14 +5175,14 @@ Responsive Styles
     }
 
     .register-page .label {
-        font-size: 0.65rem;
+        font-size: var(--font-size-badge);
     }
 
     .register-page .field,
     .register-page .register-form .field {
         min-height: 2.35rem;
         padding-inline: 0.7rem;
-        font-size: 0.75rem;
+        font-size: var(--font-size-body-sm);
     }
 
     .otp-inputs {
@@ -5193,7 +5193,7 @@ Responsive Styles
         flex: 0 0 2rem;
         width: 2rem;
         height: 2rem;
-        font-size: 0.85rem;
+        font-size: var(--font-size-body-lg);
         border-radius: 6px;
     }
 
@@ -5203,7 +5203,7 @@ Responsive Styles
     .success-card .register-form__submit {
         min-height: 2.4rem;
         padding-inline: 0.65rem;
-        font-size: 0.7rem;
+        font-size: var(--font-size-caption);
     }
 
     .account-type-option {
@@ -5215,11 +5215,11 @@ Responsive Styles
     .account-type-option__icon {
         width: 1.85rem;
         height: 1.85rem;
-        font-size: 0.95rem;
+        font-size: var(--font-size-h4);
     }
 
     .account-type-option__label {
-        font-size: 0.75rem;
+        font-size: var(--font-size-body-sm);
     }
 
     .login-card__logo {
@@ -5230,7 +5230,7 @@ Responsive Styles
     .success-card__icon {
         width: 2.35rem;
         height: 2.35rem;
-        font-size: 1.2rem;
+        font-size: var(--font-size-h3);
     }
 }
 
@@ -5537,8 +5537,16 @@ Responsive Styles
 .dash-content {
     display: grid;
     gap: var(--space-5);
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin-inline: auto;
     padding: var(--space-6);
     min-width: 0;
+    box-sizing: border-box;
+}
+
+.teacher-dashboard .dash-content.teacher-content {
+    max-width: none;
 }
 
 .dash-kicker {
@@ -5621,7 +5629,7 @@ Responsive Styles
 
 .dash-welcome__hello i {
     color: #fbbf24;
-    font-size: 1.05rem;
+    font-size: var(--font-size-h4);
 }
 
 .dash-welcome__name {
@@ -5633,12 +5641,12 @@ Responsive Styles
 
 .dash-welcome__name i {
     color: #fbbf24;
-    font-size: 1.15rem;
+    font-size: var(--font-size-h3);
 }
 
 .dash-welcome__wave {
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: var(--font-size-h3);
     line-height: 1;
     transform-origin: 70% 70%;
     animation: dash-wave 1.8s ease-in-out infinite;
@@ -5814,7 +5822,7 @@ Responsive Styles
 }
 
 .dash-stats .dash-stat--with-ring .dash-ring__pct {
-    font-size: 0.7rem;
+    font-size: var(--font-size-caption);
 }
 
 .dash-stats .dash-stat__divider {
@@ -6110,7 +6118,7 @@ Responsive Styles
     gap: 0.25rem;
     padding-top: 0.1rem;
     color: var(--color-text-muted);
-    font-size: 0.8125rem;
+    font-size: var(--font-size-body);
     font-weight: var(--font-weight-semibold);
     line-height: 1.4;
     white-space: nowrap;
@@ -6118,7 +6126,7 @@ Responsive Styles
 
 .dash-schedule-item__when {
     color: var(--color-text-muted);
-    font-size: 0.75rem;
+    font-size: var(--font-size-body-sm);
     font-weight: var(--font-weight-medium);
 }
 
@@ -6197,7 +6205,7 @@ Responsive Styles
     min-height: 1.3rem;
     padding-inline: 0.45rem;
     border-radius: 4px;
-    font-size: 0.7rem;
+    font-size: var(--font-size-caption);
     font-weight: var(--font-weight-semibold);
     line-height: 1;
     white-space: nowrap;
@@ -6236,7 +6244,7 @@ Responsive Styles
 .dash-schedule-item__copy h3 {
     margin: 0;
     color: var(--color-text-primary);
-    font-size: 0.95rem;
+    font-size: var(--font-size-h4);
     font-weight: var(--font-weight-bold);
     line-height: 1.45;
     overflow-wrap: anywhere;
@@ -6249,7 +6257,7 @@ Responsive Styles
 .dash-schedule-item__copy p {
     margin: 0;
     color: var(--color-text-muted);
-    font-size: 0.8rem;
+    font-size: var(--font-size-body);
     font-weight: var(--font-weight-regular);
     line-height: 1.45;
 }
@@ -6271,7 +6279,7 @@ Responsive Styles
     border-radius: 999px;
     background: var(--color-primary);
     color: #fff;
-    font-size: 0.875rem;
+    font-size: var(--font-size-body-lg);
     font-weight: var(--font-weight-bold);
     box-shadow: none;
 }
@@ -6293,7 +6301,7 @@ Responsive Styles
     border-radius: 10px;
     background: transparent;
     color: var(--color-text-primary);
-    font-size: 0.8125rem;
+    font-size: var(--font-size-body);
     font-weight: var(--font-weight-semibold);
 }
 
@@ -6310,7 +6318,7 @@ Responsive Styles
     border-radius: 10px;
     background: rgba(69, 10, 10, 0.55);
     color: #fca5a5;
-    font-size: 0.8125rem;
+    font-size: var(--font-size-body);
     font-weight: var(--font-weight-semibold);
 }
 
@@ -6377,7 +6385,7 @@ Responsive Styles
 
 .dash-course__icon i {
     display: inline-block;
-    font-size: 1.45rem;
+    font-size: var(--font-size-h2);
     line-height: 1;
     color: inherit !important;
     opacity: 1 !important;
@@ -6408,7 +6416,7 @@ Responsive Styles
 .dash-course__body h3 {
     margin: 0;
     color: var(--color-text-primary);
-    font-size: 0.95rem;
+    font-size: var(--font-size-h4);
     font-weight: var(--font-weight-bold);
     line-height: 1.35;
     overflow-wrap: anywhere;
@@ -6417,14 +6425,14 @@ Responsive Styles
 .dash-course__body p {
     margin: 0;
     color: var(--color-text-muted);
-    font-size: 0.75rem;
+    font-size: var(--font-size-body-sm);
     font-weight: var(--font-weight-regular);
     line-height: 1.4;
 }
 
 .dash-course__pct {
     flex: none;
-    font-size: 1rem;
+    font-size: var(--font-size-h4);
     font-weight: var(--font-weight-bold);
     line-height: 1;
     white-space: nowrap;
@@ -6499,7 +6507,7 @@ Responsive Styles
     border-radius: 14px;
     background: color-mix(in srgb, var(--color-text-primary) 3%, transparent);
     color: var(--color-text-primary);
-    font-size: 0.78rem;
+    font-size: var(--font-size-body-sm);
     font-weight: var(--font-weight-medium);
     line-height: 1.35;
     text-align: center;
@@ -6513,7 +6521,7 @@ Responsive Styles
     width: 2.75rem;
     height: 2.75rem;
     border-radius: 12px;
-    font-size: 1.35rem;
+    font-size: var(--font-size-h2);
     line-height: 1;
 }
 
@@ -6603,7 +6611,7 @@ Responsive Styles
     border-radius: 4px;
     background: color-mix(in srgb, var(--color-accent-orange) 12%, transparent);
     color: var(--color-accent-orange);
-    font-size: 0.75rem;
+    font-size: var(--font-size-body-sm);
     font-weight: var(--font-weight-semibold);
     line-height: 1;
     white-space: nowrap;
@@ -6682,7 +6690,7 @@ Responsive Styles
 .dash-task__copy h3 {
     margin: 0;
     color: var(--color-text-primary);
-    font-size: 0.875rem;
+    font-size: var(--font-size-body-lg);
     font-weight: var(--font-weight-semibold);
     line-height: 1.4;
     overflow-wrap: anywhere;
@@ -6691,7 +6699,7 @@ Responsive Styles
 .dash-task__copy p {
     margin: 0;
     color: var(--color-text-muted);
-    font-size: 0.75rem;
+    font-size: var(--font-size-body-sm);
     font-weight: var(--font-weight-regular);
     line-height: 1.45;
 }
@@ -6711,7 +6719,7 @@ Responsive Styles
     border-radius: 6px;
     background: color-mix(in srgb, var(--color-primary) 14%, transparent);
     color: var(--color-primary);
-    font-size: 0.8125rem;
+    font-size: var(--font-size-body);
     font-weight: var(--font-weight-bold);
     line-height: 1;
     white-space: nowrap;
@@ -6729,7 +6737,7 @@ Responsive Styles
     align-items: center;
     gap: 0.3rem;
     color: var(--color-primary);
-    font-size: 0.8125rem;
+    font-size: var(--font-size-body);
     font-weight: var(--font-weight-semibold);
     line-height: 1;
     white-space: nowrap;
@@ -6756,7 +6764,7 @@ Responsive Styles
     border-radius: 999px;
     background: transparent;
     color: var(--color-text-primary);
-    font-size: 0.8125rem;
+    font-size: var(--font-size-body);
     font-weight: var(--font-weight-semibold);
     line-height: 1;
 }
@@ -6797,7 +6805,7 @@ Responsive Styles
     border: 1px solid color-mix(in srgb, var(--color-text-primary) 18%, transparent);
     border-radius: 10px;
     color: var(--color-text-primary);
-    font-size: 0.8125rem;
+    font-size: var(--font-size-body);
     font-weight: var(--font-weight-semibold);
     line-height: 1;
 }
@@ -6833,7 +6841,7 @@ Responsive Styles
 
 .dash-badge-card__label {
     color: var(--color-text-primary);
-    font-size: 0.7rem;
+    font-size: var(--font-size-caption);
     font-weight: var(--font-weight-medium);
     line-height: 1.3;
     overflow-wrap: anywhere;
@@ -6849,7 +6857,7 @@ Responsive Styles
     width: 2.35rem;
     height: 2.35rem;
     border-radius: 10px;
-    font-size: 1.2rem;
+    font-size: var(--font-size-h3);
     line-height: 1;
 }
 
@@ -6932,7 +6940,7 @@ Responsive Styles
     flex: none;
     border: 1px solid transparent;
     border-radius: 10px;
-    font-size: 1.1rem;
+    font-size: var(--font-size-h3);
     line-height: 1;
 }
 
@@ -6971,7 +6979,7 @@ Responsive Styles
 .dash-activity__item h3 {
     margin: 0;
     color: var(--color-text-primary);
-    font-size: 0.875rem;
+    font-size: var(--font-size-body-lg);
     font-weight: var(--font-weight-semibold);
     line-height: 1.45;
     overflow-wrap: anywhere;
@@ -6980,7 +6988,7 @@ Responsive Styles
 .dash-activity__item p {
     margin: 0;
     color: var(--color-text-muted);
-    font-size: 0.75rem;
+    font-size: var(--font-size-body-sm);
     font-weight: var(--font-weight-regular);
     line-height: 1.4;
 }
@@ -7064,7 +7072,7 @@ Responsive Styles
         border-inline-start: 0;
         border-radius: 12px;
         color: var(--color-text-secondary);
-        font-size: 0.62rem;
+        font-size: var(--font-size-badge);
         font-weight: var(--font-weight-medium);
         line-height: 1.2;
         text-align: center;
@@ -7072,7 +7080,7 @@ Responsive Styles
     }
 
     .student-dashboard .sidebar-link i {
-        font-size: 1.2rem;
+        font-size: var(--font-size-h3);
         line-height: 1;
     }
 
@@ -7284,7 +7292,7 @@ Responsive Styles
     }
 
     .student-dashboard .sidebar-link__label {
-        font-size: 0.58rem;
+        font-size: var(--font-size-badge);
     }
 }
 
@@ -7342,7 +7350,7 @@ Responsive Styles
     }
 
     .student-dashboard .sidebar-link i {
-        font-size: 1.15rem;
+        font-size: var(--font-size-h3);
     }
 
     .student-dashboard .dash-badges {
@@ -7401,7 +7409,7 @@ Responsive Styles
 }
 
 .student-course .course-content {
-    padding-block-start: var(--space-4);
+    min-width: 0;
 }
 
 .course-layout {
@@ -7502,7 +7510,7 @@ Responsive Styles
 
 .course-lesson__icon {
     color: var(--color-primary);
-    font-size: 1.25rem;
+    font-size: var(--font-size-h3);
     line-height: 1;
 }
 
@@ -7513,14 +7521,14 @@ Responsive Styles
 }
 
 .course-lesson__name {
-    font-size: 0.82rem;
+    font-size: var(--font-size-body);
     font-weight: var(--font-weight-semibold);
     line-height: 1.4;
 }
 
 .course-lesson__meta {
     color: var(--color-text-muted);
-    font-size: 0.72rem;
+    font-size: var(--font-size-body-sm);
 }
 
 .course-tabs {
@@ -7631,7 +7639,7 @@ Responsive Styles
 
 .course-player__time {
     color: color-mix(in srgb, #fff 75%, transparent);
-    font-size: 0.72rem;
+    font-size: var(--font-size-body-sm);
     white-space: nowrap;
 }
 
@@ -7666,7 +7674,7 @@ Responsive Styles
 
 .course-dropzone__icon {
     color: var(--color-primary);
-    font-size: 1.8rem;
+    font-size: var(--font-size-h1);
     line-height: 1;
 }
 
@@ -7720,7 +7728,7 @@ Responsive Styles
     gap: 0.45rem;
     min-width: 0;
     color: var(--color-text-primary);
-    font-size: 0.82rem;
+    font-size: var(--font-size-body);
     font-weight: var(--font-weight-semibold);
 }
 
@@ -7732,14 +7740,14 @@ Responsive Styles
 
 .course-file__name i {
     color: var(--color-danger);
-    font-size: 1.15rem;
+    font-size: var(--font-size-h3);
 }
 
 .course-file__size,
 .course-file__date {
     margin: 0;
     color: var(--color-text-muted);
-    font-size: 0.75rem;
+    font-size: var(--font-size-body-sm);
 }
 
 .course-file__download {
@@ -7783,12 +7791,12 @@ Responsive Styles
 }
 
 .course-message__head strong {
-    font-size: 0.8rem;
+    font-size: var(--font-size-body);
 }
 
 .course-message__head time {
     color: var(--color-text-muted);
-    font-size: 0.68rem;
+    font-size: var(--font-size-caption);
 }
 
 .course-message__badge {
@@ -7796,14 +7804,14 @@ Responsive Styles
     border-radius: 999px;
     background: color-mix(in srgb, var(--color-primary) 16%, transparent);
     color: var(--color-primary);
-    font-size: 0.65rem;
+    font-size: var(--font-size-badge);
     font-weight: var(--font-weight-semibold);
 }
 
 .course-message p {
     margin: 0;
     color: var(--color-text-secondary);
-    font-size: 0.82rem;
+    font-size: var(--font-size-body);
     line-height: 1.6;
     overflow-wrap: anywhere;
 }
@@ -7944,7 +7952,7 @@ Responsive Styles
     .course-tabs__item {
         flex: none;
         white-space: nowrap;
-        font-size: 0.78rem;
+        font-size: var(--font-size-body-sm);
     }
 
     .course-tabs__item.is-active::after {
@@ -8008,7 +8016,7 @@ Responsive Styles
     .course-curriculum__title,
     .course-section__title,
     .course-lesson-title {
-        font-size: 1rem;
+        font-size: var(--font-size-h4);
     }
 
     .course-dropzone {
@@ -8016,7 +8024,7 @@ Responsive Styles
     }
 
     .course-dropzone__title {
-        font-size: 0.82rem;
+        font-size: var(--font-size-body);
     }
 
     .course-chat {
@@ -8060,7 +8068,7 @@ Responsive Styles
 
     .course-chat__input {
         min-height: 2.6rem;
-        font-size: 0.875rem;
+        font-size: var(--font-size-body-lg);
     }
 
     .course-chat__send {
@@ -8082,11 +8090,11 @@ Responsive Styles
 
 @media (max-width: 380px) {
     .course-tabs__item {
-        font-size: 0.72rem;
+        font-size: var(--font-size-body-sm);
     }
 
     .course-lesson__name {
-        font-size: 0.78rem;
+        font-size: var(--font-size-body-sm);
     }
 
     .course-chapters {
@@ -8095,7 +8103,7 @@ Responsive Styles
 
     .course-select {
         min-height: 2.45rem;
-        font-size: 0.82rem;
+        font-size: var(--font-size-body);
     }
 }
 
@@ -8104,7 +8112,7 @@ Responsive Styles
 }
 
 .student-classroom .classroom-content {
-    padding-block: var(--space-4);
+    min-width: 0;
 }
 
 .classroom-layout {
@@ -8221,7 +8229,7 @@ Responsive Styles
     border-radius: 0.4rem;
     background: color-mix(in srgb, var(--color-surface) 80%, transparent);
     color: var(--color-text-muted);
-    font-size: 0.9rem;
+    font-size: var(--font-size-body-lg);
 }
 
 .classroom-board__hint {
@@ -8350,19 +8358,23 @@ Responsive Styles
 
 .classroom-msg {
     display: grid;
-    gap: 0.35rem;
-    padding: 0.75rem 0.85rem;
+    gap: 0.15rem;
+    width: max-content;
+    max-width: min(85%, 22rem);
+    padding: 0.4rem 0.65rem;
     border: 1px solid transparent;
-    border-radius: 0.75rem;
+    border-radius: 0.7rem;
     background: color-mix(in srgb, var(--color-background) 70%, var(--color-surface) 30%);
     border-inline-start-width: 3px;
 }
 
 .classroom-msg p {
     margin: 0;
+    width: max-content;
+    max-width: 100%;
     color: var(--color-text-primary);
     font-size: var(--font-size-body-sm);
-    line-height: 1.7;
+    line-height: 1.4;
 }
 
 .classroom-msg strong {
@@ -8371,6 +8383,7 @@ Responsive Styles
 }
 
 .classroom-msg--teacher {
+    justify-self: end;
     background: #50659A33;
     border-color: color-mix(in srgb, #3b82f6 55%, transparent);
     border-inline-start-color: #3b82f6;
@@ -8381,6 +8394,7 @@ Responsive Styles
 }
 
 .classroom-msg--student {
+    justify-self: start;
     background: color-mix(in srgb, var(--color-primary) 8%, transparent);
     border-color: color-mix(in srgb, var(--color-primary) 55%, transparent);
     border-inline-start-width: 1px;
@@ -8491,7 +8505,7 @@ Responsive Styles
 }
 
 .student-exams .exams-content {
-    padding-block: var(--space-4);
+    min-width: 0;
 }
 
 .exams-layout {
@@ -8864,10 +8878,6 @@ Responsive Styles
 }
 
 @media (max-width: 480px) {
-    .student-exams .exams-content {
-        padding-block: var(--space-3);
-    }
-
     .exams-side,
     .exams-paper {
         padding: 0.85rem;
@@ -8886,7 +8896,7 @@ Responsive Styles
 
 
 .student-sessions .sessions-content {
-    padding-block: var(--space-4);
+    min-width: 0;
 }
 
 .sessions-layout {
@@ -9114,10 +9124,6 @@ Responsive Styles
 }
 
 @media (max-width: 480px) {
-    .student-sessions .sessions-content {
-        padding-block: var(--space-3);
-    }
-
     .sessions-teachers,
     .sessions-booking {
         padding: 0.85rem;
@@ -9154,7 +9160,7 @@ Responsive Styles
 
 
 .student-reports .reports-content {
-    padding-block: var(--space-4);
+    min-width: 0;
 }
 
 .reports-layout {
@@ -9429,10 +9435,6 @@ Responsive Styles
 }
 
 @media (max-width: 767px) {
-    .student-reports .reports-content {
-        padding-block: var(--space-3);
-    }
-
     .reports-layout {
         gap: var(--space-3);
     }
@@ -9464,7 +9466,7 @@ Responsive Styles
     }
 
     .reports-gpa__y {
-        font-size: 0.65rem;
+        font-size: var(--font-size-badge);
         padding-block: 0.1rem 1.35rem;
     }
 
@@ -9473,7 +9475,7 @@ Responsive Styles
     }
 
     .reports-gpa__x {
-        font-size: 0.65rem;
+        font-size: var(--font-size-badge);
         gap: 0.15rem;
     }
 
@@ -9493,7 +9495,7 @@ Responsive Styles
 
     .reports-bar__value,
     .reports-bar__label {
-        font-size: 0.65rem;
+        font-size: var(--font-size-badge);
     }
 
     .reports-bars__foot {
@@ -9635,7 +9637,7 @@ Responsive Styles
     border-radius: 0.65rem;
     background: var(--color-info);
     color: #ffffff;
-    font-size: 1.1rem;
+    font-size: var(--font-size-h3);
 }
 
 .teacher-pending__item .dash-task__copy {
@@ -9722,11 +9724,11 @@ Responsive Styles
     .teacher-dashboard .sidebar-link {
         min-height: 2rem;
         padding-block: 0.2rem;
-        font-size: 0.8rem;
+        font-size: var(--font-size-body);
     }
 
     .teacher-dashboard .sidebar-link i {
-        font-size: 1rem;
+        font-size: var(--font-size-h4);
     }
 
     .teacher-dashboard .dash-profile {
@@ -9755,6 +9757,7 @@ Responsive Styles
     .teacher-dashboard .dash-content.teacher-content {
         flex: 1 1 auto;
         min-height: 0;
+        max-width: none;
         display: flex;
         flex-direction: column;
         gap: 0.75rem;
@@ -9796,12 +9799,12 @@ Responsive Styles
     }
 
     .teacher-stats .dash-stat__value {
-        font-size: 1.35rem;
+        font-size: var(--font-size-h2);
     }
 
     .teacher-stats .dash-stat__label,
     .teacher-stats .dash-stat__meta {
-        font-size: 0.7rem;
+        font-size: var(--font-size-caption);
     }
 
     .teacher-grid {
@@ -9881,16 +9884,16 @@ Responsive Styles
         width: 2rem;
         height: 2rem;
         border-radius: 0.55rem;
-        font-size: 1rem;
+        font-size: var(--font-size-h4);
     }
 
     .teacher-pending__item .dash-task__copy h3 {
         margin: 0 0 0.1rem;
-        font-size: 0.8rem;
+        font-size: var(--font-size-body);
     }
 
     .teacher-pending__item .dash-task__copy p {
-        font-size: 0.68rem;
+        font-size: var(--font-size-caption);
     }
 
     .teacher-pending__action {
@@ -9899,17 +9902,17 @@ Responsive Styles
     }
 
     .teacher-schedule .dash-schedule-item__copy h3 {
-        font-size: 0.85rem;
+        font-size: var(--font-size-body-lg);
         line-height: 1.35;
     }
 
     .teacher-schedule .dash-schedule-item__copy p {
-        font-size: 0.7rem;
+        font-size: var(--font-size-caption);
         line-height: 1.35;
     }
 
     .teacher-schedule .dash-schedule-item__time {
-        font-size: 0.75rem;
+        font-size: var(--font-size-body-sm);
         padding-top: 0;
     }
 }
@@ -9976,12 +9979,12 @@ Responsive Styles
         gap: 0;
         padding: 0.25rem 0.05rem;
         border-radius: 8px;
-        font-size: 0.48rem;
+        font-size: var(--font-size-badge);
         line-height: 1;
     }
 
     .teacher-dashboard .sidebar-link i {
-        font-size: 1.05rem;
+        font-size: var(--font-size-h4);
     }
 
     .teacher-dashboard .sidebar-link__label {
@@ -9998,7 +10001,7 @@ Responsive Styles
         background: var(--color-surface);
         border: 1px solid var(--color-border);
         color: var(--color-text-primary);
-        font-size: 0.58rem;
+        font-size: var(--font-size-badge);
         font-weight: var(--font-weight-medium);
         line-height: 1.2;
         white-space: nowrap;
@@ -10036,18 +10039,18 @@ Responsive Styles
     .teacher-dashboard .dash-welcome__avatar {
         width: 2.1rem;
         height: 2.1rem;
-        font-size: 0.7rem;
+        font-size: var(--font-size-caption);
     }
 
     .teacher-dashboard .dash-welcome__name {
         margin: 0;
-        font-size: 0.75rem;
+        font-size: var(--font-size-body-sm);
         line-height: 1.25;
     }
 
     .teacher-dashboard .dash-welcome__meta {
         margin: 0;
-        font-size: 0.58rem;
+        font-size: var(--font-size-badge);
         line-height: 1.25;
         display: -webkit-box;
         -webkit-line-clamp: 1;
@@ -10066,7 +10069,7 @@ Responsive Styles
         width: auto;
         min-height: 1.35rem;
         padding-inline: 0.4rem;
-        font-size: 0.52rem;
+        font-size: var(--font-size-badge);
     }
 
     .teacher-stats {
@@ -10084,17 +10087,17 @@ Responsive Styles
     .teacher-stats .dash-stat__badge {
         width: 1.15rem;
         height: 1.15rem;
-        font-size: 0.65rem;
+        font-size: var(--font-size-badge);
     }
 
     .teacher-stats .dash-stat__value {
-        font-size: 0.95rem;
+        font-size: var(--font-size-h4);
         line-height: 1.1;
     }
 
     .teacher-stats .dash-stat__label,
     .teacher-stats .dash-stat__meta {
-        font-size: 0.52rem;
+        font-size: var(--font-size-badge);
         line-height: 1.2;
     }
 
@@ -10142,12 +10145,12 @@ Responsive Styles
 
     .teacher-schedule .dash-panel__head h2,
     .teacher-pending .dash-panel__head h2 {
-        font-size: 0.68rem;
+        font-size: var(--font-size-caption);
         line-height: 1.25;
     }
 
     .teacher-dashboard .dash-panel__link {
-        font-size: 0.55rem;
+        font-size: var(--font-size-badge);
     }
 
     .teacher-schedule .dash-timeline,
@@ -10165,7 +10168,7 @@ Responsive Styles
 
     .teacher-schedule .dash-schedule-item__time {
         grid-column: 2;
-        font-size: 0.55rem;
+        font-size: var(--font-size-badge);
         padding-top: 0;
         white-space: nowrap;
     }
@@ -10184,12 +10187,12 @@ Responsive Styles
     }
 
     .teacher-schedule .dash-schedule-item__copy h3 {
-        font-size: 0.65rem;
+        font-size: var(--font-size-badge);
         line-height: 1.2;
     }
 
     .teacher-schedule .dash-schedule-item__copy p {
-        font-size: 0.52rem;
+        font-size: var(--font-size-badge);
         line-height: 1.2;
     }
 
@@ -10199,7 +10202,7 @@ Responsive Styles
         align-self: flex-start;
         min-height: 2.5rem;
         justify-content: center;
-        font-size: 0.875rem;
+        font-size: var(--font-size-body-lg);
         padding-block: 0;
         padding-inline: 1.15rem;
     }
@@ -10213,25 +10216,25 @@ Responsive Styles
     .teacher-pending__icon {
         width: 1.35rem;
         height: 1.35rem;
-        font-size: 0.65rem;
+        font-size: var(--font-size-badge);
         border-radius: 0.3rem;
     }
 
     .teacher-pending__item .dash-task__copy h3 {
         margin: 0;
-        font-size: 0.6rem;
+        font-size: var(--font-size-badge);
         line-height: 1.15;
     }
 
     .teacher-pending__item .dash-task__copy p {
-        font-size: 0.48rem;
+        font-size: var(--font-size-badge);
         line-height: 1.15;
     }
 
     .teacher-pending__action {
         min-height: 1.25rem;
         padding-inline: 0.4rem;
-        font-size: 0.5rem;
+        font-size: var(--font-size-badge);
         width: auto;
     }
 }
@@ -10250,7 +10253,7 @@ Responsive Styles
 
     .teacher-dashboard .dash-header__title {
         flex: 1 1 auto;
-        font-size: 0.8rem;
+        font-size: var(--font-size-body);
         text-align: start;
     }
 
@@ -10298,7 +10301,7 @@ Responsive Styles
     }
 
     .teacher-dashboard .sidebar-link i {
-        font-size: 0.95rem;
+        font-size: var(--font-size-h4);
     }
 
     .teacher-dashboard:has(.teacher-content) .dash-content.teacher-content {
@@ -10320,7 +10323,7 @@ Responsive Styles
     }
 
     .teacher-stats .dash-stat__value {
-        font-size: 0.88rem;
+        font-size: var(--font-size-body-lg);
     }
 
     .teacher-schedule,
@@ -10331,12 +10334,12 @@ Responsive Styles
 
 @media (max-width: 380px) {
     .teacher-dashboard .dash-welcome__name {
-        font-size: 0.72rem;
+        font-size: var(--font-size-body-sm);
     }
 
     .teacher-stats .dash-stat__label,
     .teacher-stats .dash-stat__meta {
-        font-size: 0.5rem;
+        font-size: var(--font-size-badge);
     }
 }
 
@@ -10404,7 +10407,7 @@ Responsive Styles
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 0.7rem;
-    font-size: 1.15rem;
+    font-size: var(--font-size-h3);
 }
 
 .teacher-course-card--green .teacher-course-card__icon {
@@ -10464,7 +10467,7 @@ Responsive Styles
 }
 
 .teacher-course-card__stats i {
-    font-size: 0.95rem;
+    font-size: var(--font-size-h4);
 }
 
 .teacher-course-card__progress {
@@ -10704,7 +10707,7 @@ Responsive Styles
     height: 2.25rem;
     border-radius: 0.6rem;
     flex: none;
-    font-size: 1rem;
+    font-size: var(--font-size-h4);
 }
 
 .teacher-lesson-cell__icon--video {
@@ -10929,13 +10932,13 @@ Responsive Styles
 }
 
 .teacher-upcoming__date span {
-    font-size: 1.15rem;
+    font-size: var(--font-size-h3);
     font-weight: var(--font-weight-bold);
     line-height: 1;
 }
 
 .teacher-upcoming__date small {
-    font-size: 0.65rem;
+    font-size: var(--font-size-badge);
     line-height: 1;
 }
 
@@ -11019,7 +11022,7 @@ Responsive Styles
 }
 
 .teacher-week__day span {
-    font-size: 0.72rem;
+    font-size: var(--font-size-body-sm);
     line-height: 1.2;
 }
 
@@ -11030,7 +11033,7 @@ Responsive Styles
     height: 2.15rem;
     border-radius: 50%;
     color: var(--color-text-primary);
-    font-size: 0.95rem;
+    font-size: var(--font-size-h4);
     font-weight: var(--font-weight-bold);
     position: relative;
 }
@@ -11115,13 +11118,13 @@ Responsive Styles
     }
 
     .teacher-week__day span {
-        font-size: 0.62rem;
+        font-size: var(--font-size-badge);
     }
 
     .teacher-week__day strong {
         width: 1.85rem;
         height: 1.85rem;
-        font-size: 0.82rem;
+        font-size: var(--font-size-body);
     }
 }
 
@@ -11145,7 +11148,7 @@ Responsive Styles
     }
 
     .teacher-upcoming__date span {
-        font-size: 1rem;
+        font-size: var(--font-size-h4);
     }
 }
 
@@ -11245,7 +11248,7 @@ Responsive Styles
     height: 2.25rem;
     border-radius: 0.6rem;
     flex: none;
-    font-size: 1rem;
+    font-size: var(--font-size-h4);
     background: color-mix(in srgb, var(--color-primary) 18%, transparent);
     color: var(--color-primary);
 }
@@ -11390,7 +11393,7 @@ Responsive Styles
 
 .teacher-exam-stat__copy strong {
     color: var(--color-text-primary);
-    font-size: clamp(1.6rem, 2.2vw, 2rem);
+    font-size: var(--font-size-h1);
     font-weight: var(--font-weight-bold);
     line-height: 1.1;
 }
@@ -11410,7 +11413,7 @@ Responsive Styles
     height: 2.5rem;
     border-radius: 50%;
     flex: none;
-    font-size: 1.25rem;
+    font-size: var(--font-size-h3);
 }
 
 .teacher-exam-stat__icon--green {
@@ -11469,7 +11472,7 @@ Responsive Styles
     height: 2.5rem;
     border-radius: 50%;
     flex: none;
-    font-size: 1.15rem;
+    font-size: var(--font-size-h3);
 }
 
 .teacher-exam-item__icon--pending {
@@ -11597,7 +11600,7 @@ Responsive Styles
     }
 
     .teacher-exam-stat__copy strong {
-        font-size: 1.45rem;
+        font-size: var(--font-size-h2);
     }
 
     .teacher-exam-item__copy strong {
@@ -11712,7 +11715,7 @@ Responsive Styles
     flex: none;
     background: color-mix(in srgb, var(--color-info) 22%, transparent);
     color: var(--color-info);
-    font-size: 0.95rem;
+    font-size: var(--font-size-h4);
     font-weight: var(--font-weight-bold);
 }
 
@@ -11759,7 +11762,7 @@ Responsive Styles
 
 .teacher-request-card__meta i {
     color: var(--color-text-muted);
-    font-size: 1rem;
+    font-size: var(--font-size-h4);
 }
 
 .teacher-request-card__actions {
@@ -11828,13 +11831,13 @@ Responsive Styles
 }
 
 .teacher-confirmed__date span {
-    font-size: 1.15rem;
+    font-size: var(--font-size-h3);
     font-weight: var(--font-weight-bold);
     line-height: 1;
 }
 
 .teacher-confirmed__date small {
-    font-size: 0.65rem;
+    font-size: var(--font-size-badge);
     line-height: 1;
 }
 
@@ -12046,7 +12049,7 @@ Responsive Styles
     height: 2.25rem;
     border-radius: 50%;
     flex: none;
-    font-size: 0.85rem;
+    font-size: var(--font-size-body-lg);
     font-weight: var(--font-weight-bold);
 }
 
@@ -12233,7 +12236,7 @@ Responsive Styles
     height: 2.35rem;
     border-radius: 50%;
     flex: none;
-    font-size: 0.9rem;
+    font-size: var(--font-size-body-lg);
     font-weight: var(--font-weight-bold);
 }
 
@@ -12245,7 +12248,7 @@ Responsive Styles
 .teacher-thread__avatar--green {
     background: color-mix(in srgb, var(--color-primary) 18%, transparent);
     color: var(--color-primary);
-    font-size: 1rem;
+    font-size: var(--font-size-h4);
 }
 
 .teacher-thread__copy {
@@ -12294,30 +12297,32 @@ Responsive Styles
     display: grid;
     align-content: start;
     justify-items: stretch;
-    gap: 0.85rem;
+    gap: 0.5rem;
     padding: 1.15rem;
     overflow-y: auto;
 }
 
 .teacher-bubble {
     display: grid;
-    gap: 0.35rem;
-    width: fit-content;
-    max-width: min(72%, 28rem);
-    padding: 0.85rem 1rem;
-    border-radius: 0.85rem;
+    gap: 0.15rem;
+    width: max-content;
+    max-width: min(72%, 22rem);
+    padding: 0.4rem 0.7rem;
+    border-radius: 0.7rem;
 }
 
 .teacher-bubble p {
     margin: 0;
+    width: max-content;
+    max-width: 100%;
     font-size: var(--font-size-body-sm);
-    line-height: 1.55;
+    line-height: 1.4;
     overflow-wrap: anywhere;
 }
 
 .teacher-bubble time {
     color: inherit;
-    font-size: 0.68rem;
+    font-size: var(--font-size-caption);
     opacity: 0.75;
 }
 
@@ -12366,7 +12371,7 @@ Responsive Styles
 .teacher-messages__attach {
     background: transparent;
     color: var(--color-text-muted);
-    font-size: 1.2rem;
+    font-size: var(--font-size-h3);
 }
 
 .teacher-messages__attach:hover {
@@ -12391,7 +12396,7 @@ Responsive Styles
 .teacher-messages__send {
     background: var(--color-primary);
     color: #0a111d;
-    font-size: 1.05rem;
+    font-size: var(--font-size-h4);
 }
 
 .teacher-messages__send:hover {
@@ -12440,7 +12445,8 @@ Responsive Styles
     }
 
     .teacher-bubble {
-        max-width: min(78%, 22rem);
+        max-width: min(82%, 18rem);
+        padding: 0.35rem 0.6rem;
     }
 }
 
@@ -12530,7 +12536,7 @@ Responsive Styles
 
 .teacher-analytics-stat__copy strong {
     color: var(--color-text-primary);
-    font-size: clamp(1.5rem, 2vw, 1.85rem);
+    font-size: var(--font-size-h1);
     font-weight: var(--font-weight-bold);
     line-height: 1.1;
 }
@@ -12550,7 +12556,7 @@ Responsive Styles
     height: 2.5rem;
     border-radius: 50%;
     flex: none;
-    font-size: 1.15rem;
+    font-size: var(--font-size-h3);
 }
 
 .teacher-analytics-stat__icon--green {
@@ -12585,7 +12591,7 @@ Responsive Styles
     border-radius: 50%;
     background: color-mix(in srgb, var(--color-text-muted) 14%, transparent);
     color: var(--color-text-muted);
-    font-size: 1.15rem;
+    font-size: var(--font-size-h3);
 }
 
 .teacher-analytics-chart h3 {
@@ -12638,7 +12644,7 @@ Responsive Styles
     }
 
     .teacher-analytics-stat__copy strong {
-        font-size: 1.45rem;
+        font-size: var(--font-size-h2);
     }
 
     .teacher-analytics-chart h3 {
@@ -13038,7 +13044,7 @@ Responsive Styles
     flex: none;
     background: color-mix(in srgb, var(--color-warning) 28%, transparent);
     color: var(--color-warning);
-    font-size: 0.7rem;
+    font-size: var(--font-size-caption);
 }
 
 .parent-sidebar-child__copy {
@@ -13163,7 +13169,7 @@ Responsive Styles
 }
 
 .parent-live i {
-    font-size: 1rem;
+    font-size: var(--font-size-h4);
 }
 
 .parent-live span {
@@ -13194,7 +13200,7 @@ Responsive Styles
     border-radius: 0.7rem;
     background: color-mix(in srgb, var(--color-warning) 18%, transparent);
     color: var(--color-warning);
-    font-size: 1.2rem;
+    font-size: var(--font-size-h3);
 }
 
 .parent-alert__copy {
@@ -13247,8 +13253,12 @@ Responsive Styles
 .parent-toolbar {
     display: grid;
     gap: 0.55rem;
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin-inline: auto;
     min-width: 0;
-    padding: 0.75rem 1.25rem;
+    padding: 0.75rem var(--space-6);
+    box-sizing: border-box;
 }
 
 .parent-toolbar__row {
@@ -13319,7 +13329,7 @@ Responsive Styles
     height: 1.7rem;
     flex: none;
     margin-inline-start: 0;
-    font-size: 0.68rem;
+    font-size: var(--font-size-caption);
 }
 
 .parent-kid__dot {
@@ -13433,14 +13443,14 @@ Responsive Styles
 
 .parent-family__chevron {
     color: var(--color-text-muted);
-    font-size: 1.15rem;
+    font-size: var(--font-size-h3);
     line-height: 1;
 }
 
 .parent-family .parent-kid__avatar {
     width: 2.25rem;
     height: 2.25rem;
-    font-size: 0.8rem;
+    font-size: var(--font-size-body);
 }
 
 .parent-today__list {
@@ -13611,7 +13621,7 @@ Responsive Styles
 }
 
 .parent-dashboard .parent-stats .dash-stat__value {
-    font-size: 1.25rem;
+    font-size: var(--font-size-h3);
 }
 
 .parent-path__plot {
@@ -13650,7 +13660,7 @@ Responsive Styles
     margin-inline-start: 0;
     background: var(--color-primary);
     color: #ffffff;
-    font-size: 1rem;
+    font-size: var(--font-size-h4);
 }
 
 .parent-session__copy {
@@ -13684,7 +13694,7 @@ Responsive Styles
 }
 
 .parent-session__meta i {
-    font-size: 1rem;
+    font-size: var(--font-size-h4);
     color: var(--color-primary);
 }
 
@@ -13744,7 +13754,7 @@ Responsive Styles
     margin-inline-start: 0;
     background: var(--color-primary);
     color: #ffffff;
-    font-size: 0.7rem;
+    font-size: var(--font-size-caption);
 }
 
 .parent-msgs__copy {
@@ -13769,7 +13779,7 @@ Responsive Styles
 .parent-msgs__row time {
     flex: none;
     color: var(--color-text-muted);
-    font-size: 0.68rem;
+    font-size: var(--font-size-caption);
     white-space: nowrap;
 }
 
@@ -13824,7 +13834,7 @@ Responsive Styles
     height: 1.6rem;
     flex: none;
     border-radius: 0.45rem;
-    font-size: 0.85rem;
+    font-size: var(--font-size-body-lg);
     font-weight: var(--font-weight-bold);
 }
 
@@ -13832,7 +13842,7 @@ Responsive Styles
     flex: none;
     margin-inline-start: auto;
     color: var(--color-primary);
-    font-size: 1.05rem;
+    font-size: var(--font-size-h4);
 }
 
 .parent-subject h3 {
@@ -13848,7 +13858,7 @@ Responsive Styles
 .parent-subject strong {
     justify-self: start;
     color: var(--color-text-primary);
-    font-size: 1.25rem;
+    font-size: var(--font-size-h3);
     font-weight: var(--font-weight-bold);
 }
 
@@ -13872,7 +13882,7 @@ Responsive Styles
 .parent-subject__goal {
     flex: none;
     color: var(--color-text-muted);
-    font-size: 0.68rem;
+    font-size: var(--font-size-caption);
     font-weight: var(--font-weight-medium);
 }
 
@@ -13966,7 +13976,7 @@ Responsive Styles
     gap: 0.3rem;
     margin: 0;
     color: var(--color-danger);
-    font-size: 0.68rem;
+    font-size: var(--font-size-caption);
     font-weight: var(--font-weight-medium);
 }
 
@@ -14014,7 +14024,7 @@ Responsive Styles
     }
 
     .parent-dashboard .sidebar-link i {
-        font-size: 0.95rem;
+        font-size: var(--font-size-h4);
     }
 
     .parent-dashboard .dash-profile {
@@ -14056,11 +14066,6 @@ Responsive Styles
         flex: none;
         min-height: 3.5rem;
         padding: 0.65rem 1.25rem;
-    }
-
-    .parent-dashboard .parent-content {
-        gap: 0.85rem;
-        padding: 0.85rem 1.25rem 1rem;
     }
 }
 
@@ -14110,12 +14115,12 @@ Responsive Styles
         gap: 0;
         padding: 0.25rem 0.05rem;
         border-radius: 8px;
-        font-size: 0.48rem;
+        font-size: var(--font-size-badge);
         line-height: 1;
     }
 
     .parent-dashboard .sidebar-link i {
-        font-size: 1.05rem;
+        font-size: var(--font-size-h4);
     }
 
     .parent-dashboard .sidebar-link__label {
@@ -14132,7 +14137,7 @@ Responsive Styles
         background: var(--color-surface);
         border: 1px solid var(--color-border);
         color: var(--color-text-primary);
-        font-size: 0.58rem;
+        font-size: var(--font-size-badge);
         font-weight: var(--font-weight-medium);
         line-height: 1.2;
         white-space: nowrap;
@@ -14167,7 +14172,7 @@ Responsive Styles
     }
 
     .parent-toolbar {
-        padding-inline: 0.85rem;
+        padding-inline: var(--space-4);
     }
 
     .parent-alert,
@@ -14193,7 +14198,7 @@ Responsive Styles
 
     .parent-dashboard .dash-header__title {
         flex: 1 1 auto;
-        font-size: 0.8rem;
+        font-size: var(--font-size-body);
         text-align: start;
     }
 
@@ -14268,7 +14273,7 @@ Responsive Styles
 
 @media (max-width: 600px) {
     .parent-live {
-        font-size: 0.72rem;
+        font-size: var(--font-size-body-sm);
         padding-block: 0.4rem;
     }
 
@@ -14293,18 +14298,18 @@ Responsive Styles
     }
 
     .parent-dashboard .sidebar-link i {
-        font-size: 0.95rem;
+        font-size: var(--font-size-h4);
     }
 
     .parent-alert__copy h2,
     .parent-family__copy h3,
     .parent-today__copy h3,
     .parent-subject h3 {
-        font-size: 0.8rem;
+        font-size: var(--font-size-body);
     }
 
     .parent-dashboard .parent-stats .dash-stat__value {
-        font-size: 1.05rem;
+        font-size: var(--font-size-h4);
     }
 }
 
@@ -14322,7 +14327,7 @@ Responsive Styles
     }
 
     .parent-badge {
-        font-size: 0.55rem;
+        font-size: var(--font-size-badge);
         padding-inline: 0.4rem;
     }
 }
@@ -14437,7 +14442,7 @@ Responsive Styles
     width: 2.5rem;
     height: 2.5rem;
     margin-inline-start: 0;
-    font-size: 0.9rem;
+    font-size: var(--font-size-body-lg);
 }
 
 .parent-child-card__stats {
@@ -14456,13 +14461,13 @@ Responsive Styles
 
 .parent-child-card__stats dt {
     color: var(--color-text-muted);
-    font-size: 0.68rem;
+    font-size: var(--font-size-caption);
 }
 
 .parent-child-card__stats dd {
     margin: 0;
     color: var(--color-text-primary);
-    font-size: 1.15rem;
+    font-size: var(--font-size-h3);
     font-weight: var(--font-weight-bold);
 }
 
@@ -14623,7 +14628,7 @@ Responsive Styles
     }
 
     .parent-child-card__stats dd {
-        font-size: 1.05rem;
+        font-size: var(--font-size-h4);
     }
 }
 
@@ -14689,7 +14694,7 @@ Responsive Styles
     grid-area: icon;
     border-radius: 50%;
     color: #ffffff;
-    font-size: 1.05rem;
+    font-size: var(--font-size-h4);
 }
 
 .parent-progress-stat__icon--green {
@@ -14721,7 +14726,7 @@ Responsive Styles
     justify-self: end;
     margin: 0;
     color: var(--color-text-primary);
-    font-size: 1.35rem;
+    font-size: var(--font-size-h2);
     font-weight: var(--font-weight-bold);
     line-height: 1.2;
     white-space: nowrap;
@@ -14932,8 +14937,8 @@ Responsive Styles
 
 .parent-progress-radar__plot text {
     fill: var(--color-text-muted);
-    font-size: 8px;
-    font-family: inherit;
+    font-size: var(--font-size-badge);
+    font-family: var(--font-family-base);
 }
 
 .parent-progress__download {
@@ -15028,7 +15033,7 @@ Responsive Styles
     }
 
     .parent-progress-stat__value {
-        font-size: 1.2rem;
+        font-size: var(--font-size-h3);
     }
 
     .parent-progress-chart__plot svg {
@@ -15070,7 +15075,7 @@ Responsive Styles
 
 @media (max-width: 480px) {
     .parent-progress-stat__value {
-        font-size: 1.1rem;
+        font-size: var(--font-size-h3);
     }
 
     .parent-progress__tabs {
@@ -15098,7 +15103,7 @@ Responsive Styles
     .parent-progress-stat__icon {
         width: 1.6rem;
         height: 1.6rem;
-        font-size: 0.95rem;
+        font-size: var(--font-size-h4);
     }
 
     .parent-progress-chart,
@@ -17104,6 +17109,427 @@ Responsive Styles
     .parent-reports-page .parent-rep-card__icon {
         width: 2.1rem;
         height: 2.1rem;
+    }
+}
+
+.parent-messages-page .parent-msg {
+    gap: 1rem;
+    align-content: start;
+}
+
+.parent-messages-page .parent-msg-panel {
+    display: grid;
+    grid-template-columns: minmax(14.5rem, 17.5rem) minmax(0, 1fr);
+    min-height: min(32rem, calc(100svh - 12rem));
+    overflow: hidden;
+    padding: 0;
+}
+
+.parent-messages-page .parent-msg__threads {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    gap: 0.75rem;
+    min-width: 0;
+    min-height: 0;
+    padding: 0.9rem;
+    border-inline-end: 1px solid var(--color-border);
+    background: color-mix(in srgb, var(--color-background) 45%, transparent);
+}
+
+.parent-messages-page .parent-msg__search {
+    width: 100%;
+}
+
+.parent-messages-page .parent-msg__search .search-field {
+    width: 100%;
+}
+
+.parent-messages-page .parent-msg__list {
+    display: grid;
+    align-content: start;
+    gap: 0.35rem;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+.parent-messages-page .parent-msg-thread {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 0.65rem;
+    width: 100%;
+    padding: 0.7rem 0.65rem;
+    border: 1px solid transparent;
+    border-radius: 0.75rem;
+    background: transparent;
+    color: inherit;
+    text-align: start;
+    cursor: pointer;
+}
+
+.parent-messages-page .parent-msg-thread.is-active {
+    background: color-mix(in srgb, var(--color-background) 70%, transparent);
+    border-color: color-mix(in srgb, var(--color-primary) 55%, transparent);
+}
+
+.parent-messages-page .parent-msg-thread:hover:not(.is-active) {
+    background: color-mix(in srgb, var(--color-background) 40%, transparent);
+}
+
+.parent-messages-page .parent-msg-thread__avatar {
+    position: relative;
+    width: 2.35rem;
+    height: 2.35rem;
+    flex: none;
+    background: var(--color-primary);
+    color: #ffffff;
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-bold);
+}
+
+.parent-messages-page .parent-msg-thread__dot {
+    position: absolute;
+    top: -0.05rem;
+    inset-inline-start: -0.05rem;
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 50%;
+    background: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-surface);
+}
+
+.parent-messages-page .parent-msg-thread__copy {
+    display: grid;
+    gap: 0.15rem;
+    min-width: 0;
+}
+
+.parent-messages-page .parent-msg-thread__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.45rem;
+    min-width: 0;
+}
+
+.parent-messages-page .parent-msg-thread__copy strong {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-body-sm);
+    font-weight: var(--font-weight-bold);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.parent-messages-page .parent-msg-thread__copy time {
+    flex: none;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-caption);
+    white-space: nowrap;
+}
+
+.parent-messages-page .parent-msg-thread__child {
+    color: var(--color-primary);
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-semibold);
+}
+
+.parent-messages-page .parent-msg-thread__copy small {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-caption);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.parent-messages-page .parent-msg__compose {
+    width: 100%;
+}
+
+.parent-messages-page .parent-msg__chat {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    min-width: 0;
+    min-height: 0;
+}
+
+.parent-messages-page .parent-msg__chat-head {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 0.55rem 0.7rem;
+    min-width: 0;
+    padding: 0.9rem 1.1rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.parent-messages-page .parent-msg__chat-copy {
+    display: grid;
+    gap: 0.2rem;
+    min-width: 0;
+}
+
+.parent-messages-page .parent-msg__chat-copy h2 {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+}
+
+.parent-messages-page .parent-msg__chat-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.parent-messages-page .parent-msg__chat-tags p {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-semibold);
+}
+
+.parent-messages-page .parent-msg__about {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin: 0;
+    width: fit-content;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-pill);
+    background: color-mix(in srgb, var(--color-primary) 14%, transparent);
+    color: var(--color-primary);
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-medium);
+}
+
+.parent-messages-page .parent-msg__stream {
+    display: grid;
+    align-content: start;
+    justify-items: stretch;
+    gap: 0.5rem;
+    padding: 1.1rem;
+    overflow-y: auto;
+}
+
+.parent-messages-page .parent-msg-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.4rem;
+    width: max-content;
+    max-width: min(78%, 22rem);
+}
+
+.parent-messages-page .parent-msg-row--in {
+    justify-self: end;
+}
+
+.parent-messages-page .parent-msg-row--out {
+    justify-self: start;
+}
+
+.parent-messages-page .parent-msg-row__avatar {
+    width: 1.85rem;
+    height: 1.85rem;
+    flex: none;
+    background: var(--color-primary);
+    color: #ffffff;
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-bold);
+}
+
+.parent-messages-page .parent-msg-bubble {
+    display: grid;
+    gap: 0.15rem;
+    width: max-content;
+    max-width: 100%;
+    min-width: 0;
+    padding: 0.4rem 0.7rem;
+    border-radius: 0.7rem;
+}
+
+.parent-messages-page .parent-msg-bubble p {
+    margin: 0;
+    width: max-content;
+    max-width: 100%;
+    font-size: var(--font-size-body-sm);
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.parent-messages-page .parent-msg-bubble time {
+    color: inherit;
+    font-size: var(--font-size-caption);
+    opacity: 0.75;
+}
+
+.parent-messages-page .parent-msg-row--in .parent-msg-bubble {
+    background: color-mix(in srgb, var(--color-background) 75%, transparent);
+    border: 1px solid var(--color-border);
+    color: #ffffff;
+    border-end-end-radius: 0.35rem;
+}
+
+.parent-messages-page .parent-msg-row--in .parent-msg-bubble p,
+.parent-messages-page .parent-msg-row--in .parent-msg-bubble time {
+    color: #ffffff;
+}
+
+[data-theme="light"] .parent-messages-page .parent-msg-row--in .parent-msg-bubble,
+[data-theme="light"] .parent-messages-page .parent-msg-row--in .parent-msg-bubble p,
+[data-theme="light"] .parent-messages-page .parent-msg-row--in .parent-msg-bubble time {
+    color: #0a111d;
+}
+
+.parent-messages-page .parent-msg-row--out .parent-msg-bubble {
+    background: var(--color-primary);
+    color: #0a111d;
+    border-end-start-radius: 0.35rem;
+}
+
+.parent-messages-page .parent-msg-row--out .parent-msg-bubble p,
+.parent-messages-page .parent-msg-row--out .parent-msg-bubble time {
+    color: #0a111d;
+}
+
+.parent-messages-page .parent-msg__composer {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.85rem 1rem;
+    border-top: 1px solid var(--color-border);
+    background: color-mix(in srgb, var(--color-background) 35%, transparent);
+}
+
+.parent-messages-page .parent-msg__attach,
+.parent-messages-page .parent-msg__send {
+    display: inline-grid;
+    place-items: center;
+    width: 2.35rem;
+    height: 2.35rem;
+    flex: none;
+    border: 0;
+    border-radius: 0.65rem;
+    cursor: pointer;
+}
+
+.parent-messages-page .parent-msg__attach {
+    background: transparent;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-h3);
+}
+
+.parent-messages-page .parent-msg__attach:hover {
+    color: var(--color-primary);
+}
+
+.parent-messages-page .parent-msg__input {
+    width: 100%;
+    min-height: 2.5rem;
+    padding-inline: 0.95rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    background: var(--color-background);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-body-sm);
+}
+
+.parent-messages-page .parent-msg__input::placeholder {
+    color: var(--color-text-muted);
+}
+
+.parent-messages-page .parent-msg__send {
+    background: var(--color-primary);
+    color: #0a111d;
+    font-size: var(--font-size-body-lg);
+}
+
+.parent-messages-page .parent-msg__send:hover {
+    filter: brightness(1.05);
+}
+
+@media (max-width: 1279px) {
+    .parent-messages-page .parent-msg-panel {
+        grid-template-columns: minmax(13.5rem, 16.5rem) minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 1199px) {
+    .parent-messages-page .parent-msg-panel {
+        min-height: min(30rem, calc(100svh - 10rem));
+    }
+
+    .parent-messages-page .dash-content .btn.parent-msg__compose {
+        width: 100%;
+    }
+
+    .parent-messages-page .parent-msg__attach,
+    .parent-messages-page .parent-msg__send {
+        width: 2.35rem;
+        min-width: 2.35rem;
+        height: 2.35rem;
+        min-height: 2.35rem;
+        padding: 0;
+        align-self: center;
+    }
+}
+
+@media (max-width: 1023px) {
+    .parent-messages-page .parent-msg-panel {
+        grid-template-columns: minmax(12.5rem, 15rem) minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .parent-messages-page .parent-msg-panel {
+        grid-template-columns: minmax(0, 1fr);
+        min-height: 0;
+    }
+
+    .parent-messages-page .parent-msg__threads {
+        border-inline-end: 0;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .parent-messages-page .parent-msg__chat {
+        min-height: 22rem;
+    }
+
+    .parent-messages-page .dash-content .btn.parent-msg__compose {
+        width: auto;
+        justify-self: start;
+    }
+
+    .parent-messages-page .parent-msg-row {
+        max-width: min(86%, 18rem);
+    }
+}
+
+@media (max-width: 600px) {
+    .parent-messages-page .parent-msg__chat-head,
+    .parent-messages-page .parent-msg__stream,
+    .parent-messages-page .parent-msg__composer {
+        padding-inline: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .parent-messages-page .parent-msg__threads {
+        padding: 0.75rem;
+    }
+
+    .parent-messages-page .parent-msg-thread__avatar {
+        width: 2.1rem;
+        height: 2.1rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .parent-messages-page .parent-msg-row__avatar {
+        width: 1.65rem;
+        height: 1.65rem;
     }
 }
 

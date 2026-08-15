@@ -788,7 +788,8 @@ function getSearchItems(form) {
         ".teacher-pending__item",
         ".teacher-upcoming__item",
         ".teacher-request-card",
-        ".teacher-thread"
+        ".teacher-thread",
+        ".parent-msg-thread"
     ].join(", ")));
 }
 

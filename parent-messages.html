@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مشكاة | الحضور</title>
+    <title>مشكاة | الرسائل</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
     <link rel="stylesheet" href="./index.css">
 </head>
-<body class="student-dashboard parent-dashboard parent-attendance-page app-shell">
+<body class="student-dashboard parent-dashboard parent-messages-page app-shell">
     <div class="app-layout">
         <aside class="sidebar" id="mobile-menu" data-sidebar aria-hidden="true">
             <a class="dash-brand landing-brand landing-brand--image" href="./parent-dashboard.html">
@@ -35,7 +35,7 @@
                     <i class="ri-shield-check-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">الاختبارات</span>
                 </a>
-                <a class="sidebar-link is-active" href="./parent-attendance.html" aria-current="page">
+                <a class="sidebar-link" href="./parent-attendance.html">
                     <i class="ri-calendar-check-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">الحضور</span>
                 </a>
@@ -51,7 +51,7 @@
                     <i class="ri-file-chart-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">التقارير</span>
                 </a>
-                <a class="sidebar-link" href="./parent-messages.html">
+                <a class="sidebar-link is-active" href="./parent-messages.html" aria-current="page">
                     <i class="ri-chat-3-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">الرسائل</span>
                 </a>
@@ -125,7 +125,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="dash-notify__item dropdown-item" href="./parent-dashboard.html">
+                                <a class="dash-notify__item dropdown-item" href="./parent-messages.html">
                                     <span class="avatar parent-msgs__avatar" aria-hidden="true">أ</span>
                                     <span class="dash-notify__copy">
                                         <p>أ. أحمد</p>
@@ -135,7 +135,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="dash-notify__item dropdown-item" href="./parent-dashboard.html">
+                                <a class="dash-notify__item dropdown-item" href="./parent-messages.html">
                                     <span class="avatar parent-msgs__avatar" aria-hidden="true">س</span>
                                     <span class="dash-notify__copy">
                                         <p>د. سارة</p>
@@ -150,83 +150,117 @@
                 </div>
             </header>
 
-            <main class="dash-content parent-att">
-                <h2 class="parent-att__title">الحضور</h2>
+            <main class="dash-content parent-msg">
+                <section class="card parent-msg-panel">
+                    <aside class="parent-msg__threads" aria-label="قائمة المحادثات">
+                        <form class="search parent-msg__search" role="search" action="./parent-messages.html" method="get">
+                            <i class="ri-search-line search-icon" aria-hidden="true"></i>
+                            <label class="visually-hidden" for="parent-msg-search">بحث</label>
+                            <input class="search-field" id="parent-msg-search" name="q" type="search" placeholder="بحث...">
+                        </form>
 
-                <section class="parent-att__stats" aria-label="الحضور">
-                    <article class="card parent-att-stat">
-                        <p class="parent-att-stat__label">معدل الحضور</p>
-                        <p class="parent-att-stat__value parent-att-stat__value--orange">88%</p>
-                    </article>
-                    <article class="card parent-att-stat">
-                        <p class="parent-att-stat__label">هذا الشهر</p>
-                        <p class="parent-att-stat__value parent-att-stat__value--blue">18/20</p>
-                    </article>
-                    <article class="card parent-att-stat">
-                        <p class="parent-att-stat__label">الغياب</p>
-                        <p class="parent-att-stat__value parent-att-stat__value--red">2</p>
-                    </article>
-                    <article class="card parent-att-stat">
-                        <p class="parent-att-stat__label">التأخير</p>
-                        <p class="parent-att-stat__value parent-att-stat__value--yellow">1</p>
-                    </article>
-                </section>
-
-                <nav class="parent-att__tabs" aria-label="عرض الحضور">
-                    <a class="is-active" href="./parent-attendance.html" aria-current="page">يومي</a>
-                    <a href="#">شهري</a>
-                    <a href="#">الاتجاهات</a>
-                </nav>
-
-                <div class="parent-att__layout">
-                    <section class="card parent-att-total" aria-labelledby="parent-att-total-title">
-                        <h3 id="parent-att-total-title">الإجمالي</h3>
-                        <div class="parent-att-total__ring" aria-hidden="true">
-                            <svg viewBox="0 0 48 48">
-                                <circle class="parent-att-total__track" cx="24" cy="24" r="18"></circle>
-                                <circle class="parent-att-total__value" cx="24" cy="24" r="18" pathLength="100" stroke-dasharray="88 100"></circle>
-                            </svg>
-                            <strong>88%</strong>
+                        <div class="parent-msg__list">
+                            <button class="parent-msg-thread is-active" type="button">
+                                <span class="avatar parent-msg-thread__avatar parent-msg-thread__avatar--online" aria-hidden="true">
+                                    أ
+                                    <span class="parent-msg-thread__dot"></span>
+                                </span>
+                                <span class="parent-msg-thread__copy">
+                                    <span class="parent-msg-thread__row">
+                                        <strong>أ. أحمد</strong>
+                                        <time datetime="2026-08-15T13:45">منذ ساعتين</time>
+                                    </span>
+                                    <span class="parent-msg-thread__child">أحمد</span>
+                                    <small>كيف يجد أحمد فصل المشتقات؟</small>
+                                </span>
+                            </button>
+                            <button class="parent-msg-thread" type="button">
+                                <span class="avatar parent-msg-thread__avatar parent-msg-thread__avatar--online" aria-hidden="true">
+                                    س
+                                    <span class="parent-msg-thread__dot"></span>
+                                </span>
+                                <span class="parent-msg-thread__copy">
+                                    <span class="parent-msg-thread__row">
+                                        <strong>د. سارة</strong>
+                                        <time datetime="2026-08-14">أمس</time>
+                                    </span>
+                                    <span class="parent-msg-thread__child">أحمد</span>
+                                    <small>تقرير أحمد في العلوم يحتاج مراجعة</small>
+                                </span>
+                            </button>
+                            <button class="parent-msg-thread" type="button">
+                                <span class="avatar parent-msg-thread__avatar" aria-hidden="true">ل</span>
+                                <span class="parent-msg-thread__copy">
+                                    <span class="parent-msg-thread__row">
+                                        <strong>أ. ليلى</strong>
+                                        <time datetime="2025-06-20">20 يونيو</time>
+                                    </span>
+                                    <span class="parent-msg-thread__child">ليلى</span>
+                                    <small>مقال ليلى كان من أفضل المقالات</small>
+                                </span>
+                            </button>
                         </div>
-                        <p>جيد - تابع عن كثب</p>
-                    </section>
 
-                    <section class="card parent-att-day" aria-labelledby="parent-att-day-title">
-                        <header class="parent-att-day__head">
-                            <h3 id="parent-att-day-title">اليوم — أحمد</h3>
-                            <span>الأحد 22 يونيو</span>
+                        <button class="btn btn-primary btn-md parent-msg__compose" type="button">
+                            <i class="ri-add-line" aria-hidden="true"></i>
+                            رسالة جديدة
+                        </button>
+                    </aside>
+
+                    <div class="parent-msg__chat">
+                        <header class="parent-msg__chat-head">
+                            <span class="avatar parent-msg-thread__avatar" aria-hidden="true">أ</span>
+                            <div class="parent-msg__chat-copy">
+                                <h2>أ. أحمد</h2>
+                                <div class="parent-msg__chat-tags">
+                                    <p>الرياضيات</p>
+                                    <span class="parent-badge parent-badge--ok">أحمد</span>
+                                </div>
+                            </div>
+                            <p class="parent-msg__about">بخصوص: أحمد - الرياضيات</p>
                         </header>
-                        <ul class="parent-att-day__list">
-                            <li class="parent-att-row parent-att-row--ok">
-                                <span class="parent-att-row__bar" aria-hidden="true"></span>
-                                <div class="parent-att-row__copy">
-                                    <h4>الرياضيات</h4>
-                                    <p>10:00 ص</p>
+
+                        <div class="parent-msg__stream" role="log" aria-live="polite">
+                            <article class="parent-msg-row parent-msg-row--in">
+                                <div class="parent-msg-bubble">
+                                    <p>كيف يجد أحمد فصل المشتقات حتى الآن؟</p>
+                                    <time datetime="14:15">2:15 م</time>
                                 </div>
-                                <span class="parent-badge parent-badge--ok">حاضر</span>
-                            </li>
-                            <li class="parent-att-row parent-att-row--ok">
-                                <span class="parent-att-row__bar" aria-hidden="true"></span>
-                                <div class="parent-att-row__copy">
-                                    <h4>العلوم</h4>
-                                    <p>12:00 م</p>
+                                <span class="avatar parent-msg-row__avatar" aria-hidden="true">أ</span>
+                            </article>
+                            <article class="parent-msg-row parent-msg-row--out">
+                                <div class="parent-msg-bubble">
+                                    <p>يجده صعباً، خاصةً قاعدة السلسلة.</p>
+                                    <time datetime="14:18">2:18 م</time>
                                 </div>
-                                <span class="parent-badge parent-badge--ok">حاضر</span>
-                            </li>
-                            <li class="parent-att-row parent-att-row--absent">
-                                <span class="parent-att-row__bar" aria-hidden="true"></span>
-                                <div class="parent-att-row__copy">
-                                    <h4>اللغة الإنجليزية</h4>
-                                    <p>3:00 م</p>
+                            </article>
+                            <article class="parent-msg-row parent-msg-row--in">
+                                <div class="parent-msg-bubble">
+                                    <p>هذا متوقع، أنصح بحجز جلسة هذا الأسبوع.</p>
+                                    <time datetime="14:20">2:20 م</time>
                                 </div>
-                                <div class="parent-att-row__actions">
-                                    <span class="parent-badge parent-badge--danger">غائب</span>
-                                    <a class="parent-att-row__msg" href="./parent-messages.html">مراسلة</a>
+                                <span class="avatar parent-msg-row__avatar" aria-hidden="true">أ</span>
+                            </article>
+                            <article class="parent-msg-row parent-msg-row--out">
+                                <div class="parent-msg-bubble">
+                                    <p>نعم، الجمعة مناسبة.</p>
+                                    <time datetime="14:22">2:22 م</time>
                                 </div>
-                            </li>
-                        </ul>
-                    </section>
-                </div>
+                            </article>
+                        </div>
+
+                        <form class="parent-msg__composer" action="#" method="post">
+                            <button class="parent-msg__attach" type="button" aria-label="إرفاق ملف">
+                                <i class="ri-attachment-2" aria-hidden="true"></i>
+                            </button>
+                            <label class="visually-hidden" for="parent-message-input">اكتب رسالتك هنا</label>
+                            <input class="parent-msg__input" id="parent-message-input" name="message" type="text" placeholder="اكتب رسالتك هنا...">
+                            <button class="parent-msg__send" type="submit" aria-label="إرسال">
+                                <i class="ri-send-plane-fill" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                </section>
             </main>
         </div>
     </div>
