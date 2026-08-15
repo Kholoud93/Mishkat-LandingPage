@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشكاة | التقدم الأكاديمي</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body class="student-dashboard parent-dashboard parent-progress-page app-shell">
+    <div class="app-layout">
+        <aside class="sidebar" id="mobile-menu" data-sidebar aria-hidden="true">
+            <a class="dash-brand landing-brand landing-brand--image" href="./parent-dashboard.html">
+                <img class="landing-logo" src="./assets/logo.png" alt="شعار مشكاة">
+            </a>
+
+            <nav class="sidebar-nav" aria-label="تنقل بوابة ولي الأمر">
+                <a class="sidebar-link" href="./parent-dashboard.html">
+                    <i class="ri-apps-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الرئيسية</span>
+                </a>
+                <a class="sidebar-link" href="./parent-children.html">
+                    <i class="ri-user-heart-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">أطفالي</span>
+                </a>
+                <a class="sidebar-link is-active" href="./parent-progress.html" aria-current="page">
+                    <i class="ri-line-chart-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">التقدم الأكاديمي</span>
+                </a>
+                <a class="sidebar-link" href="./parent-assignments.html">
+                    <i class="ri-clipboard-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الواجبات</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-shield-check-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الاختبارات</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-calendar-check-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الحضور</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-calendar-schedule-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الجلسات الخاصة</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-wallet-3-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">المدفوعات</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-file-chart-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">التقارير</span>
+                </a>
+                <a class="sidebar-link" href="#">
+                    <i class="ri-chat-3-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الرسائل</span>
+                </a>
+            </nav>
+
+            <div class="dash-profile">
+                <div class="parent-sidebar-child">
+                    <span class="avatar parent-sidebar-child__avatar" aria-hidden="true">أ</span>
+                    <div class="parent-sidebar-child__copy">
+                        <p class="parent-sidebar-child__name">أحمد</p>
+                        <p class="parent-sidebar-child__meta">الصف العاشر</p>
+                    </div>
+                    <span class="parent-badge parent-badge--warn">يحتاج متابعة</span>
+                </div>
+                <a class="dash-profile__info" href="#">
+                    <span class="avatar dash-profile__avatar" aria-hidden="true">AE</span>
+                    <div class="dash-profile__copy">
+                        <p class="dash-profile__name">عبدالله الشرقاوي</p>
+                    </div>
+                </a>
+                <a class="btn btn-ghost btn-sm dash-profile__logout" href="./login.html">
+                    <i class="ri-logout-box-r-line" aria-hidden="true"></i>
+                    تسجيل الخروج
+                </a>
+            </div>
+        </aside>
+
+        <div class="dash-shell">
+            <header class="dash-header">
+                <button class="btn btn-ghost btn-md sidebar-toggle" type="button" data-sidebar-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="فتح القائمة">
+                    <i class="ri-menu-line" aria-hidden="true"></i>
+                </button>
+
+                <h1 class="dash-header__title">بوابة ولي الأمر</h1>
+
+                <div class="dash-header__actions">
+                    <button class="dash-icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="تبديل الوضع">
+                        <i class="ri-moon-line" aria-hidden="true"></i>
+                    </button>
+                    <a class="nav-language" href="./index.html" lang="en" dir="ltr" aria-label="تبديل اللغة إلى الإنجليزية">
+                        <i class="ri-global-line" aria-hidden="true"></i>
+                        EN
+                    </a>
+                    <div class="dropdown dash-notify">
+                    <button class="dash-icon-btn" type="button" data-dropdown-toggle aria-expanded="false" aria-haspopup="true" aria-controls="parent-notify-menu" aria-label="الإشعارات">
+                        <i class="ri-notification-3-line" aria-hidden="true"></i>
+                        <span class="dash-icon-btn__dot" aria-hidden="true"></span>
+                    </button>
+                    <div class="dropdown-menu dash-notify__menu" id="parent-notify-menu">
+                        <ul class="dash-notify__list">
+                            <li>
+                                <a class="dash-notify__item dropdown-item" href="./parent-dashboard.html">
+                                    <span class="avatar dash-notify__icon dash-notify__icon--live" aria-hidden="true">
+                                        <i class="ri-vidicon-fill"></i>
+                                    </span>
+                                    <span class="dash-notify__copy">
+                                        <p>أحمد في حصة الرياضيات المباشرة الآن</p>
+                                        <span>أ. أحمد الراشدي • بدأ منذ 14 دقيقة</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dash-notify__item dropdown-item" href="./parent-dashboard.html">
+                                    <span class="avatar dash-notify__icon dash-notify__icon--warn" aria-hidden="true">
+                                        <i class="ri-error-warning-fill"></i>
+                                    </span>
+                                    <span class="dash-notify__copy">
+                                        <p>يحتاج متابعة — أحمد</p>
+                                        <span>غاب عن حصة الإنجليزية اليوم. درجات العلوم في تراجع.</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dash-notify__item dropdown-item" href="./parent-dashboard.html">
+                                    <span class="avatar parent-msgs__avatar" aria-hidden="true">أ</span>
+                                    <span class="dash-notify__copy">
+                                        <p>أ. أحمد</p>
+                                        <span>منذ ساعتين</span>
+                                        <span>كيف يجد أحمد فصل المشتقات؟</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dash-notify__item dropdown-item" href="./parent-dashboard.html">
+                                    <span class="avatar parent-msgs__avatar" aria-hidden="true">س</span>
+                                    <span class="dash-notify__copy">
+                                        <p>د. سارة</p>
+                                        <span>أمس</span>
+                                        <span>تقرير أحمد في العلوم يحتاج مراجعة</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="dash-content parent-progress">
+                <section class="parent-progress__stats" aria-label="التقدم الأكاديمي">
+                    <article class="card parent-progress-stat">
+                        <span class="parent-progress-stat__icon parent-progress-stat__icon--green" aria-hidden="true">
+                            <i class="ri-line-chart-line"></i>
+                        </span>
+                        <p class="parent-progress-stat__label">المعدل التراكمي</p>
+                        <p class="parent-progress-stat__value">3.6 <span>/ 4.0</span></p>
+                    </article>
+                    <article class="card parent-progress-stat">
+                        <span class="parent-progress-stat__icon parent-progress-stat__icon--orange" aria-hidden="true">
+                            <i class="ri-calendar-line"></i>
+                        </span>
+                        <p class="parent-progress-stat__label">الحضور</p>
+                        <p class="parent-progress-stat__value">88%</p>
+                    </article>
+                    <article class="card parent-progress-stat">
+                        <span class="parent-progress-stat__icon parent-progress-stat__icon--blue" aria-hidden="true">
+                            <i class="ri-file-text-line"></i>
+                        </span>
+                        <p class="parent-progress-stat__label">الواجبات</p>
+                        <p class="parent-progress-stat__value">41 <span>مُسلّم</span></p>
+                    </article>
+                    <article class="card parent-progress-stat">
+                        <span class="parent-progress-stat__icon parent-progress-stat__icon--tan" aria-hidden="true">
+                            <i class="ri-user-line"></i>
+                        </span>
+                        <p class="parent-progress-stat__label">الجلسات</p>
+                        <p class="parent-progress-stat__value">5 <span>هذا الشهر</span></p>
+                    </article>
+                </section>
+
+                <nav class="parent-progress__tabs" aria-label="التقدم الأكاديمي">
+                    <a class="is-active" href="./parent-progress.html" aria-current="page">نظرة عامة</a>
+                    <a href="#">المواد</a>
+                    <a href="#">الحضور</a>
+                </nav>
+
+                <div class="parent-progress__charts">
+                    <div class="parent-progress__aside">
+                        <section class="card parent-progress-radar" aria-labelledby="parent-radar-title">
+                            <h2 id="parent-radar-title">توازن المواد</h2>
+                            <div class="parent-progress-radar__plot" role="img" aria-label="توازن المواد">
+                                <svg viewBox="-16 8 252 236" aria-hidden="true">
+                                    <polygon class="parent-progress-radar__grid" points="110,40 179.3,80 179.3,160 110,200 40.7,160 40.7,80"></polygon>
+                                    <polygon class="parent-progress-radar__grid" points="110,66.7 156.2,93.3 156.2,146.7 110,173.3 63.8,146.7 63.8,93.3"></polygon>
+                                    <polygon class="parent-progress-radar__grid" points="110,93.3 133.1,106.7 133.1,133.3 110,146.7 86.9,133.3 86.9,106.7"></polygon>
+                                    <line class="parent-progress-radar__axis" x1="110" y1="120" x2="110" y2="40"></line>
+                                    <line class="parent-progress-radar__axis" x1="110" y1="120" x2="179.3" y2="80"></line>
+                                    <line class="parent-progress-radar__axis" x1="110" y1="120" x2="179.3" y2="160"></line>
+                                    <line class="parent-progress-radar__axis" x1="110" y1="120" x2="110" y2="200"></line>
+                                    <line class="parent-progress-radar__axis" x1="110" y1="120" x2="40.7" y2="160"></line>
+                                    <line class="parent-progress-radar__axis" x1="110" y1="120" x2="40.7" y2="80"></line>
+                                    <polygon class="parent-progress-radar__fill" points="110,50.4 161.3,90.4 173,156.4 110,183.2 62.9,147.2 49,84.8"></polygon>
+                                    <text x="110" y="28" text-anchor="middle">الرياضيات</text>
+                                    <text x="198" y="78" text-anchor="middle">العلوم</text>
+                                    <text x="198" y="168" text-anchor="middle">اللغة العربية</text>
+                                    <text x="110" y="222" text-anchor="middle">اللغة الإنجليزية</text>
+                                    <text x="22" y="168" text-anchor="middle">التاريخ</text>
+                                    <text x="22" y="78" text-anchor="middle">الفنون</text>
+                                </svg>
+                            </div>
+                        </section>
+                        <a class="btn btn-primary btn-sm parent-progress__download" href="#">
+                            <i class="ri-download-2-line" aria-hidden="true"></i>
+                            تحميل تقرير التقدم
+                        </a>
+                    </div>
+
+                    <div class="parent-progress__main">
+                    <section class="card parent-progress-chart" aria-labelledby="parent-path-title">
+                        <div class="parent-progress-chart__head">
+                            <h2 id="parent-path-title">مسار الدرجات — أحمد</h2>
+                            <ul class="parent-progress-legend">
+                                <li class="parent-progress-legend--math">رياضيات</li>
+                                <li class="parent-progress-legend--science">علوم</li>
+                                <li class="parent-progress-legend--english">إنجليزية</li>
+                            </ul>
+                        </div>
+                        <div class="parent-progress-chart__body" role="img" aria-label="مسار الدرجات — أحمد">
+                            <div class="parent-progress-chart__y" aria-hidden="true">
+                                <span>100</span>
+                                <span>80</span>
+                                <span>65</span>
+                                <span>50</span>
+                            </div>
+                            <div class="parent-progress-chart__plot">
+                                <svg viewBox="0 0 560 190" preserveAspectRatio="none" aria-hidden="true">
+                                    <defs>
+                                        <linearGradient id="parent-progress-area" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0%" stop-color="#81CC33" stop-opacity="0.28"></stop>
+                                            <stop offset="100%" stop-color="#81CC33" stop-opacity="0"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                    <line class="parent-progress-grid" x1="0" y1="10" x2="560" y2="10"></line>
+                                    <line class="parent-progress-grid" x1="0" y1="74" x2="560" y2="74"></line>
+                                    <line class="parent-progress-grid" x1="0" y1="122" x2="560" y2="122"></line>
+                                    <line class="parent-progress-grid" x1="0" y1="170" x2="560" y2="170"></line>
+                                    <polygon class="parent-progress-area" points="20,106 105,96.4 190,86.8 275,77.2 360,64.4 445,54.8 530,48.4 530,190 20,190"></polygon>
+                                    <polyline class="parent-progress-line parent-progress-line--math" fill="none" points="20,106 105,96.4 190,86.8 275,77.2 360,64.4 445,54.8 530,48.4"></polyline>
+                                    <polyline class="parent-progress-line parent-progress-line--science" fill="none" points="20,112.4 105,106 190,96.4 275,86.8 360,77.2 445,67.6 530,61.2"></polyline>
+                                    <polyline class="parent-progress-line parent-progress-line--english" fill="none" points="20,118.8 105,109.2 190,102.8 275,93.2 360,80.4 445,67.6 530,58"></polyline>
+                                </svg>
+                                <div class="parent-progress-chart__x" aria-hidden="true">
+                                    <span>1أ</span>
+                                    <span>2أ</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5أ</span>
+                                    <span>6</span>
+                                    <span>7أ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                <section class="card parent-progress-avgs" aria-labelledby="parent-avgs-title">
+                    <h2 id="parent-avgs-title">متوسطات المواد</h2>
+                    <ul class="parent-progress-avgs__list">
+                        <li>
+                            <span class="parent-child-card__dot parent-child-card__dot--green" aria-hidden="true"></span>
+                            <span>الرياضيات</span>
+                            <span class="parent-child-card__bar">
+                                <span class="parent-child-card__fill parent-child-card__fill--green parent-subject__fill--87"></span>
+                            </span>
+                            <strong>87%</strong>
+                        </li>
+                        <li>
+                            <span class="parent-child-card__dot parent-child-card__dot--blue" aria-hidden="true"></span>
+                            <span>العلوم</span>
+                            <span class="parent-child-card__bar">
+                                <span class="parent-child-card__fill parent-child-card__fill--blue parent-subject__fill--74"></span>
+                            </span>
+                            <strong>74%</strong>
+                        </li>
+                        <li>
+                            <span class="parent-child-card__dot parent-child-card__dot--orange" aria-hidden="true"></span>
+                            <span>اللغة العربية</span>
+                            <span class="parent-child-card__bar">
+                                <span class="parent-child-card__fill parent-child-card__fill--orange parent-subject__fill--91"></span>
+                            </span>
+                            <strong>91%</strong>
+                        </li>
+                        <li>
+                            <span class="parent-child-card__dot parent-child-card__dot--cyan" aria-hidden="true"></span>
+                            <span>اللغة الإنجليزية</span>
+                            <span class="parent-child-card__bar">
+                                <span class="parent-child-card__fill parent-child-card__fill--cyan parent-subject__fill--79"></span>
+                            </span>
+                            <strong>79%</strong>
+                        </li>
+                        <li>
+                            <span class="parent-progress-avgs__dot parent-progress-avgs__dot--pink" aria-hidden="true"></span>
+                            <span class="parent-progress-avgs__name">
+                                التاريخ
+                                <span class="parent-badge parent-badge--danger">في خطر</span>
+                            </span>
+                            <span class="parent-child-card__bar">
+                                <span class="parent-progress-avgs__fill parent-progress-avgs__fill--pink parent-subject__fill--68"></span>
+                            </span>
+                            <strong>68%</strong>
+                        </li>
+                        <li>
+                            <span class="parent-progress-avgs__dot parent-progress-avgs__dot--purple" aria-hidden="true"></span>
+                            <span>الفنون</span>
+                            <span class="parent-child-card__bar">
+                                <span class="parent-progress-avgs__fill parent-progress-avgs__fill--purple parent-subject__fill--88"></span>
+                            </span>
+                            <strong>88%</strong>
+                        </li>
+                    </ul>
+                </section>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

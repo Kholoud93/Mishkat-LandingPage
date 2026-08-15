@@ -271,6 +271,11 @@ function initDropdowns() {
     });
 
     document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeDropdowns();
+            return;
+        }
+
         if (event.key !== "ArrowDown" && event.key !== "ArrowUp") {
             return;
         }
@@ -766,6 +771,35 @@ function initReportsSearch() {
     });
 }
 
+function initParentHwFilter() {
+    const root = document.querySelector(".parent-hw");
+    if (!root) {
+        return;
+    }
+
+    const chips = Array.from(root.querySelectorAll(".parent-hw__chip"));
+    const items = Array.from(root.querySelectorAll(".parent-hw-list__items li"));
+    if (!chips.length || !items.length) {
+        return;
+    }
+
+    const applyFilter = (filter) => {
+        chips.forEach((chip) => {
+            chip.classList.toggle("is-active", chip.getAttribute("data-hw-filter") === filter);
+        });
+        items.forEach((item) => {
+            const status = item.querySelector("[data-hw-status]")?.getAttribute("data-hw-status") || "";
+            item.classList.toggle("is-hidden", filter !== "الكل" && status !== filter);
+        });
+    };
+
+    chips.forEach((chip) => {
+        chip.addEventListener("click", () => {
+            applyFilter(chip.getAttribute("data-hw-filter") || "الكل");
+        });
+    });
+}
+
 function initApp() {
     initTheme();
     initModals();
@@ -777,6 +811,7 @@ function initApp() {
     initAccountTypeOptions();
     initSessionsTeacherPick();
     initReportsSearch();
+    initParentHwFilter();
     initGlobalEvents();
 }
 

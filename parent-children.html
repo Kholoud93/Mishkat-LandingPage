@@ -23,11 +23,11 @@
                     <i class="ri-user-heart-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">أطفالي</span>
                 </a>
-                <a class="sidebar-link" href="#">
+                <a class="sidebar-link" href="./parent-progress.html">
                     <i class="ri-line-chart-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">التقدم الأكاديمي</span>
                 </a>
-                <a class="sidebar-link" href="#">
+                <a class="sidebar-link" href="./parent-assignments.html">
                     <i class="ri-clipboard-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">الواجبات</span>
                 </a>
@@ -95,10 +95,58 @@
                         <i class="ri-global-line" aria-hidden="true"></i>
                         EN
                     </a>
-                    <button class="dash-icon-btn" type="button" aria-label="الإشعارات">
+                    <div class="dropdown dash-notify">
+                    <button class="dash-icon-btn" type="button" data-dropdown-toggle aria-expanded="false" aria-haspopup="true" aria-controls="parent-notify-menu" aria-label="الإشعارات">
                         <i class="ri-notification-3-line" aria-hidden="true"></i>
                         <span class="dash-icon-btn__dot" aria-hidden="true"></span>
                     </button>
+                    <div class="dropdown-menu dash-notify__menu" id="parent-notify-menu">
+                        <ul class="dash-notify__list">
+                            <li>
+                                <a class="dash-notify__item dropdown-item" href="./parent-dashboard.html">
+                                    <span class="avatar dash-notify__icon dash-notify__icon--live" aria-hidden="true">
+                                        <i class="ri-vidicon-fill"></i>
+                                    </span>
+                                    <span class="dash-notify__copy">
+                                        <p>أحمد في حصة الرياضيات المباشرة الآن</p>
+                                        <span>أ. أحمد الراشدي • بدأ منذ 14 دقيقة</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dash-notify__item dropdown-item" href="./parent-dashboard.html">
+                                    <span class="avatar dash-notify__icon dash-notify__icon--warn" aria-hidden="true">
+                                        <i class="ri-error-warning-fill"></i>
+                                    </span>
+                                    <span class="dash-notify__copy">
+                                        <p>يحتاج متابعة — أحمد</p>
+                                        <span>غاب عن حصة الإنجليزية اليوم. درجات العلوم في تراجع.</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dash-notify__item dropdown-item" href="./parent-dashboard.html">
+                                    <span class="avatar parent-msgs__avatar" aria-hidden="true">أ</span>
+                                    <span class="dash-notify__copy">
+                                        <p>أ. أحمد</p>
+                                        <span>منذ ساعتين</span>
+                                        <span>كيف يجد أحمد فصل المشتقات؟</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dash-notify__item dropdown-item" href="./parent-dashboard.html">
+                                    <span class="avatar parent-msgs__avatar" aria-hidden="true">س</span>
+                                    <span class="dash-notify__copy">
+                                        <p>د. سارة</p>
+                                        <span>أمس</span>
+                                        <span>تقرير أحمد في العلوم يحتاج مراجعة</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
                 </div>
             </header>
 
@@ -173,7 +221,7 @@
                             </li>
                         </ul>
                         <div class="parent-child-card__foot">
-                            <a class="btn btn-sm parent-child-card__progress" href="#">عرض التقدم</a>
+                            <a class="btn btn-sm parent-child-card__progress" href="./parent-progress.html">عرض التقدم</a>
                             <a class="parent-child-card__msg" href="#" aria-label="الرسائل">
                                 <i class="ri-chat-3-line" aria-hidden="true"></i>
                             </a>
@@ -234,7 +282,7 @@
                             </li>
                         </ul>
                         <div class="parent-child-card__foot">
-                            <a class="btn btn-sm parent-child-card__progress" href="#">عرض التقدم</a>
+                            <a class="btn btn-sm parent-child-card__progress" href="./parent-progress.html">عرض التقدم</a>
                             <a class="parent-child-card__msg" href="#" aria-label="الرسائل">
                                 <i class="ri-chat-3-line" aria-hidden="true"></i>
                             </a>
@@ -295,7 +343,7 @@
                             </li>
                         </ul>
                         <div class="parent-child-card__foot">
-                            <a class="btn btn-sm parent-child-card__progress" href="#">عرض التقدم</a>
+                            <a class="btn btn-sm parent-child-card__progress" href="./parent-progress.html">عرض التقدم</a>
                             <a class="parent-child-card__msg" href="#" aria-label="الرسائل">
                                 <i class="ri-chat-3-line" aria-hidden="true"></i>
                             </a>

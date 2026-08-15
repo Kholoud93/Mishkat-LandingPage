@@ -93,10 +93,47 @@
                         <i class="ri-global-line" aria-hidden="true"></i>
                         EN
                     </a>
-                    <button class="dash-icon-btn" type="button" aria-label="الإشعارات">
+                    <div class="dropdown dash-notify">
+                    <button class="dash-icon-btn" type="button" data-dropdown-toggle aria-expanded="false" aria-haspopup="true" aria-controls="teacher-notify-menu" aria-label="الإشعارات">
                         <i class="ri-notification-3-line" aria-hidden="true"></i>
                         <span class="dash-icon-btn__dot" aria-hidden="true"></span>
                     </button>
+                    <div class="dropdown-menu dash-notify__menu" id="teacher-notify-menu">
+                        <ul class="dash-notify__list">
+                            <li>
+                                <a class="dash-notify__item dropdown-item" href="./teacher-assignments.html">
+                                    <span class="avatar dash-notify__icon dash-notify__icon--warn" aria-hidden="true">
+                                        <i class="ri-file-text-line"></i>
+                                    </span>
+                                    <span class="dash-notify__copy">
+                                        <p>تجارب الكيمياء العضوية</p>
+                                        <span>كيمياء 3 • 12 تسليم جديد</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dash-notify__item dropdown-item" href="./teacher-assignments.html">
+                                    <span class="avatar dash-notify__icon dash-notify__icon--warn" aria-hidden="true">
+                                        <i class="ri-file-text-line"></i>
+                                    </span>
+                                    <span class="dash-notify__copy">
+                                        <p>حل معادلات الدرجة الثانية</p>
+                                        <span>رياضيات • 8 تسليمات جديدة</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dash-notify__item dropdown-item" href="./teacher-messages.html">
+                                    <span class="avatar dash-notify__icon dash-notify__icon--live" aria-hidden="true">م</span>
+                                    <span class="dash-notify__copy">
+                                        <p>محمد الدوسري (ولي أمر)</p>
+                                        <span>بخصوص مستوى أحمد الدراسي</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
                 </div>
             </header>
 
