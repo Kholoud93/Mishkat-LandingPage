@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشكاة | الرسائل والمحادثات</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body class="student-dashboard teacher-dashboard teacher-messages-page app-shell">
+    <div class="app-layout">
+        <aside class="sidebar" id="mobile-menu" data-sidebar aria-hidden="true">
+            <a class="dash-brand landing-brand landing-brand--image" href="./teacher-dashboard.html">
+                <img class="landing-logo" src="./assets/logo.png" alt="شعار مشكاة">
+            </a>
+
+            <nav class="sidebar-nav" aria-label="تنقل بوابة المعلم">
+                <a class="sidebar-link" href="./teacher-dashboard.html">
+                    <i class="ri-apps-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الرئيسية</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-courses.html">
+                    <i class="ri-book-open-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">موادي الدراسية</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-lessons.html">
+                    <i class="ri-file-list-3-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">إدارة الدروس</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-classroom.html">
+                    <i class="ri-vidicon-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الفصل الافتراضي</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-assignments.html">
+                    <i class="ri-clipboard-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الواجبات</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-exams.html">
+                    <i class="ri-shield-check-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الاختبارات</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-sessions.html">
+                    <i class="ri-calendar-schedule-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الجلسات الخاصة</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-students.html">
+                    <i class="ri-group-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الطلاب</span>
+                </a>
+                <a class="sidebar-link is-active" href="./teacher-messages.html" aria-current="page">
+                    <i class="ri-chat-3-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الرسائل</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-analytics.html">
+                    <i class="ri-bar-chart-2-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">التحليلات</span>
+                </a>
+            </nav>
+
+            <div class="dash-profile">
+                <a class="dash-profile__info" href="./teacher-profile.html">
+                    <span class="avatar dash-profile__avatar" aria-hidden="true">AE</span>
+                    <div class="dash-profile__copy">
+                        <p class="dash-profile__name">عبدالله الشرقاوي</p>
+                    </div>
+                </a>
+                <a class="btn btn-ghost btn-sm dash-profile__logout" href="./login.html">
+                    <i class="ri-logout-box-r-line" aria-hidden="true"></i>
+                    تسجيل الخروج
+                </a>
+            </div>
+        </aside>
+
+        <div class="dash-shell">
+            <header class="dash-header">
+                <button class="btn btn-ghost btn-md sidebar-toggle" type="button" data-sidebar-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="فتح القائمة">
+                    <i class="ri-menu-line" aria-hidden="true"></i>
+                </button>
+
+                <h1 class="dash-header__title">بوابة المعلم الأكاديمية</h1>
+
+                <div class="dash-header__actions">
+                    <button class="dash-icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="تبديل الوضع">
+                        <i class="ri-moon-line" aria-hidden="true"></i>
+                    </button>
+                    <a class="nav-language" href="./index.html" lang="en" dir="ltr" aria-label="تبديل اللغة إلى الإنجليزية">
+                        <i class="ri-global-line" aria-hidden="true"></i>
+                        EN
+                    </a>
+                </div>
+            </header>
+
+            <main class="dash-content teacher-messages-content">
+                <div class="teacher-messages__top">
+                    <h2 class="teacher-messages__title">الرسائل والمحادثات</h2>
+                    <button class="btn btn-primary teacher-messages__compose" type="button">
+                        <i class="ri-edit-box-line" aria-hidden="true"></i>
+                        رسالة جديدة
+                    </button>
+                </div>
+
+                <section class="card teacher-messages-panel">
+                    <aside class="teacher-messages__threads" aria-label="قائمة المحادثات">
+                        <button class="teacher-thread is-active" type="button">
+                            <span class="teacher-thread__avatar teacher-thread__avatar--blue" aria-hidden="true">م</span>
+                            <span class="teacher-thread__copy">
+                                <strong>محمد الدوسري (ولي أمر)</strong>
+                                <small>بخصوص مستوى أحمد الدراسي</small>
+                            </span>
+                        </button>
+                        <button class="teacher-thread" type="button">
+                            <span class="teacher-thread__avatar teacher-thread__avatar--green" aria-hidden="true">
+                                <i class="ri-error-warning-line"></i>
+                            </span>
+                            <span class="teacher-thread__copy">
+                                <strong>إدارة المدرسة</strong>
+                                <small>تعميم إداري جديد</small>
+                            </span>
+                        </button>
+                    </aside>
+
+                    <div class="teacher-messages__chat">
+                        <header class="teacher-messages__chat-head">
+                            <h3>محمد الدوسري (ولي أمر الطالب أحمد)</h3>
+                        </header>
+
+                        <div class="teacher-messages__stream" role="log" aria-live="polite">
+                            <article class="teacher-bubble teacher-bubble--in">
+                                <p>السلام عليكم دكتور، لاحظت انخفاضاً في درجات أحمد مؤخراً، هل هناك ما يستدعي المتابعة؟</p>
+                                <time datetime="10:30">10:30 ص</time>
+                            </article>
+                            <article class="teacher-bubble teacher-bubble--out">
+                                <p>وعليكم السلام، أحمد يحتاج لمراجعة إضافية في الوحدة الأخيرة وسأرسل لكم ملخصاً بالمطلوب.</p>
+                                <time datetime="11:15">11:15 ص</time>
+                            </article>
+                        </div>
+
+                        <form class="teacher-messages__composer" action="#" method="post">
+                            <button class="teacher-messages__attach" type="button" aria-label="إرفاق ملف">
+                                <i class="ri-attachment-2" aria-hidden="true"></i>
+                            </button>
+                            <label class="visually-hidden" for="teacher-message-input">اكتب رسالتك هنا</label>
+                            <input class="teacher-messages__input" id="teacher-message-input" name="message" type="text" placeholder="اكتب رسالتك هنا...">
+                            <button class="teacher-messages__send" type="submit" aria-label="إرسال">
+                                <i class="ri-send-plane-fill" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

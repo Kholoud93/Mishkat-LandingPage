@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشكاة | موادي الدراسية</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body class="student-dashboard teacher-dashboard teacher-courses-page app-shell">
+    <div class="app-layout">
+        <aside class="sidebar" id="mobile-menu" data-sidebar aria-hidden="true">
+            <a class="dash-brand landing-brand landing-brand--image" href="./teacher-dashboard.html">
+                <img class="landing-logo" src="./assets/logo.png" alt="شعار مشكاة">
+            </a>
+
+            <nav class="sidebar-nav" aria-label="تنقل بوابة المعلم">
+                <a class="sidebar-link" href="./teacher-dashboard.html">
+                    <i class="ri-apps-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الرئيسية</span>
+                </a>
+                <a class="sidebar-link is-active" href="./teacher-courses.html" aria-current="page">
+                    <i class="ri-book-open-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">موادي الدراسية</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-lessons.html">
+                    <i class="ri-file-list-3-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">إدارة الدروس</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-classroom.html">
+                    <i class="ri-vidicon-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الفصل الافتراضي</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-assignments.html">
+                    <i class="ri-clipboard-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الواجبات</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-exams.html">
+                    <i class="ri-shield-check-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الاختبارات</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-sessions.html">
+                    <i class="ri-calendar-schedule-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الجلسات الخاصة</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-students.html">
+                    <i class="ri-group-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الطلاب</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-messages.html">
+                    <i class="ri-chat-3-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الرسائل</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-analytics.html">
+                    <i class="ri-bar-chart-2-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">التحليلات</span>
+                </a>
+            </nav>
+
+            <div class="dash-profile">
+                <a class="dash-profile__info" href="./teacher-profile.html">
+                    <span class="avatar dash-profile__avatar" aria-hidden="true">AE</span>
+                    <div class="dash-profile__copy">
+                        <p class="dash-profile__name">عبدالله الشرقاوي</p>
+                    </div>
+                </a>
+                <a class="btn btn-ghost btn-sm dash-profile__logout" href="./login.html">
+                    <i class="ri-logout-box-r-line" aria-hidden="true"></i>
+                    تسجيل الخروج
+                </a>
+            </div>
+        </aside>
+
+        <div class="dash-shell">
+            <header class="dash-header">
+                <button class="btn btn-ghost btn-md sidebar-toggle" type="button" data-sidebar-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="فتح القائمة">
+                    <i class="ri-menu-line" aria-hidden="true"></i>
+                </button>
+
+                <h1 class="dash-header__title">بوابة المعلم الأكاديمية</h1>
+
+                <div class="dash-header__actions">
+                    <button class="dash-icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="تبديل الوضع">
+                        <i class="ri-moon-line" aria-hidden="true"></i>
+                    </button>
+                    <a class="nav-language" href="./index.html" lang="en" dir="ltr" aria-label="تبديل اللغة إلى الإنجليزية">
+                        <i class="ri-global-line" aria-hidden="true"></i>
+                        EN
+                    </a>
+                </div>
+            </header>
+
+            <main class="dash-content teacher-courses-content">
+                <div class="teacher-courses__top">
+                    <h2 class="teacher-courses__title">موادي الدراسية</h2>
+                    <button class="btn btn-primary teacher-courses__add" type="button">
+                        <i class="ri-add-line" aria-hidden="true"></i>
+                        إضافة مقرر جديد
+                    </button>
+                </div>
+
+                <div class="teacher-courses__grid">
+                    <article class="card teacher-course-card teacher-course-card--green">
+                        <div class="teacher-course-card__head">
+                            <span class="teacher-course-card__icon" aria-hidden="true">
+                                <i class="ri-book-open-fill"></i>
+                            </span>
+                            <button class="teacher-course-card__menu" type="button" aria-label="المزيد">
+                                <i class="ri-more-2-fill" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <h3 class="teacher-course-card__title">الفيزياء المتقدمة (الفصل 3)</h3>
+                        <p class="teacher-course-card__meta">المرحلة الثانوية - مسار العلوم</p>
+                        <div class="teacher-course-card__stats">
+                            <span>
+                                <i class="ri-calendar-line" aria-hidden="true"></i>
+                                12 درس
+                            </span>
+                            <span>
+                                <i class="ri-user-line" aria-hidden="true"></i>
+                                32 طالب
+                            </span>
+                        </div>
+                        <div class="teacher-course-card__progress">
+                            <div class="teacher-course-card__progress-top">
+                                <span>نسبة الإنجاز</span>
+                                <strong>65%</strong>
+                            </div>
+                            <div class="dash-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65" aria-label="نسبة الإنجاز 65%">
+                                <span class="dash-bar__fill dash-bar__fill--green" style="width: 65%"></span>
+                            </div>
+                        </div>
+                        <a class="btn teacher-course-card__action" href="#">إدارة المقرر</a>
+                    </article>
+
+                    <article class="card teacher-course-card teacher-course-card--blue">
+                        <div class="teacher-course-card__head">
+                            <span class="teacher-course-card__icon" aria-hidden="true">
+                                <i class="ri-book-open-fill"></i>
+                            </span>
+                            <button class="teacher-course-card__menu" type="button" aria-label="المزيد">
+                                <i class="ri-more-2-fill" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <h3 class="teacher-course-card__title">الرياضيات (الجبر)</h3>
+                        <p class="teacher-course-card__meta">المرحلة الثانوية - مسار العلوم</p>
+                        <div class="teacher-course-card__stats">
+                            <span>
+                                <i class="ri-calendar-line" aria-hidden="true"></i>
+                                12 درس
+                            </span>
+                            <span>
+                                <i class="ri-user-line" aria-hidden="true"></i>
+                                32 طالب
+                            </span>
+                        </div>
+                        <div class="teacher-course-card__progress">
+                            <div class="teacher-course-card__progress-top">
+                                <span>نسبة الإنجاز</span>
+                                <strong>40%</strong>
+                            </div>
+                            <div class="dash-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40" aria-label="نسبة الإنجاز 40%">
+                                <span class="dash-bar__fill dash-bar__fill--blue" style="width: 40%"></span>
+                            </div>
+                        </div>
+                        <a class="btn teacher-course-card__action" href="#">إدارة المقرر</a>
+                    </article>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

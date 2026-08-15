@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشكاة | التحليلات والإحصائيات</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body class="student-dashboard teacher-dashboard teacher-analytics-page app-shell">
+    <div class="app-layout">
+        <aside class="sidebar" id="mobile-menu" data-sidebar aria-hidden="true">
+            <a class="dash-brand landing-brand landing-brand--image" href="./teacher-dashboard.html">
+                <img class="landing-logo" src="./assets/logo.png" alt="شعار مشكاة">
+            </a>
+
+            <nav class="sidebar-nav" aria-label="تنقل بوابة المعلم">
+                <a class="sidebar-link" href="./teacher-dashboard.html">
+                    <i class="ri-apps-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الرئيسية</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-courses.html">
+                    <i class="ri-book-open-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">موادي الدراسية</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-lessons.html">
+                    <i class="ri-file-list-3-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">إدارة الدروس</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-classroom.html">
+                    <i class="ri-vidicon-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الفصل الافتراضي</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-assignments.html">
+                    <i class="ri-clipboard-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الواجبات</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-exams.html">
+                    <i class="ri-shield-check-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الاختبارات</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-sessions.html">
+                    <i class="ri-calendar-schedule-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الجلسات الخاصة</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-students.html">
+                    <i class="ri-group-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الطلاب</span>
+                </a>
+                <a class="sidebar-link" href="./teacher-messages.html">
+                    <i class="ri-chat-3-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">الرسائل</span>
+                </a>
+                <a class="sidebar-link is-active" href="./teacher-analytics.html" aria-current="page">
+                    <i class="ri-bar-chart-2-line" aria-hidden="true"></i>
+                    <span class="sidebar-link__label">التحليلات</span>
+                </a>
+            </nav>
+
+            <div class="dash-profile">
+                <a class="dash-profile__info" href="./teacher-profile.html">
+                    <span class="avatar dash-profile__avatar" aria-hidden="true">AE</span>
+                    <div class="dash-profile__copy">
+                        <p class="dash-profile__name">عبدالله الشرقاوي</p>
+                    </div>
+                </a>
+                <a class="btn btn-ghost btn-sm dash-profile__logout" href="./login.html">
+                    <i class="ri-logout-box-r-line" aria-hidden="true"></i>
+                    تسجيل الخروج
+                </a>
+            </div>
+        </aside>
+
+        <div class="dash-shell">
+            <header class="dash-header">
+                <button class="btn btn-ghost btn-md sidebar-toggle" type="button" data-sidebar-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="فتح القائمة">
+                    <i class="ri-menu-line" aria-hidden="true"></i>
+                </button>
+
+                <h1 class="dash-header__title">بوابة المعلم الأكاديمية</h1>
+
+                <div class="dash-header__actions">
+                    <button class="dash-icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="تبديل الوضع">
+                        <i class="ri-moon-line" aria-hidden="true"></i>
+                    </button>
+                    <a class="nav-language" href="./index.html" lang="en" dir="ltr" aria-label="تبديل اللغة إلى الإنجليزية">
+                        <i class="ri-global-line" aria-hidden="true"></i>
+                        EN
+                    </a>
+                </div>
+            </header>
+
+            <main class="dash-content teacher-analytics-content">
+                <div class="teacher-analytics__top">
+                    <h2 class="teacher-analytics__title">التحليلات والإحصائيات</h2>
+                    <button class="btn teacher-analytics__export" type="button">
+                        <i class="ri-download-2-line" aria-hidden="true"></i>
+                        تصدير التقرير
+                    </button>
+                </div>
+
+                <div class="teacher-analytics__stats">
+                    <article class="teacher-analytics-stat teacher-analytics-stat--attendance">
+                        <span class="teacher-analytics-stat__icon teacher-analytics-stat__icon--green" aria-hidden="true">
+                            <i class="ri-bar-chart-2-fill"></i>
+                        </span>
+                        <div class="teacher-analytics-stat__copy">
+                            <strong>92%</strong>
+                            <p>متوسط الحضور العام</p>
+                        </div>
+                    </article>
+                    <article class="teacher-analytics-stat teacher-analytics-stat--assignments">
+                        <span class="teacher-analytics-stat__icon teacher-analytics-stat__icon--blue" aria-hidden="true">
+                            <i class="ri-checkbox-line"></i>
+                        </span>
+                        <div class="teacher-analytics-stat__copy">
+                            <strong>78%</strong>
+                            <p>نسبة تسليم الواجبات</p>
+                        </div>
+                    </article>
+                </div>
+
+                <section class="card teacher-analytics-chart" aria-labelledby="teacher-analytics-chart-title">
+                    <span class="teacher-analytics-chart__icon" aria-hidden="true">
+                        <i class="ri-pie-chart-2-line"></i>
+                    </span>
+                    <h3 id="teacher-analytics-chart-title">الرسوم البيانية التفاعلية</h3>
+                    <p>مساحة مخصصة لعرض تفاعل الطلاب أسبوعياً</p>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
