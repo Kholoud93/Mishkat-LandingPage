@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مشكاة | الواجبات</title>
+    <title>مشكاة | المدفوعات</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
     <link rel="stylesheet" href="./index.css">
 </head>
-<body class="student-dashboard parent-dashboard parent-assignments-page app-shell">
+<body class="student-dashboard parent-dashboard parent-payments-page app-shell">
     <div class="app-layout">
         <aside class="sidebar" id="mobile-menu" data-sidebar aria-hidden="true">
             <a class="dash-brand landing-brand landing-brand--image" href="./parent-dashboard.html">
@@ -27,7 +27,7 @@
                     <i class="ri-line-chart-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">التقدم الأكاديمي</span>
                 </a>
-                <a class="sidebar-link is-active" href="./parent-assignments.html" aria-current="page">
+                <a class="sidebar-link" href="./parent-assignments.html">
                     <i class="ri-clipboard-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">الواجبات</span>
                 </a>
@@ -43,7 +43,7 @@
                     <i class="ri-calendar-schedule-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">الجلسات الخاصة</span>
                 </a>
-                <a class="sidebar-link" href="./parent-payments.html">
+                <a class="sidebar-link is-active" href="./parent-payments.html" aria-current="page">
                     <i class="ri-wallet-3-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">المدفوعات</span>
                 </a>
@@ -114,7 +114,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="dash-notify__item dropdown-item" href="./parent-dashboard.html">
+                                <a class="dash-notify__item dropdown-item" href="./parent-attendance.html">
                                     <span class="avatar dash-notify__icon dash-notify__icon--warn" aria-hidden="true">
                                         <i class="ri-error-warning-fill"></i>
                                     </span>
@@ -150,96 +150,122 @@
                 </div>
             </header>
 
-            <main class="dash-content parent-hw">
-                <div class="parent-hw__head">
-                    <h2 id="parent-hw-list-title">واجبات أحمد</h2>
-                    <div class="parent-hw__filters" role="tablist" aria-label="الواجبات">
-                        <button class="parent-hw__chip is-active" type="button" data-hw-filter="الكل">الكل</button>
-                        <button class="parent-hw__chip" type="button" data-hw-filter="مصحح">مصحح</button>
-                        <button class="parent-hw__chip" type="button" data-hw-filter="مسلّم">مسلّم</button>
-                        <button class="parent-hw__chip" type="button" data-hw-filter="قيد الانتظار">قيد الانتظار</button>
-                    </div>
-                </div>
+            <main class="dash-content parent-pay">
+                <h2 class="parent-pay__title">المدفوعات</h2>
 
-                <div class="parent-hw__layout">
-                    <section class="parent-hw-list" aria-labelledby="parent-hw-list-title">
-                        <ul class="parent-hw-list__items">
+                <div class="parent-pay__layout">
+                    <section class="card parent-pay-features" aria-labelledby="parent-pay-features-title">
+                        <h3 id="parent-pay-features-title">مميزات الباقة</h3>
+                        <ul>
                             <li>
-                                <article class="parent-hw-card parent-hw-card--math" data-hw-status="قيد الانتظار">
-                                    <span class="parent-hw-card__subject parent-hw-card__subject--math">الرياضيات</span>
-                                    <h3>ورقة عمل المشتقات</h3>
-                                    <div class="parent-hw-card__foot">
-                                        <span class="parent-hw-card__status parent-hw-card__status--wait">قيد الانتظار</span>
-                                        <p class="parent-hw-card__when">اليوم 5:00 م</p>
-                                    </div>
-                                </article>
+                                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
+                                حصص مباشرة غير محدودة
                             </li>
                             <li>
-                                <article class="parent-hw-card parent-hw-card--science" data-hw-status="قيد التنفيذ">
-                                    <span class="parent-hw-card__subject parent-hw-card__subject--science">العلوم</span>
-                                    <h3>تقرير مختبر بيولوجيا الخلية</h3>
-                                    <div class="parent-hw-card__foot">
-                                        <span class="parent-hw-card__status parent-hw-card__status--progress">قيد التنفيذ</span>
-                                        <p class="parent-hw-card__when">28 يونيو</p>
-                                    </div>
-                                </article>
+                                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
+                                جميع الدروس المسجلة
                             </li>
                             <li>
-                                <article class="parent-hw-card parent-hw-card--english" data-hw-status="مسلّم">
-                                    <span class="parent-hw-card__subject parent-hw-card__subject--english">اللغة الإنجليزية</span>
-                                    <h3>المقال الوصفي</h3>
-                                    <div class="parent-hw-card__foot">
-                                        <span class="parent-hw-card__status parent-hw-card__status--done">مسلّم</span>
-                                        <p class="parent-hw-card__when">مسلّم</p>
-                                    </div>
-                                </article>
+                                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
+                                الاختبارات والواجبات
                             </li>
                             <li>
-                                <article class="parent-hw-card parent-hw-card--history is-active" data-hw-status="مصحح">
-                                    <span class="parent-hw-card__subject parent-hw-card__subject--history">التاريخ</span>
-                                    <h3>تحليل الحرب العالمية الثانية</h3>
-                                    <div class="parent-hw-card__foot">
-                                        <span class="parent-hw-card__status parent-hw-card__status--graded">مصحح</span>
-                                        <p class="parent-hw-card__when">15 يونيو</p>
-                                    </div>
-                                </article>
+                                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
+                                4 حصص خاصة شهرياً
                             </li>
                             <li>
-                                <article class="parent-hw-card parent-hw-card--arabic" data-hw-status="متأخر">
-                                    <span class="parent-hw-card__subject parent-hw-card__subject--arabic">اللغة العربية</span>
-                                    <h3>الفهم القرائي</h3>
-                                    <div class="parent-hw-card__foot">
-                                        <span class="parent-hw-card__status parent-hw-card__status--late">متأخر</span>
-                                        <p class="parent-hw-card__when parent-hw-card__when--late">منذ 3 أيام</p>
-                                    </div>
-                                </article>
+                                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
+                                تقارير ولي الأمر
+                            </li>
+                            <li>
+                                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
+                                دعم أولوية 24/7
                             </li>
                         </ul>
                     </section>
 
-                    <section class="card parent-hw-detail" aria-labelledby="parent-hw-detail-title">
-                        <div class="parent-hw-detail__top">
-                            <span class="parent-hw-card__subject parent-hw-card__subject--history parent-hw-detail__subject">التاريخ</span>
-                            <div class="parent-hw-detail__grade">
-                                <span>الدرجة</span>
-                                <strong>88%</strong>
+                    <div class="parent-pay__main">
+                    <section class="card parent-pay-plan" aria-labelledby="parent-pay-plan-title">
+                        <header class="parent-pay-plan__head">
+                            <div class="parent-pay-plan__copy">
+                                <h3 id="parent-pay-plan-title">الباقة الحالية</h3>
+                                <p class="parent-pay-plan__name">مميزة</p>
                             </div>
+                            <span class="parent-pay-plan__icon" aria-hidden="true">
+                                <i class="ri-medal-line"></i>
+                            </span>
+                        </header>
+                        <div class="parent-pay-plan__stats">
+                            <p class="parent-pay-plan__status">نشطة</p>
+                            <p>31 أغسطس 2025</p>
+                            <p>3 مرتبطون</p>
+                            <p>299 ريال/شهر</p>
                         </div>
-                        <div class="parent-hw-detail__info">
-                            <h2 id="parent-hw-detail-title">تحليل الحرب العالمية الثانية</h2>
-                            <p>أ. خالد • 15 نقطة</p>
-                        </div>
-                        <div class="parent-hw-detail__feedback">
-                            <h3>تغذية المعلم الراجعة</h3>
-                            <div class="parent-hw-note">
-                                <span class="avatar parent-hw-note__avatar" aria-hidden="true">خ</span>
-                                <div class="parent-hw-note__copy">
-                                    <p>أ. خالد</p>
-                                    <p>تحليل ممتاز. استخدمت المصادر الأولية بشكل فعال.</p>
-                                </div>
-                            </div>
+                        <div class="parent-pay-plan__actions">
+                            <a class="btn btn-primary btn-md" href="#">إدارة الباقة</a>
+                            <a class="btn btn-outline btn-md" href="#">تغيير الباقة</a>
                         </div>
                     </section>
+
+                <section class="card parent-pay-log" aria-labelledby="parent-pay-log-title">
+                    <header class="parent-pay-log__head">
+                        <h3 id="parent-pay-log-title">سجل المدفوعات</h3>
+                        <a class="parent-pay-log__export" href="#">
+                            <i class="ri-download-2-line" aria-hidden="true"></i>
+                            تصدير
+                        </a>
+                    </header>
+                    <ul class="parent-pay-log__list">
+                        <li class="parent-pay-row">
+                            <span class="parent-pay-row__icon" aria-hidden="true">
+                                <i class="ri-wallet-3-line"></i>
+                            </span>
+                            <div class="parent-pay-row__copy">
+                                <h4>باقة مميزة</h4>
+                                <p>1 يونيو 2025</p>
+                            </div>
+                            <strong>299 ريال</strong>
+                            <span class="parent-badge parent-badge--ok">مدفوع</span>
+                        </li>
+                        <li class="parent-pay-row">
+                            <span class="parent-pay-row__icon" aria-hidden="true">
+                                <i class="ri-wallet-3-line"></i>
+                            </span>
+                            <div class="parent-pay-row__copy">
+                                <h4>باقة مميزة</h4>
+                                <p>1 مايو 2025</p>
+                            </div>
+                            <strong>299 ريال</strong>
+                            <span class="parent-badge parent-badge--ok">مدفوع</span>
+                        </li>
+                        <li class="parent-pay-row">
+                            <span class="parent-pay-row__icon" aria-hidden="true">
+                                <i class="ri-wallet-3-line"></i>
+                            </span>
+                            <div class="parent-pay-row__copy">
+                                <h4>باقة مميزة</h4>
+                                <p>1 أبريل 2025</p>
+                            </div>
+                            <strong>299 ريال</strong>
+                            <span class="parent-badge parent-badge--ok">مدفوع</span>
+                        </li>
+                        <li class="parent-pay-row">
+                            <span class="parent-pay-row__icon" aria-hidden="true">
+                                <i class="ri-wallet-3-line"></i>
+                            </span>
+                            <div class="parent-pay-row__copy">
+                                <h4>باقة مميزة</h4>
+                                <p>1 مارس 2025</p>
+                            </div>
+                            <strong>299 ريال</strong>
+                            <div class="parent-pay-row__fail">
+                                <span class="parent-badge parent-badge--danger">فشل</span>
+                                <a class="btn btn-sm parent-pay-row__retry" href="#">إعادة المحاولة</a>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                    </div>
                 </div>
             </main>
         </div>

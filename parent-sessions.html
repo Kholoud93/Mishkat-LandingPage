@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مشكاة | الواجبات</title>
+    <title>مشكاة | الجلسات الخاصة</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
     <link rel="stylesheet" href="./index.css">
 </head>
-<body class="student-dashboard parent-dashboard parent-assignments-page app-shell">
+<body class="student-dashboard parent-dashboard parent-sessions-page app-shell">
     <div class="app-layout">
         <aside class="sidebar" id="mobile-menu" data-sidebar aria-hidden="true">
             <a class="dash-brand landing-brand landing-brand--image" href="./parent-dashboard.html">
@@ -27,7 +27,7 @@
                     <i class="ri-line-chart-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">التقدم الأكاديمي</span>
                 </a>
-                <a class="sidebar-link is-active" href="./parent-assignments.html" aria-current="page">
+                <a class="sidebar-link" href="./parent-assignments.html">
                     <i class="ri-clipboard-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">الواجبات</span>
                 </a>
@@ -39,7 +39,7 @@
                     <i class="ri-calendar-check-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">الحضور</span>
                 </a>
-                <a class="sidebar-link" href="./parent-sessions.html">
+                <a class="sidebar-link is-active" href="./parent-sessions.html" aria-current="page">
                     <i class="ri-calendar-schedule-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">الجلسات الخاصة</span>
                 </a>
@@ -114,7 +114,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="dash-notify__item dropdown-item" href="./parent-dashboard.html">
+                                <a class="dash-notify__item dropdown-item" href="./parent-attendance.html">
                                     <span class="avatar dash-notify__icon dash-notify__icon--warn" aria-hidden="true">
                                         <i class="ri-error-warning-fill"></i>
                                     </span>
@@ -150,97 +150,86 @@
                 </div>
             </header>
 
-            <main class="dash-content parent-hw">
-                <div class="parent-hw__head">
-                    <h2 id="parent-hw-list-title">واجبات أحمد</h2>
-                    <div class="parent-hw__filters" role="tablist" aria-label="الواجبات">
-                        <button class="parent-hw__chip is-active" type="button" data-hw-filter="الكل">الكل</button>
-                        <button class="parent-hw__chip" type="button" data-hw-filter="مصحح">مصحح</button>
-                        <button class="parent-hw__chip" type="button" data-hw-filter="مسلّم">مسلّم</button>
-                        <button class="parent-hw__chip" type="button" data-hw-filter="قيد الانتظار">قيد الانتظار</button>
-                    </div>
+            <main class="dash-content parent-ps">
+                <h2 class="parent-ps__title">الجلسات الخاصة</h2>
+
+                <div class="parent-ps__toolbar">
+                    <nav class="parent-ps__tabs" aria-label="الجلسات الخاصة">
+                        <a class="is-active" href="./parent-sessions.html" aria-current="page">القادمة</a>
+                        <a href="#">بحث</a>
+                        <a href="#">السجل</a>
+                    </nav>
+                    <a class="btn btn-primary btn-md parent-ps__book" href="#">
+                        <i class="ri-add-line" aria-hidden="true"></i>
+                        احجز لـ أحمد
+                    </a>
                 </div>
 
-                <div class="parent-hw__layout">
-                    <section class="parent-hw-list" aria-labelledby="parent-hw-list-title">
-                        <ul class="parent-hw-list__items">
-                            <li>
-                                <article class="parent-hw-card parent-hw-card--math" data-hw-status="قيد الانتظار">
-                                    <span class="parent-hw-card__subject parent-hw-card__subject--math">الرياضيات</span>
-                                    <h3>ورقة عمل المشتقات</h3>
-                                    <div class="parent-hw-card__foot">
-                                        <span class="parent-hw-card__status parent-hw-card__status--wait">قيد الانتظار</span>
-                                        <p class="parent-hw-card__when">اليوم 5:00 م</p>
-                                    </div>
-                                </article>
-                            </li>
-                            <li>
-                                <article class="parent-hw-card parent-hw-card--science" data-hw-status="قيد التنفيذ">
-                                    <span class="parent-hw-card__subject parent-hw-card__subject--science">العلوم</span>
-                                    <h3>تقرير مختبر بيولوجيا الخلية</h3>
-                                    <div class="parent-hw-card__foot">
-                                        <span class="parent-hw-card__status parent-hw-card__status--progress">قيد التنفيذ</span>
-                                        <p class="parent-hw-card__when">28 يونيو</p>
-                                    </div>
-                                </article>
-                            </li>
-                            <li>
-                                <article class="parent-hw-card parent-hw-card--english" data-hw-status="مسلّم">
-                                    <span class="parent-hw-card__subject parent-hw-card__subject--english">اللغة الإنجليزية</span>
-                                    <h3>المقال الوصفي</h3>
-                                    <div class="parent-hw-card__foot">
-                                        <span class="parent-hw-card__status parent-hw-card__status--done">مسلّم</span>
-                                        <p class="parent-hw-card__when">مسلّم</p>
-                                    </div>
-                                </article>
-                            </li>
-                            <li>
-                                <article class="parent-hw-card parent-hw-card--history is-active" data-hw-status="مصحح">
-                                    <span class="parent-hw-card__subject parent-hw-card__subject--history">التاريخ</span>
-                                    <h3>تحليل الحرب العالمية الثانية</h3>
-                                    <div class="parent-hw-card__foot">
-                                        <span class="parent-hw-card__status parent-hw-card__status--graded">مصحح</span>
-                                        <p class="parent-hw-card__when">15 يونيو</p>
-                                    </div>
-                                </article>
-                            </li>
-                            <li>
-                                <article class="parent-hw-card parent-hw-card--arabic" data-hw-status="متأخر">
-                                    <span class="parent-hw-card__subject parent-hw-card__subject--arabic">اللغة العربية</span>
-                                    <h3>الفهم القرائي</h3>
-                                    <div class="parent-hw-card__foot">
-                                        <span class="parent-hw-card__status parent-hw-card__status--late">متأخر</span>
-                                        <p class="parent-hw-card__when parent-hw-card__when--late">منذ 3 أيام</p>
-                                    </div>
-                                </article>
-                            </li>
-                        </ul>
-                    </section>
-
-                    <section class="card parent-hw-detail" aria-labelledby="parent-hw-detail-title">
-                        <div class="parent-hw-detail__top">
-                            <span class="parent-hw-card__subject parent-hw-card__subject--history parent-hw-detail__subject">التاريخ</span>
-                            <div class="parent-hw-detail__grade">
-                                <span>الدرجة</span>
-                                <strong>88%</strong>
-                            </div>
-                        </div>
-                        <div class="parent-hw-detail__info">
-                            <h2 id="parent-hw-detail-title">تحليل الحرب العالمية الثانية</h2>
-                            <p>أ. خالد • 15 نقطة</p>
-                        </div>
-                        <div class="parent-hw-detail__feedback">
-                            <h3>تغذية المعلم الراجعة</h3>
-                            <div class="parent-hw-note">
-                                <span class="avatar parent-hw-note__avatar" aria-hidden="true">خ</span>
-                                <div class="parent-hw-note__copy">
-                                    <p>أ. خالد</p>
-                                    <p>تحليل ممتاز. استخدمت المصادر الأولية بشكل فعال.</p>
+                <section class="parent-ps__grid" aria-label="القادمة">
+                    <article class="card parent-ps-card parent-ps-card--math">
+                        <div class="parent-ps-card__top">
+                            <span class="avatar parent-ps-card__avatar parent-ps-card__avatar--math" aria-hidden="true">أ</span>
+                            <div class="parent-ps-card__copy">
+                                <h3>أ. أحمد الراشدي</h3>
+                                <div class="parent-ps-card__tags">
+                                    <span class="parent-today__subject parent-today__subject--math">الرياضيات</span>
+                                    <span class="parent-badge parent-badge--ok">مؤكدة</span>
                                 </div>
                             </div>
                         </div>
-                    </section>
-                </div>
+                        <ul class="parent-ps-card__meta">
+                            <li>
+                                <i class="ri-time-line" aria-hidden="true"></i>
+                                اليوم 4:00 م
+                            </li>
+                            <li>
+                                <i class="ri-timer-line" aria-hidden="true"></i>
+                                60 دقيقة
+                            </li>
+                            <li>
+                                <i class="ri-book-open-line" aria-hidden="true"></i>
+                                مراجعة المشتقات
+                            </li>
+                            <li>
+                                <i class="ri-user-heart-line" aria-hidden="true"></i>
+                                لـ أحمد
+                            </li>
+                        </ul>
+                        <a class="btn btn-primary btn-md parent-ps-card__join" href="#">انضم للجلسة</a>
+                    </article>
+
+                    <article class="card parent-ps-card parent-ps-card--science">
+                        <div class="parent-ps-card__top">
+                            <span class="avatar parent-ps-card__avatar parent-ps-card__avatar--science" aria-hidden="true">س</span>
+                            <div class="parent-ps-card__copy">
+                                <h3>د. سارة محمود</h3>
+                                <div class="parent-ps-card__tags">
+                                    <span class="parent-today__subject parent-today__subject--science">العلوم</span>
+                                    <span class="parent-badge parent-badge--ok">مؤكدة</span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="parent-ps-card__meta">
+                            <li>
+                                <i class="ri-time-line" aria-hidden="true"></i>
+                                غداً 11:00 ص
+                            </li>
+                            <li>
+                                <i class="ri-timer-line" aria-hidden="true"></i>
+                                45 دقيقة
+                            </li>
+                            <li>
+                                <i class="ri-book-open-line" aria-hidden="true"></i>
+                                انقسام الخلايا
+                            </li>
+                            <li>
+                                <i class="ri-user-heart-line" aria-hidden="true"></i>
+                                لـ أحمد
+                            </li>
+                        </ul>
+                        <a class="btn btn-md parent-ps-card__join parent-ps-card__join--science" href="#">انضم للجلسة</a>
+                    </article>
+                </section>
             </main>
         </div>
     </div>

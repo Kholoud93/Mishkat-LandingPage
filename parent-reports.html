@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مشكاة | الواجبات</title>
+    <title>مشكاة | التقارير</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
     <link rel="stylesheet" href="./index.css">
 </head>
-<body class="student-dashboard parent-dashboard parent-assignments-page app-shell">
+<body class="student-dashboard parent-dashboard parent-reports-page app-shell">
     <div class="app-layout">
         <aside class="sidebar" id="mobile-menu" data-sidebar aria-hidden="true">
             <a class="dash-brand landing-brand landing-brand--image" href="./parent-dashboard.html">
@@ -27,7 +27,7 @@
                     <i class="ri-line-chart-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">التقدم الأكاديمي</span>
                 </a>
-                <a class="sidebar-link is-active" href="./parent-assignments.html" aria-current="page">
+                <a class="sidebar-link" href="./parent-assignments.html">
                     <i class="ri-clipboard-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">الواجبات</span>
                 </a>
@@ -47,7 +47,7 @@
                     <i class="ri-wallet-3-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">المدفوعات</span>
                 </a>
-                <a class="sidebar-link" href="./parent-reports.html">
+                <a class="sidebar-link is-active" href="./parent-reports.html" aria-current="page">
                     <i class="ri-file-chart-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">التقارير</span>
                 </a>
@@ -114,7 +114,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="dash-notify__item dropdown-item" href="./parent-dashboard.html">
+                                <a class="dash-notify__item dropdown-item" href="./parent-attendance.html">
                                     <span class="avatar dash-notify__icon dash-notify__icon--warn" aria-hidden="true">
                                         <i class="ri-error-warning-fill"></i>
                                     </span>
@@ -150,97 +150,93 @@
                 </div>
             </header>
 
-            <main class="dash-content parent-hw">
-                <div class="parent-hw__head">
-                    <h2 id="parent-hw-list-title">واجبات أحمد</h2>
-                    <div class="parent-hw__filters" role="tablist" aria-label="الواجبات">
-                        <button class="parent-hw__chip is-active" type="button" data-hw-filter="الكل">الكل</button>
-                        <button class="parent-hw__chip" type="button" data-hw-filter="مصحح">مصحح</button>
-                        <button class="parent-hw__chip" type="button" data-hw-filter="مسلّم">مسلّم</button>
-                        <button class="parent-hw__chip" type="button" data-hw-filter="قيد الانتظار">قيد الانتظار</button>
-                    </div>
-                </div>
+            <main class="dash-content parent-rep">
+                <h2 class="parent-rep__title">التقارير</h2>
 
-                <div class="parent-hw__layout">
-                    <section class="parent-hw-list" aria-labelledby="parent-hw-list-title">
-                        <ul class="parent-hw-list__items">
-                            <li>
-                                <article class="parent-hw-card parent-hw-card--math" data-hw-status="قيد الانتظار">
-                                    <span class="parent-hw-card__subject parent-hw-card__subject--math">الرياضيات</span>
-                                    <h3>ورقة عمل المشتقات</h3>
-                                    <div class="parent-hw-card__foot">
-                                        <span class="parent-hw-card__status parent-hw-card__status--wait">قيد الانتظار</span>
-                                        <p class="parent-hw-card__when">اليوم 5:00 م</p>
-                                    </div>
-                                </article>
-                            </li>
-                            <li>
-                                <article class="parent-hw-card parent-hw-card--science" data-hw-status="قيد التنفيذ">
-                                    <span class="parent-hw-card__subject parent-hw-card__subject--science">العلوم</span>
-                                    <h3>تقرير مختبر بيولوجيا الخلية</h3>
-                                    <div class="parent-hw-card__foot">
-                                        <span class="parent-hw-card__status parent-hw-card__status--progress">قيد التنفيذ</span>
-                                        <p class="parent-hw-card__when">28 يونيو</p>
-                                    </div>
-                                </article>
-                            </li>
-                            <li>
-                                <article class="parent-hw-card parent-hw-card--english" data-hw-status="مسلّم">
-                                    <span class="parent-hw-card__subject parent-hw-card__subject--english">اللغة الإنجليزية</span>
-                                    <h3>المقال الوصفي</h3>
-                                    <div class="parent-hw-card__foot">
-                                        <span class="parent-hw-card__status parent-hw-card__status--done">مسلّم</span>
-                                        <p class="parent-hw-card__when">مسلّم</p>
-                                    </div>
-                                </article>
-                            </li>
-                            <li>
-                                <article class="parent-hw-card parent-hw-card--history is-active" data-hw-status="مصحح">
-                                    <span class="parent-hw-card__subject parent-hw-card__subject--history">التاريخ</span>
-                                    <h3>تحليل الحرب العالمية الثانية</h3>
-                                    <div class="parent-hw-card__foot">
-                                        <span class="parent-hw-card__status parent-hw-card__status--graded">مصحح</span>
-                                        <p class="parent-hw-card__when">15 يونيو</p>
-                                    </div>
-                                </article>
-                            </li>
-                            <li>
-                                <article class="parent-hw-card parent-hw-card--arabic" data-hw-status="متأخر">
-                                    <span class="parent-hw-card__subject parent-hw-card__subject--arabic">اللغة العربية</span>
-                                    <h3>الفهم القرائي</h3>
-                                    <div class="parent-hw-card__foot">
-                                        <span class="parent-hw-card__status parent-hw-card__status--late">متأخر</span>
-                                        <p class="parent-hw-card__when parent-hw-card__when--late">منذ 3 أيام</p>
-                                    </div>
-                                </article>
-                            </li>
-                        </ul>
-                    </section>
+                <section class="parent-rep__grid" aria-label="التقارير">
+                    <article class="card parent-rep-card">
+                        <header class="parent-rep-card__head">
+                            <span class="parent-rep-card__icon" aria-hidden="true">
+                                <i class="ri-file-text-line"></i>
+                            </span>
+                            <div class="parent-rep-card__copy">
+                                <h3>التقرير الشهري</h3>
+                                <p>أحمد - يونيو 2025</p>
+                            </div>
+                            <span class="parent-badge parent-badge--ok">جاهز</span>
+                        </header>
+                        <a class="btn btn-primary btn-md parent-rep-card__action" href="#">
+                            <i class="ri-download-2-line" aria-hidden="true"></i>
+                            تحميل
+                        </a>
+                    </article>
 
-                    <section class="card parent-hw-detail" aria-labelledby="parent-hw-detail-title">
-                        <div class="parent-hw-detail__top">
-                            <span class="parent-hw-card__subject parent-hw-card__subject--history parent-hw-detail__subject">التاريخ</span>
-                            <div class="parent-hw-detail__grade">
-                                <span>الدرجة</span>
-                                <strong>88%</strong>
+                    <article class="card parent-rep-card">
+                        <header class="parent-rep-card__head">
+                            <span class="parent-rep-card__icon" aria-hidden="true">
+                                <i class="ri-file-text-line"></i>
+                            </span>
+                            <div class="parent-rep-card__copy">
+                                <h3>الملخص الأسبوعي</h3>
+                                <p>أحمد - 16-22 يونيو</p>
                             </div>
-                        </div>
-                        <div class="parent-hw-detail__info">
-                            <h2 id="parent-hw-detail-title">تحليل الحرب العالمية الثانية</h2>
-                            <p>أ. خالد • 15 نقطة</p>
-                        </div>
-                        <div class="parent-hw-detail__feedback">
-                            <h3>تغذية المعلم الراجعة</h3>
-                            <div class="parent-hw-note">
-                                <span class="avatar parent-hw-note__avatar" aria-hidden="true">خ</span>
-                                <div class="parent-hw-note__copy">
-                                    <p>أ. خالد</p>
-                                    <p>تحليل ممتاز. استخدمت المصادر الأولية بشكل فعال.</p>
-                                </div>
+                            <span class="parent-badge parent-badge--ok">جاهز</span>
+                        </header>
+                        <a class="btn btn-primary btn-md parent-rep-card__action" href="#">
+                            <i class="ri-download-2-line" aria-hidden="true"></i>
+                            تحميل
+                        </a>
+                    </article>
+
+                    <article class="card parent-rep-card parent-rep-card--pending">
+                        <header class="parent-rep-card__head">
+                            <span class="parent-rep-card__icon" aria-hidden="true">
+                                <i class="ri-file-text-line"></i>
+                            </span>
+                            <div class="parent-rep-card__copy">
+                                <h3>تقرير الفصل الثاني</h3>
+                                <p>أحمد - فبراير-يونيو 2025</p>
                             </div>
-                        </div>
-                    </section>
-                </div>
+                        </header>
+                        <button class="btn btn-md parent-rep-card__action parent-rep-card__busy" type="button" disabled>
+                            <i class="ri-loader-4-line" aria-hidden="true"></i>
+                            جارٍ الإنشاء...
+                        </button>
+                    </article>
+                </section>
+
+                <section class="card parent-rep-custom" aria-labelledby="parent-rep-custom-title">
+                    <h3 id="parent-rep-custom-title">تقرير مخصص</h3>
+                    <form class="parent-rep-custom__form" action="#" method="get">
+                        <label class="parent-rep-field">
+                            <span>المادة</span>
+                            <span class="parent-rep-field__control">
+                                <select class="select" name="subject">
+                                    <option selected>جميع المواد</option>
+                                </select>
+                                <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+                            </span>
+                        </label>
+                        <label class="parent-rep-field">
+                            <span>من</span>
+                            <span class="parent-rep-field__control">
+                                <input class="field" type="text" name="from" value="1 يونيو 2025">
+                                <i class="ri-calendar-line" aria-hidden="true"></i>
+                            </span>
+                        </label>
+                        <label class="parent-rep-field">
+                            <span>إلى</span>
+                            <span class="parent-rep-field__control">
+                                <input class="field" type="text" name="to" value="30 يونيو 2025">
+                                <i class="ri-calendar-line" aria-hidden="true"></i>
+                            </span>
+                        </label>
+                        <button class="btn btn-primary btn-md parent-rep-custom__submit" type="submit">
+                            <i class="ri-download-2-line" aria-hidden="true"></i>
+                            إنشاء PDF
+                        </button>
+                    </form>
+                </section>
             </main>
         </div>
     </div>
