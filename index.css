@@ -4662,9 +4662,10 @@ Responsive Styles
     }
 
     .sessions-copy .btn {
-        width: 100%;
+        width: auto;
         justify-content: center;
         min-height: 2.75rem;
+        align-self: flex-start;
     }
 
     .live-section {
@@ -4683,9 +4684,10 @@ Responsive Styles
     }
 
     .live-copy .btn {
-        width: 100%;
+        width: auto;
         justify-content: center;
         min-height: 2.75rem;
+        align-self: flex-start;
     }
 
     .live-visual img {
@@ -4716,9 +4718,10 @@ Responsive Styles
     }
 
     .parent-copy .btn {
-        width: 100%;
+        width: auto;
         justify-content: center;
         min-height: 2.75rem;
+        align-self: flex-start;
     }
 
     .parent-visual img {
@@ -7120,13 +7123,13 @@ Responsive Styles
     }
 
     .student-dashboard .dash-schedule-item__main {
-        align-items: stretch;
+        align-items: flex-start;
     }
 
     .student-dashboard .dash-schedule-item__action,
     .student-dashboard .dash-schedule-item__action.btn {
-        width: 100%;
-        align-self: stretch;
+        width: auto;
+        align-self: flex-start;
     }
 
     .student-dashboard .dash-badges {
@@ -7792,8 +7795,8 @@ Responsive Styles
 
     .course-complete-btn,
     .course-submit-btn {
-        width: 100%;
-        justify-content: center;
+        width: auto;
+        align-self: flex-start;
     }
 }
 
@@ -8732,9 +8735,10 @@ Responsive Styles
     .exams-submit,
     .exams-flag,
     .exams-saved {
-        width: 100%;
+        width: auto;
         justify-content: center;
         margin-inline-start: 0;
+        align-self: flex-start;
     }
 }
 
@@ -9825,6 +9829,14 @@ Responsive Styles
         box-sizing: border-box;
     }
 
+    .teacher-dashboard:not(:has(.teacher-content)) .dash-shell {
+        min-height: 0;
+    }
+
+    .teacher-dashboard:not(:has(.teacher-content)) {
+        overflow-x: hidden;
+    }
+
     .teacher-dashboard .sidebar {
         height: auto;
         max-height: none;
@@ -10051,7 +10063,7 @@ Responsive Styles
         padding: 0.3rem 0.4rem;
         gap: 0.2rem;
         width: 100%;
-        align-items: stretch;
+        align-items: flex-start;
     }
 
     .teacher-schedule .dash-schedule-item__copy h3 {
@@ -10066,11 +10078,13 @@ Responsive Styles
 
     .teacher-schedule .dash-schedule-item__action,
     .teacher-schedule .dash-schedule-item__action.btn {
-        width: 100%;
-        min-height: 1.45rem;
+        width: auto;
+        align-self: flex-start;
+        min-height: 2.5rem;
         justify-content: center;
-        font-size: 0.58rem;
-        padding-block: 0.1rem;
+        font-size: 0.875rem;
+        padding-block: 0;
+        padding-inline: 1.15rem;
     }
 
     .teacher-pending__item {
@@ -10130,6 +10144,29 @@ Responsive Styles
         height: 1.9rem;
         min-height: 1.9rem;
         padding-inline: 0;
+    }
+
+    .teacher-dashboard .dash-content .btn,
+    .student-dashboard .dash-content .btn {
+        width: auto;
+        max-width: 100%;
+        flex: none;
+        align-self: flex-start;
+    }
+
+    .teacher-dashboard .teacher-course-card__action,
+    .teacher-dashboard .teacher-request-card__accept,
+    .teacher-dashboard .teacher-request-card__reject,
+    .teacher-dashboard .teacher-messages__send,
+    .teacher-dashboard .teacher-messages__attach {
+        width: 100%;
+        align-self: stretch;
+    }
+
+    .teacher-dashboard .teacher-messages__send,
+    .teacher-dashboard .teacher-messages__attach {
+        width: 2.35rem;
+        align-self: center;
     }
 }
 
@@ -10388,8 +10425,8 @@ Responsive Styles
     }
 
     .teacher-courses__add {
-        width: 100%;
-        justify-content: center;
+        width: auto;
+        align-self: flex-start;
     }
 
     .teacher-course-card {
@@ -10469,9 +10506,31 @@ Responsive Styles
 }
 
 .teacher-lessons__search {
+    position: relative;
+    display: block;
     flex: 1 1 14rem;
+    min-width: 0;
     max-width: 18rem;
     margin-inline-start: auto;
+}
+
+.teacher-lessons__search .search-field {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.teacher-lessons__search .search-icon {
+    position: absolute;
+    inset-inline-start: 1rem;
+    inset-block-start: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    pointer-events: none;
 }
 
 .teacher-lessons__table-wrap {
@@ -10597,6 +10656,22 @@ Responsive Styles
     color: #ef4444;
 }
 
+@media (max-width: 1023px) {
+    .teacher-lessons__toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .teacher-lessons__select,
+    .teacher-lessons__search {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        margin-inline-start: 0;
+        align-self: stretch;
+    }
+}
+
 @media (max-width: 767px) {
     .teacher-lessons-content {
         gap: var(--space-4);
@@ -10608,8 +10683,8 @@ Responsive Styles
     }
 
     .teacher-lessons__add {
-        width: 100%;
-        justify-content: center;
+        width: auto;
+        align-self: flex-start;
     }
 
     .teacher-lessons__toolbar {
@@ -10619,9 +10694,11 @@ Responsive Styles
 
     .teacher-lessons__select,
     .teacher-lessons__search {
+        flex: none;
         width: 100%;
-        max-width: none;
+        max-width: 100%;
         margin-inline-start: 0;
+        align-self: stretch;
     }
 
     .teacher-lessons-panel {
@@ -10885,8 +10962,8 @@ Responsive Styles
     }
 
     .teacher-classroom__add {
-        width: 100%;
-        justify-content: center;
+        width: auto;
+        align-self: flex-start;
     }
 
     .teacher-upcoming,
@@ -10903,8 +10980,9 @@ Responsive Styles
     .teacher-upcoming__action,
     .teacher-upcoming__edit {
         grid-column: 1 / -1;
-        width: 100%;
+        width: auto;
         justify-content: center;
+        align-self: flex-start;
     }
 
     .teacher-week__days {
@@ -11084,8 +11162,8 @@ Responsive Styles
     }
 
     .teacher-assignments__add {
-        width: 100%;
-        justify-content: center;
+        width: auto;
+        align-self: flex-start;
     }
 
     .teacher-assignments-panel {
@@ -11347,14 +11425,16 @@ Responsive Styles
     }
 
     .teacher-exams__actions {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
     }
 
     .teacher-exams__create,
     .teacher-exams__bank {
-        width: 100%;
-        justify-content: center;
+        width: auto;
+        align-self: flex-start;
     }
 
     .teacher-exams__stats {
@@ -11375,9 +11455,10 @@ Responsive Styles
     .teacher-exam-item__manage,
     .teacher-exam-item__link {
         grid-column: 1 / -1;
-        width: 100%;
+        width: auto;
         justify-content: center;
         text-align: center;
+        align-self: flex-start;
     }
 
     .teacher-exams-panel {
@@ -11695,8 +11776,8 @@ Responsive Styles
     }
 
     .teacher-sessions__settings {
-        width: 100%;
-        justify-content: center;
+        width: auto;
+        align-self: flex-start;
     }
 
     .teacher-session-requests,
@@ -11715,8 +11796,9 @@ Responsive Styles
 
     .teacher-confirmed__enter {
         grid-column: 1 / -1;
-        width: 100%;
+        width: auto;
         justify-content: center;
+        align-self: flex-start;
     }
 }
 
@@ -11758,9 +11840,31 @@ Responsive Styles
 }
 
 .teacher-students__search {
+    position: relative;
+    display: block;
     flex: 1 1 14rem;
+    min-width: 0;
     max-width: 18rem;
     margin-inline-start: auto;
+}
+
+.teacher-students__search .search-field {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.teacher-students__search .search-icon {
+    position: absolute;
+    inset-inline-start: 1rem;
+    inset-block-start: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    pointer-events: none;
 }
 
 .teacher-students-panel {
@@ -11875,6 +11979,21 @@ Responsive Styles
     color: var(--color-primary);
 }
 
+@media (max-width: 1023px) {
+    .teacher-students__top {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .teacher-students__search {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        margin-inline-start: 0;
+        align-self: stretch;
+    }
+}
+
 @media (max-width: 767px) {
     .teacher-students-content {
         gap: var(--space-4);
@@ -11886,9 +12005,11 @@ Responsive Styles
     }
 
     .teacher-students__search {
+        flex: none;
         width: 100%;
-        max-width: none;
+        max-width: 100%;
         margin-inline-start: 0;
+        align-self: stretch;
     }
 
     .teacher-students-panel {
@@ -12055,6 +12176,7 @@ Responsive Styles
 .teacher-messages__stream {
     display: grid;
     align-content: start;
+    justify-items: stretch;
     gap: 0.85rem;
     padding: 1.15rem;
     overflow-y: auto;
@@ -12063,7 +12185,8 @@ Responsive Styles
 .teacher-bubble {
     display: grid;
     gap: 0.35rem;
-    max-width: min(100%, 28rem);
+    width: fit-content;
+    max-width: min(72%, 28rem);
     padding: 0.85rem 1rem;
     border-radius: 0.85rem;
 }
@@ -12072,6 +12195,7 @@ Responsive Styles
     margin: 0;
     font-size: var(--font-size-body-sm);
     line-height: 1.55;
+    overflow-wrap: anywhere;
 }
 
 .teacher-bubble time {
@@ -12188,8 +12312,8 @@ Responsive Styles
     }
 
     .teacher-messages__compose {
-        width: 100%;
-        justify-content: center;
+        width: auto;
+        align-self: flex-start;
     }
 
     .teacher-messages__chat-head,
@@ -12199,7 +12323,7 @@ Responsive Styles
     }
 
     .teacher-bubble {
-        max-width: 100%;
+        max-width: min(78%, 22rem);
     }
 }
 
@@ -12372,8 +12496,8 @@ Responsive Styles
     }
 
     .teacher-analytics__export {
-        width: 100%;
-        justify-content: center;
+        width: auto;
+        align-self: flex-start;
     }
 
     .teacher-analytics__stats {
@@ -12410,10 +12534,32 @@ Responsive Styles
     color: inherit;
 }
 
+.teacher-profile-page {
+    height: 100svh;
+    max-height: 100svh;
+    overflow: hidden;
+}
+
+.teacher-profile-page .app-layout,
+.teacher-profile-page .dash-shell {
+    height: 100%;
+    max-height: 100%;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.teacher-profile-page .dash-shell {
+    min-height: 0;
+}
+
 .teacher-profile-content {
     display: grid;
     gap: var(--space-5);
     align-content: start;
+    min-width: 0;
+    max-width: 100%;
+    flex: 1 1 auto;
+    overflow: hidden;
 }
 
 .teacher-profile__top {
@@ -12422,6 +12568,7 @@ Responsive Styles
     justify-content: space-between;
     gap: var(--space-3);
     flex-wrap: wrap;
+    min-width: 0;
 }
 
 .teacher-profile__title {
@@ -12429,6 +12576,9 @@ Responsive Styles
     color: var(--color-text-primary);
     font-size: var(--font-size-h3);
     font-weight: var(--font-weight-bold);
+    overflow-wrap: anywhere;
+    min-width: 0;
+    flex: 1 1 12rem;
 }
 
 .teacher-profile__save {
@@ -12436,6 +12586,7 @@ Responsive Styles
     padding-inline: 1.25rem;
     border-radius: var(--radius-pill);
     color: #ffffff;
+    flex: none;
 }
 
 .teacher-profile__save,
@@ -12450,6 +12601,7 @@ Responsive Styles
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-4);
     align-items: start;
+    min-width: 0;
 }
 
 .teacher-profile-card {
@@ -12458,6 +12610,7 @@ Responsive Styles
     padding: 1.15rem;
     border-radius: 1rem;
     border: 1px solid var(--color-border);
+    min-width: 0;
 }
 
 .teacher-profile-card--info {
@@ -12473,16 +12626,19 @@ Responsive Styles
     color: var(--color-text-primary);
     font-size: var(--font-size-body-lg);
     font-weight: var(--font-weight-bold);
+    overflow-wrap: anywhere;
 }
 
 .teacher-profile-fields {
     display: grid;
     gap: 0.95rem;
+    min-width: 0;
 }
 
 .teacher-profile-field {
     display: grid;
     gap: 0.4rem;
+    min-width: 0;
 }
 
 .teacher-profile-field span {
@@ -12492,6 +12648,9 @@ Responsive Styles
 
 .teacher-profile-field input {
     width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
     min-height: 2.6rem;
     padding-inline: 0.9rem;
     border: 1px solid var(--color-border);
@@ -12499,6 +12658,11 @@ Responsive Styles
     background: color-mix(in srgb, var(--color-background) 70%, transparent);
     color: var(--color-text-primary);
     font-size: var(--font-size-body-sm);
+}
+
+.teacher-profile-field input[type="email"] {
+    direction: ltr;
+    text-align: start;
 }
 
 .teacher-profile-field input:focus {
@@ -12512,6 +12676,7 @@ Responsive Styles
     padding: 0;
     display: grid;
     gap: 0.85rem;
+    min-width: 0;
 }
 
 .teacher-profile-toggles li {
@@ -12525,6 +12690,13 @@ Responsive Styles
     border: 1px solid var(--color-border);
     color: var(--color-text-primary);
     font-size: var(--font-size-body-sm);
+    min-width: 0;
+}
+
+.teacher-profile-toggles li > span {
+    min-width: 0;
+    flex: 1 1 auto;
+    overflow-wrap: anywhere;
 }
 
 .teacher-toggle {
@@ -12579,6 +12751,24 @@ Responsive Styles
     outline-offset: 2px;
 }
 
+@media (min-width: 1200px) {
+    .teacher-profile-page .dash-header {
+        flex-wrap: nowrap;
+    }
+
+    .teacher-profile-content {
+        gap: var(--space-4);
+        padding-block-end: 1rem;
+    }
+}
+
+@media (max-width: 1199px) {
+    .teacher-profile-content {
+        padding-bottom: 0;
+        gap: var(--space-4);
+    }
+}
+
 @media (max-width: 1023px) {
     .teacher-profile__grid {
         grid-template-columns: 1fr;
@@ -12587,35 +12777,104 @@ Responsive Styles
 
 @media (max-width: 767px) {
     .teacher-profile-content {
-        gap: var(--space-4);
+        gap: var(--space-3);
     }
 
     .teacher-profile__top {
         flex-direction: column;
-        align-items: stretch;
+        align-items: flex-start;
+        gap: var(--space-2);
     }
 
     .teacher-profile__save {
-        width: 100%;
-        justify-content: center;
+        width: auto;
+        align-self: flex-start;
+        min-height: 2.35rem;
+        padding-inline: 1rem;
     }
 
     .teacher-profile-card {
-        padding: 1rem;
+        padding: 0.85rem;
+        gap: var(--space-3);
+    }
+
+    .teacher-profile-fields {
+        gap: 0.7rem;
+    }
+
+    .teacher-profile-toggles {
+        gap: 0.5rem;
     }
 
     .teacher-profile-toggles li {
-        padding: 0.75rem 0.85rem;
+        padding: 0.65rem 0.7rem;
         font-size: var(--font-size-caption);
+        gap: 0.5rem;
+    }
+
+    .teacher-profile-field input {
+        min-height: 2.35rem;
+        padding-inline: 0.7rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .teacher-profile-card {
+        padding: 0.85rem;
+    }
+
+    .teacher-profile-toggles li {
+        padding: 0.7rem 0.75rem;
     }
 }
 
 @media (max-width: 480px) {
     .teacher-profile__title {
         font-size: var(--font-size-body-lg);
+        flex-basis: 100%;
     }
 
     .teacher-profile-card h3 {
         font-size: var(--font-size-body);
     }
+
+    .teacher-profile-field input {
+        font-size: var(--font-size-caption);
+    }
 }
+
+@media (max-width: 380px) {
+    .teacher-profile-content {
+        gap: var(--space-3);
+    }
+
+    .teacher-profile-card {
+        padding: 0.75rem;
+        border-radius: 0.85rem;
+    }
+
+    .teacher-profile-toggles li {
+        padding: 0.65rem 0.7rem;
+        gap: 0.5rem;
+    }
+
+    .teacher-toggle {
+        width: 2.35rem;
+        height: 1.3rem;
+    }
+
+    .teacher-toggle__ui::after {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .teacher-toggle input:checked + .teacher-toggle__ui::after {
+        inset-inline-start: calc(100% - 1.15rem);
+    }
+
+    .teacher-profile-field input {
+        min-height: 2.3rem;
+        padding-inline: 0.65rem;
+    }
+}
+
