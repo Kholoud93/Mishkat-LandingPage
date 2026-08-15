@@ -749,55 +749,120 @@ function initSessionsTeacherPick() {
     });
 }
 
-function initReportsSearch() {
-    const input = document.getElementById("reports-search");
-    const rows = Array.from(document.querySelectorAll(".reports-table tbody tr"));
-    if (!input || !rows.length) {
-        return;
+function normalizeSearchText(value) {
+    return (value || "").replace(/\s+/g, " ").trim().toLowerCase();
+}
+
+function getSearchItems(form) {
+    const main = document.querySelector(".dash-content");
+    if (!main) {
+        return [];
     }
 
-    const filterRows = () => {
-        const query = input.value.trim().toLowerCase();
-        rows.forEach((row) => {
-            const text = row.textContent?.toLowerCase() || "";
-            row.classList.toggle("is-hidden", Boolean(query) && !text.includes(query));
-        });
-    };
+    const scoped = form.closest(".teacher-students-content, .teacher-lessons-content, .teacher-assignments-content, .reports-grades, .reports-content, .parent-hw");
+    if (scoped) {
+        const rows = scoped.querySelectorAll("table tbody tr");
+        if (rows.length) {
+            return Array.from(rows);
+        }
 
-    input.addEventListener("input", filterRows);
-    document.querySelector(".reports-search")?.addEventListener("submit", (event) => {
-        event.preventDefault();
-        filterRows();
+        const cards = scoped.querySelectorAll(".parent-hw-card");
+        if (cards.length) {
+            return Array.from(cards);
+        }
+    }
+
+    return Array.from(main.querySelectorAll([
+        "table tbody tr",
+        ".dash-task",
+        ".dash-course",
+        ".dash-activity__item",
+        ".parent-today__item",
+        ".parent-family__item",
+        ".parent-msgs__item",
+        ".parent-child-card",
+        ".parent-subject",
+        ".sessions-teacher",
+        ".teacher-course-card",
+        ".teacher-exam-item",
+        ".teacher-pending__item",
+        ".teacher-upcoming__item",
+        ".teacher-request-card",
+        ".teacher-thread"
+    ].join(", ")));
+}
+
+function applyPortalLists() {
+    const kid = document.querySelector(".parent-kid.is-active")?.getAttribute("data-child-filter") || "";
+    const course = document.getElementById("teacher-lesson-course")?.value || "";
+    const specialty = document.getElementById("sessions-specialty")?.value || "";
+    const hwFilter = document.querySelector(".parent-hw__chip.is-active")?.getAttribute("data-hw-filter") || "الكل";
+
+    document.querySelectorAll("[data-child]").forEach((item) => {
+        item.classList.toggle("is-child-hidden", Boolean(kid) && item.getAttribute("data-child") !== kid);
+    });
+
+    document.querySelectorAll(".sessions-teacher[data-specialty]").forEach((item) => {
+        item.classList.toggle("is-filter-hidden", Boolean(specialty) && specialty !== "كل التخصصات" && item.getAttribute("data-specialty") !== specialty);
+    });
+
+    document.querySelectorAll(".teacher-lessons__table tbody tr").forEach((row) => {
+        const rowCourse = row.getAttribute("data-course") || "";
+        row.classList.toggle("is-filter-hidden", Boolean(course) && rowCourse !== course);
+    });
+
+    document.querySelectorAll(".parent-hw-list__items li").forEach((item) => {
+        const status = item.querySelector("[data-hw-status]")?.getAttribute("data-hw-status") || "";
+        item.classList.toggle("is-filter-hidden", hwFilter !== "الكل" && status !== hwFilter);
+    });
+
+    document.querySelectorAll("form.search .search-field").forEach((input) => {
+        const form = input.closest("form.search");
+        const query = normalizeSearchText(input.value);
+        if (!form) {
+            return;
+        }
+
+        getSearchItems(form).forEach((item) => {
+            item.classList.toggle("is-search-hidden", Boolean(query) && !normalizeSearchText(item.textContent).includes(query));
+        });
     });
 }
 
-function initParentHwFilter() {
-    const root = document.querySelector(".parent-hw");
-    if (!root) {
-        return;
-    }
-
-    const chips = Array.from(root.querySelectorAll(".parent-hw__chip"));
-    const items = Array.from(root.querySelectorAll(".parent-hw-list__items li"));
-    if (!chips.length || !items.length) {
-        return;
-    }
-
-    const applyFilter = (filter) => {
-        chips.forEach((chip) => {
-            chip.classList.toggle("is-active", chip.getAttribute("data-hw-filter") === filter);
-        });
-        items.forEach((item) => {
-            const status = item.querySelector("[data-hw-status]")?.getAttribute("data-hw-status") || "";
-            item.classList.toggle("is-hidden", filter !== "الكل" && status !== filter);
-        });
-    };
-
-    chips.forEach((chip) => {
-        chip.addEventListener("click", () => {
-            applyFilter(chip.getAttribute("data-hw-filter") || "الكل");
+function initPortalLists() {
+    document.querySelectorAll("form.search").forEach((form) => {
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            applyPortalLists();
         });
     });
+
+    document.querySelectorAll("form.search .search-field").forEach((input) => {
+        input.addEventListener("input", applyPortalLists);
+    });
+
+    document.querySelectorAll(".parent-hw__chip").forEach((chip) => {
+        chip.addEventListener("click", () => {
+            document.querySelectorAll(".parent-hw__chip").forEach((item) => {
+                item.classList.toggle("is-active", item === chip);
+            });
+            applyPortalLists();
+        });
+    });
+
+    document.querySelectorAll(".parent-kid[data-child-filter]").forEach((chip) => {
+        chip.addEventListener("click", () => {
+            document.querySelectorAll(".parent-kid[data-child-filter]").forEach((item) => {
+                item.classList.toggle("is-active", item === chip);
+            });
+            applyPortalLists();
+        });
+    });
+
+    document.getElementById("sessions-specialty")?.addEventListener("change", applyPortalLists);
+    document.getElementById("teacher-lesson-course")?.addEventListener("change", applyPortalLists);
+
+    applyPortalLists();
 }
 
 function initApp() {
@@ -810,8 +875,7 @@ function initApp() {
     initOtpInputs();
     initAccountTypeOptions();
     initSessionsTeacherPick();
-    initReportsSearch();
-    initParentHwFilter();
+    initPortalLists();
     initGlobalEvents();
 }
 

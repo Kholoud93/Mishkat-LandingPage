@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مشكاة | الواجبات</title>
+    <title>مشكاة | الحضور</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
     <link rel="stylesheet" href="./index.css">
 </head>
-<body class="student-dashboard parent-dashboard parent-assignments-page app-shell">
+<body class="student-dashboard parent-dashboard parent-attendance-page app-shell">
     <div class="app-layout">
         <aside class="sidebar" id="mobile-menu" data-sidebar aria-hidden="true">
             <a class="dash-brand landing-brand landing-brand--image" href="./parent-dashboard.html">
@@ -27,7 +27,7 @@
                     <i class="ri-line-chart-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">التقدم الأكاديمي</span>
                 </a>
-                <a class="sidebar-link is-active" href="./parent-assignments.html" aria-current="page">
+                <a class="sidebar-link" href="./parent-assignments.html">
                     <i class="ri-clipboard-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">الواجبات</span>
                 </a>
@@ -35,7 +35,7 @@
                     <i class="ri-shield-check-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">الاختبارات</span>
                 </a>
-                <a class="sidebar-link" href="./parent-attendance.html">
+                <a class="sidebar-link is-active" href="./parent-attendance.html" aria-current="page">
                     <i class="ri-calendar-check-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">الحضور</span>
                 </a>
@@ -114,7 +114,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="dash-notify__item dropdown-item" href="./parent-dashboard.html">
+                                <a class="dash-notify__item dropdown-item" href="./parent-attendance.html">
                                     <span class="avatar dash-notify__icon dash-notify__icon--warn" aria-hidden="true">
                                         <i class="ri-error-warning-fill"></i>
                                     </span>
@@ -150,95 +150,81 @@
                 </div>
             </header>
 
-            <main class="dash-content parent-hw">
-                <div class="parent-hw__head">
-                    <h2 id="parent-hw-list-title">واجبات أحمد</h2>
-                    <div class="parent-hw__filters" role="tablist" aria-label="الواجبات">
-                        <button class="parent-hw__chip is-active" type="button" data-hw-filter="الكل">الكل</button>
-                        <button class="parent-hw__chip" type="button" data-hw-filter="مصحح">مصحح</button>
-                        <button class="parent-hw__chip" type="button" data-hw-filter="مسلّم">مسلّم</button>
-                        <button class="parent-hw__chip" type="button" data-hw-filter="قيد الانتظار">قيد الانتظار</button>
-                    </div>
-                </div>
+            <main class="dash-content parent-att">
+                <h2 class="parent-att__title">الحضور</h2>
 
-                <div class="parent-hw__layout">
-                    <section class="parent-hw-list" aria-labelledby="parent-hw-list-title">
-                        <ul class="parent-hw-list__items">
-                            <li>
-                                <article class="parent-hw-card parent-hw-card--math" data-hw-status="قيد الانتظار">
-                                    <span class="parent-hw-card__subject parent-hw-card__subject--math">الرياضيات</span>
-                                    <h3>ورقة عمل المشتقات</h3>
-                                    <div class="parent-hw-card__foot">
-                                        <span class="parent-hw-card__status parent-hw-card__status--wait">قيد الانتظار</span>
-                                        <p class="parent-hw-card__when">اليوم 5:00 م</p>
-                                    </div>
-                                </article>
-                            </li>
-                            <li>
-                                <article class="parent-hw-card parent-hw-card--science" data-hw-status="قيد التنفيذ">
-                                    <span class="parent-hw-card__subject parent-hw-card__subject--science">العلوم</span>
-                                    <h3>تقرير مختبر بيولوجيا الخلية</h3>
-                                    <div class="parent-hw-card__foot">
-                                        <span class="parent-hw-card__status parent-hw-card__status--progress">قيد التنفيذ</span>
-                                        <p class="parent-hw-card__when">28 يونيو</p>
-                                    </div>
-                                </article>
-                            </li>
-                            <li>
-                                <article class="parent-hw-card parent-hw-card--english" data-hw-status="مسلّم">
-                                    <span class="parent-hw-card__subject parent-hw-card__subject--english">اللغة الإنجليزية</span>
-                                    <h3>المقال الوصفي</h3>
-                                    <div class="parent-hw-card__foot">
-                                        <span class="parent-hw-card__status parent-hw-card__status--done">مسلّم</span>
-                                        <p class="parent-hw-card__when">مسلّم</p>
-                                    </div>
-                                </article>
-                            </li>
-                            <li>
-                                <article class="parent-hw-card parent-hw-card--history is-active" data-hw-status="مصحح">
-                                    <span class="parent-hw-card__subject parent-hw-card__subject--history">التاريخ</span>
-                                    <h3>تحليل الحرب العالمية الثانية</h3>
-                                    <div class="parent-hw-card__foot">
-                                        <span class="parent-hw-card__status parent-hw-card__status--graded">مصحح</span>
-                                        <p class="parent-hw-card__when">15 يونيو</p>
-                                    </div>
-                                </article>
-                            </li>
-                            <li>
-                                <article class="parent-hw-card parent-hw-card--arabic" data-hw-status="متأخر">
-                                    <span class="parent-hw-card__subject parent-hw-card__subject--arabic">اللغة العربية</span>
-                                    <h3>الفهم القرائي</h3>
-                                    <div class="parent-hw-card__foot">
-                                        <span class="parent-hw-card__status parent-hw-card__status--late">متأخر</span>
-                                        <p class="parent-hw-card__when parent-hw-card__when--late">منذ 3 أيام</p>
-                                    </div>
-                                </article>
-                            </li>
-                        </ul>
+                <section class="parent-att__stats" aria-label="الحضور">
+                    <article class="card parent-att-stat">
+                        <p class="parent-att-stat__label">معدل الحضور</p>
+                        <p class="parent-att-stat__value parent-att-stat__value--orange">88%</p>
+                    </article>
+                    <article class="card parent-att-stat">
+                        <p class="parent-att-stat__label">هذا الشهر</p>
+                        <p class="parent-att-stat__value parent-att-stat__value--blue">18/20</p>
+                    </article>
+                    <article class="card parent-att-stat">
+                        <p class="parent-att-stat__label">الغياب</p>
+                        <p class="parent-att-stat__value parent-att-stat__value--red">2</p>
+                    </article>
+                    <article class="card parent-att-stat">
+                        <p class="parent-att-stat__label">التأخير</p>
+                        <p class="parent-att-stat__value parent-att-stat__value--yellow">1</p>
+                    </article>
+                </section>
+
+                <nav class="parent-att__tabs" aria-label="عرض الحضور">
+                    <a class="is-active" href="./parent-attendance.html" aria-current="page">يومي</a>
+                    <a href="#">شهري</a>
+                    <a href="#">الاتجاهات</a>
+                </nav>
+
+                <div class="parent-att__layout">
+                    <section class="card parent-att-total" aria-labelledby="parent-att-total-title">
+                        <h3 id="parent-att-total-title">الإجمالي</h3>
+                        <div class="parent-att-total__ring" aria-hidden="true">
+                            <svg viewBox="0 0 48 48">
+                                <circle class="parent-att-total__track" cx="24" cy="24" r="18"></circle>
+                                <circle class="parent-att-total__value" cx="24" cy="24" r="18" pathLength="100" stroke-dasharray="88 100"></circle>
+                            </svg>
+                            <strong>88%</strong>
+                        </div>
+                        <p>جيد - تابع عن كثب</p>
                     </section>
 
-                    <section class="card parent-hw-detail" aria-labelledby="parent-hw-detail-title">
-                        <div class="parent-hw-detail__top">
-                            <span class="parent-hw-card__subject parent-hw-card__subject--history parent-hw-detail__subject">التاريخ</span>
-                            <div class="parent-hw-detail__grade">
-                                <span>الدرجة</span>
-                                <strong>88%</strong>
-                            </div>
-                        </div>
-                        <div class="parent-hw-detail__info">
-                            <h2 id="parent-hw-detail-title">تحليل الحرب العالمية الثانية</h2>
-                            <p>أ. خالد • 15 نقطة</p>
-                        </div>
-                        <div class="parent-hw-detail__feedback">
-                            <h3>تغذية المعلم الراجعة</h3>
-                            <div class="parent-hw-note">
-                                <span class="avatar parent-hw-note__avatar" aria-hidden="true">خ</span>
-                                <div class="parent-hw-note__copy">
-                                    <p>أ. خالد</p>
-                                    <p>تحليل ممتاز. استخدمت المصادر الأولية بشكل فعال.</p>
+                    <section class="card parent-att-day" aria-labelledby="parent-att-day-title">
+                        <header class="parent-att-day__head">
+                            <h3 id="parent-att-day-title">اليوم — أحمد</h3>
+                            <span>الأحد 22 يونيو</span>
+                        </header>
+                        <ul class="parent-att-day__list">
+                            <li class="parent-att-row parent-att-row--ok">
+                                <span class="parent-att-row__bar" aria-hidden="true"></span>
+                                <div class="parent-att-row__copy">
+                                    <h4>الرياضيات</h4>
+                                    <p>10:00 ص</p>
                                 </div>
-                            </div>
-                        </div>
+                                <span class="parent-badge parent-badge--ok">حاضر</span>
+                            </li>
+                            <li class="parent-att-row parent-att-row--ok">
+                                <span class="parent-att-row__bar" aria-hidden="true"></span>
+                                <div class="parent-att-row__copy">
+                                    <h4>العلوم</h4>
+                                    <p>12:00 م</p>
+                                </div>
+                                <span class="parent-badge parent-badge--ok">حاضر</span>
+                            </li>
+                            <li class="parent-att-row parent-att-row--absent">
+                                <span class="parent-att-row__bar" aria-hidden="true"></span>
+                                <div class="parent-att-row__copy">
+                                    <h4>اللغة الإنجليزية</h4>
+                                    <p>3:00 م</p>
+                                </div>
+                                <div class="parent-att-row__actions">
+                                    <span class="parent-badge parent-badge--danger">غائب</span>
+                                    <a class="parent-att-row__msg" href="#">مراسلة</a>
+                                </div>
+                            </li>
+                        </ul>
                     </section>
                 </div>
             </main>

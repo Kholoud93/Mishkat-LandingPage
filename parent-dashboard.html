@@ -31,11 +31,11 @@
                     <i class="ri-clipboard-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">الواجبات</span>
                 </a>
-                <a class="sidebar-link" href="#">
+                <a class="sidebar-link" href="./parent-exams.html">
                     <i class="ri-shield-check-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">الاختبارات</span>
                 </a>
-                <a class="sidebar-link" href="#">
+                <a class="sidebar-link" href="./parent-attendance.html">
                     <i class="ri-calendar-check-line" aria-hidden="true"></i>
                     <span class="sidebar-link__label">الحضور</span>
                 </a>
@@ -150,7 +150,7 @@
                 </div>
             </header>
 
-            <p class="parent-live">
+            <p class="parent-live" data-child="أحمد">
                 <i class="ri-vidicon-fill" aria-hidden="true"></i>
                 أحمد في حصة الرياضيات المباشرة الآن
                 <span>أ. أحمد الراشدي • بدأ منذ 14 دقيقة</span>
@@ -168,11 +168,11 @@
                                 </span>
                                 أحمد
                             </button>
-                            <button class="parent-kid" type="button">
+                            <button class="parent-kid" type="button" data-child-filter="ليلى">
                                 <span class="avatar parent-kid__avatar parent-kid__avatar--layla" aria-hidden="true">ل</span>
                                 ليلى
                             </button>
-                            <button class="parent-kid" type="button">
+                            <button class="parent-kid" type="button" data-child-filter="عمر">
                                 <span class="avatar parent-kid__avatar parent-kid__avatar--omar" aria-hidden="true">ع</span>
                                 عمر
                             </button>
@@ -187,7 +187,7 @@
             </div>
 
             <main class="dash-content parent-content">
-                <section class="card parent-alert" aria-label="تنبيه متابعة">
+                <section class="card parent-alert" aria-label="تنبيه متابعة" data-child="أحمد">
                     <span class="parent-alert__icon" aria-hidden="true">
                         <i class="ri-error-warning-fill"></i>
                     </span>
@@ -196,7 +196,7 @@
                         <p>غاب عن حصة الإنجليزية اليوم. درجات العلوم في تراجع.</p>
                     </div>
                     <div class="parent-alert__actions">
-                        <a class="btn btn-ghost btn-sm" href="#">عرض الحضور</a>
+                        <a class="btn btn-ghost btn-sm" href="./parent-attendance.html">عرض الحضور</a>
                         <a class="btn btn-primary btn-sm" href="#">حجز جلسة</a>
                     </div>
                 </section>
@@ -301,7 +301,7 @@
 
                 <div class="parent-layout">
                     <div class="parent-layout__main">
-                        <section class="card dash-panel parent-today" aria-labelledby="parent-today-title">
+                        <section class="card dash-panel parent-today" aria-labelledby="parent-today-title" data-child="أحمد">
                             <header class="dash-panel__head">
                                 <h2 id="parent-today-title">
                                     <span class="parent-today__mark" aria-hidden="true"></span>
@@ -353,7 +353,7 @@
                             </ol>
                         </section>
 
-                        <section class="parent-subjects" aria-labelledby="parent-subjects-title">
+                        <section class="parent-subjects" aria-labelledby="parent-subjects-title" data-child="أحمد">
                             <header class="dash-panel__head">
                                 <h2 id="parent-subjects-title">
                                     <span class="parent-today__mark" aria-hidden="true"></span>
@@ -461,7 +461,7 @@
                             </div>
                         </section>
 
-                        <section class="card dash-panel parent-session" aria-labelledby="parent-session-title">
+                        <section class="card dash-panel parent-session" aria-labelledby="parent-session-title" data-child="أحمد">
                             <header class="dash-panel__head">
                                 <h2 id="parent-session-title">الجلسة الخاصة القادمة</h2>
                             </header>
@@ -494,7 +494,7 @@
                                 <a class="dash-panel__link" href="#">عرض الكل</a>
                             </header>
                             <ul class="parent-msgs__list">
-                                <li class="parent-msgs__item">
+                                <li class="parent-msgs__item" data-child="أحمد">
                                     <span class="parent-msgs__status" aria-hidden="true"></span>
                                     <span class="avatar parent-msgs__avatar" aria-hidden="true">أ</span>
                                     <div class="parent-msgs__copy">
@@ -505,7 +505,7 @@
                                         <p class="parent-msgs__preview">كيف يجد أحمد فصل المشتقات؟</p>
                                     </div>
                                 </li>
-                                <li class="parent-msgs__item">
+                                <li class="parent-msgs__item" data-child="أحمد">
                                     <span class="parent-msgs__status" aria-hidden="true"></span>
                                     <span class="avatar parent-msgs__avatar" aria-hidden="true">س</span>
                                     <div class="parent-msgs__copy">

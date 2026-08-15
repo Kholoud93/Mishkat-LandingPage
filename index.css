@@ -9382,8 +9382,10 @@ Responsive Styles
     color: var(--color-primary);
 }
 
-.reports-table tr.is-hidden {
-    display: none;
+.is-search-hidden,
+.is-filter-hidden,
+.is-child-hidden {
+    display: none !important;
 }
 
 @media (max-width: 1199px) {
@@ -15443,6 +15445,800 @@ Responsive Styles
     .parent-assignments-page .parent-hw-note__avatar {
         width: 2.15rem;
         height: 2.15rem;
+    }
+}
+
+.parent-exams-page .parent-exams {
+    gap: 1rem;
+}
+
+.parent-exams-page .parent-exams__title {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+}
+
+.parent-exams-page .parent-exams__layout {
+    display: grid;
+    grid-template-columns: minmax(15rem, 17.5rem) minmax(0, 1fr);
+    grid-template-areas: "side main";
+    gap: 1.25rem;
+    align-items: start;
+    min-width: 0;
+}
+
+.parent-exams-page .parent-exams__main {
+    grid-area: main;
+}
+
+.parent-exams-page .parent-exams__side {
+    grid-area: side;
+}
+
+.parent-exams-page .parent-exams__main,
+.parent-exams-page .parent-exams__side,
+.parent-exams-page .parent-exams__upcoming,
+.parent-exams-page .parent-exams__results {
+    display: grid;
+    gap: 0.75rem;
+    min-width: 0;
+}
+
+.parent-exams-page .parent-exams__upcoming h3,
+.parent-exams-page .parent-exams__results h3 {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-semibold);
+}
+
+.parent-exams-page .parent-exam-perf h3 {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-body-lg);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+}
+
+.parent-exams-page .parent-exam-card {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.85rem;
+    min-width: 0;
+    padding: 0.95rem 1rem;
+}
+
+.parent-exams-page .parent-exam-card--open {
+    border-color: color-mix(in srgb, var(--color-accent-cyan) 38%, var(--color-border));
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, var(--color-accent-cyan) 55%, transparent),
+        0 0 18px color-mix(in srgb, var(--color-info) 16%, transparent);
+}
+
+.parent-exams-page .parent-exam-card__icon {
+    display: grid;
+    place-items: center;
+    width: 2.85rem;
+    height: 2.85rem;
+    flex: none;
+    border-radius: 0.7rem;
+    color: #ffffff;
+}
+
+.parent-exams-page .parent-exam-card__icon i {
+    font-size: var(--font-size-h3);
+}
+
+.parent-exams-page .parent-exam-card__icon--math {
+    background: var(--color-primary);
+}
+
+.parent-exams-page .parent-exam-card__icon--muted {
+    background: color-mix(in srgb, var(--color-text-muted) 28%, transparent);
+    color: var(--color-text-muted);
+}
+
+.parent-exams-page .parent-exam-card__copy {
+    display: grid;
+    gap: 0.35rem;
+    min-width: 0;
+}
+
+.parent-exams-page .parent-exam-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.parent-exams-page .parent-exam-card__subject {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    width: fit-content;
+    max-width: max-content;
+    color: var(--color-primary);
+    font-size: var(--font-size-badge);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.parent-exams-page .parent-exam-card__subject::before {
+    content: "";
+    width: 0.35rem;
+    height: 0.35rem;
+    flex: none;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.parent-exams-page .parent-exam-card__subject--science {
+    color: var(--color-info);
+}
+
+.parent-exams-page .parent-exam-card__subject--english {
+    color: var(--color-accent-cyan);
+}
+
+.parent-exams-page .parent-exam-card__subject--history {
+    color: #ec4899;
+}
+
+.parent-exams-page .parent-exam-card__status {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.35rem;
+    padding-inline: 0.5rem;
+    border-radius: var(--radius-pill);
+    background: color-mix(in srgb, var(--color-text-primary) 10%, transparent);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-badge);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.parent-exams-page .parent-exam-card__copy h4 {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-heading);
+    overflow-wrap: anywhere;
+}
+
+.parent-exams-page .parent-exam-card__copy p {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-caption);
+}
+
+.parent-exams-page .parent-exam-card__copy p span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.parent-exams-page .parent-exam-card__topics {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.4rem;
+    min-width: 0;
+}
+
+.parent-exams-page .parent-exam-card__topics span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.45rem;
+    padding-inline: 0.55rem;
+    border: 1px solid color-mix(in srgb, var(--color-primary) 55%, transparent);
+    border-radius: var(--radius-pill);
+    color: var(--color-primary);
+    font-size: var(--font-size-badge);
+    font-weight: var(--font-weight-semibold);
+    white-space: nowrap;
+}
+
+.parent-exams-page .parent-exam-card__topics--science span {
+    border-color: color-mix(in srgb, var(--color-info) 55%, transparent);
+    color: var(--color-info);
+}
+
+.parent-exams-page .parent-exams__results-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0.75rem;
+    min-width: 0;
+}
+
+.parent-exams-page .parent-exam-result {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+    padding: 0.95rem 1rem;
+}
+
+.parent-exams-page .parent-exam-result__ring {
+    position: relative;
+    width: 3.35rem;
+    height: 3.35rem;
+    flex: none;
+}
+
+.parent-exams-page .parent-exam-result__ring svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.parent-exams-page .parent-exam-result__track,
+.parent-exams-page .parent-exam-result__value {
+    fill: none;
+    stroke-width: 4;
+}
+
+.parent-exams-page .parent-exam-result__track {
+    stroke: color-mix(in srgb, var(--color-text-primary) 10%, transparent);
+}
+
+.parent-exams-page .parent-exam-result__value {
+    stroke-linecap: round;
+}
+
+.parent-exams-page .parent-exam-result__ring--cyan .parent-exam-result__value {
+    stroke: var(--color-accent-cyan);
+}
+
+.parent-exams-page .parent-exam-result__ring--pink .parent-exam-result__value {
+    stroke: #ec4899;
+}
+
+.parent-exams-page .parent-exam-result__body {
+    display: grid;
+    gap: 0.28rem;
+    min-width: 0;
+}
+
+.parent-exams-page .parent-exam-result__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.35rem;
+}
+
+.parent-exams-page .parent-exam-result__body h4 {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-semibold);
+    overflow-wrap: anywhere;
+}
+
+.parent-exams-page .parent-exam-result__body strong {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+}
+
+.parent-exams-page .parent-exam-result__note {
+    margin: 0;
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-semibold);
+}
+
+.parent-exams-page .parent-exam-result__note--up {
+    color: var(--color-primary);
+}
+
+.parent-exams-page .parent-exam-result__note--down {
+    color: #ec4899;
+}
+
+.parent-exams-page .parent-exam-perf {
+    display: grid;
+    gap: 0.85rem;
+    min-width: 0;
+    padding: 0.95rem 1rem;
+}
+
+.parent-exams-page .parent-exam-perf__chart {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-rows: 8.5rem auto;
+    column-gap: 0.45rem;
+    row-gap: 0.4rem;
+    min-width: 0;
+}
+
+.parent-exams-page .parent-exam-perf__y {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-row: 1;
+    color: var(--color-text-muted);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-helper);
+    line-height: 1;
+    text-align: start;
+}
+
+.parent-exams-page .parent-exam-perf__plot {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: end;
+    gap: 0.45rem;
+    min-width: 0;
+    height: 100%;
+    padding: 0.15rem 0.15rem 0;
+    border-block-end: 1px solid color-mix(in srgb, var(--color-text-primary) 10%, transparent);
+}
+
+.parent-exams-page .parent-exam-perf__bar {
+    display: block;
+    width: 100%;
+    max-width: 1.15rem;
+    margin-inline: auto;
+    border-radius: 0.25rem 0.25rem 0 0;
+    background: var(--color-primary);
+}
+
+.parent-exams-page .parent-exam-perf__bar--math {
+    height: 85%;
+}
+
+.parent-exams-page .parent-exam-perf__bar--science {
+    height: 50%;
+}
+
+.parent-exams-page .parent-exam-perf__bar--english {
+    height: 70%;
+}
+
+.parent-exams-page .parent-exam-perf__bar--history {
+    height: 30%;
+}
+
+.parent-exams-page .parent-exam-perf__x {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-column: 2;
+    gap: 0.45rem;
+    color: var(--color-text-muted);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-helper);
+    text-align: center;
+}
+
+.parent-exams-page .parent-exam-perf__x span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.parent-exams-page .parent-exams__book {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 100%;
+    color: #0b1119;
+}
+
+.parent-exams-page .parent-exams__book:hover:not(:disabled) {
+    color: #0b1119;
+}
+
+@media (max-width: 1279px) {
+    .parent-exams-page .parent-exams__layout {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 1199px) {
+    .parent-exams-page .parent-exams__layout {
+        grid-template-columns: minmax(14rem, 16rem) minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 1023px) {
+    .parent-exams-page .parent-exams__layout {
+        grid-template-columns: minmax(13rem, 15rem) minmax(0, 1fr);
+    }
+
+    .parent-exams-page .parent-exam-card {
+        grid-template-columns: auto minmax(0, 1fr);
+    }
+
+    .parent-exams-page .parent-exam-card__topics {
+        grid-column: 2;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .parent-exams-page .parent-exams__book {
+        width: auto;
+        justify-self: start;
+    }
+}
+
+@media (max-width: 767px) {
+    .parent-exams-page .parent-exams__layout,
+    .parent-exams-page .parent-exams__results-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .parent-exams-page .parent-exams__layout {
+        grid-template-areas:
+            "main"
+            "side";
+    }
+}
+
+@media (max-width: 600px) {
+    .parent-exams-page .parent-exam-card,
+    .parent-exams-page .parent-exam-result,
+    .parent-exams-page .parent-exam-perf {
+        padding: 0.8rem 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .parent-exams-page .parent-exam-card {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: start;
+    }
+
+    .parent-exams-page .parent-exam-card__topics {
+        grid-column: 1;
+        justify-content: flex-start;
+    }
+
+    .parent-exams-page .parent-exam-result__body strong {
+        font-size: var(--font-size-h4);
+    }
+}
+
+@media (max-width: 380px) {
+    .parent-exams-page .parent-exam-card__icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+.parent-attendance-page .parent-att {
+    gap: 1rem;
+}
+
+.parent-attendance-page .parent-att__title {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+}
+
+.parent-attendance-page .parent-att__stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+    min-width: 0;
+}
+
+.parent-attendance-page .parent-att-stat {
+    display: grid;
+    gap: 0.35rem;
+    min-width: 0;
+    padding: 0.9rem 1rem;
+}
+
+.parent-attendance-page .parent-att-stat__label {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-caption);
+    line-height: 1.3;
+}
+
+.parent-attendance-page .parent-att-stat__value {
+    margin: 0;
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+}
+
+.parent-attendance-page .parent-att-stat__value--orange {
+    color: var(--color-accent-orange);
+}
+
+.parent-attendance-page .parent-att-stat__value--blue {
+    color: var(--color-accent-cyan);
+}
+
+.parent-attendance-page .parent-att-stat__value--red {
+    color: var(--color-danger);
+}
+
+.parent-attendance-page .parent-att-stat__value--yellow {
+    color: var(--color-warning);
+}
+
+.parent-attendance-page .parent-att__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.25rem;
+    min-width: 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.parent-attendance-page .parent-att__tabs a {
+    padding: 0.35rem 0 0.7rem;
+    border-bottom: 2px solid transparent;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-body-sm);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    margin-bottom: -1px;
+}
+
+.parent-attendance-page .parent-att__tabs a.is-active {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+}
+
+.parent-attendance-page .parent-att__layout {
+    display: grid;
+    grid-template-columns: minmax(15rem, 17.5rem) minmax(0, 1fr);
+    grid-template-areas: "total day";
+    gap: 1.25rem;
+    align-items: start;
+    min-width: 0;
+}
+
+.parent-attendance-page .parent-att-total {
+    display: grid;
+    justify-items: center;
+    gap: 0.85rem;
+    grid-area: total;
+    min-width: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+.parent-attendance-page .parent-att-day {
+    display: grid;
+    gap: 0.85rem;
+    grid-area: day;
+    min-width: 0;
+    padding: 1rem;
+}
+
+.parent-attendance-page .parent-att-total h3,
+.parent-attendance-page .parent-att-day h3 {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-body-lg);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+}
+
+.parent-attendance-page .parent-att-total h3 {
+    justify-self: start;
+}
+
+.parent-attendance-page .parent-att-total__ring {
+    position: relative;
+    width: 8.5rem;
+    height: 8.5rem;
+}
+
+.parent-attendance-page .parent-att-total__ring svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.parent-attendance-page .parent-att-total__track,
+.parent-attendance-page .parent-att-total__value {
+    fill: none;
+    stroke-width: 4;
+}
+
+.parent-attendance-page .parent-att-total__track {
+    stroke: color-mix(in srgb, var(--color-text-primary) 10%, transparent);
+}
+
+.parent-attendance-page .parent-att-total__value {
+    stroke: var(--color-accent-orange);
+    stroke-linecap: round;
+}
+
+.parent-attendance-page .parent-att-total__ring strong {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: var(--color-accent-orange);
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+}
+
+.parent-attendance-page .parent-att-total p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-semibold);
+}
+
+.parent-attendance-page .parent-att-day__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem 1rem;
+    min-width: 0;
+}
+
+.parent-attendance-page .parent-att-day__head span {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-caption);
+}
+
+.parent-attendance-page .parent-att-day__list {
+    display: grid;
+    gap: 0.55rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.parent-attendance-page .parent-att-row {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+    padding: 0.75rem 0.85rem;
+    border-radius: 0.75rem;
+    background: color-mix(in srgb, var(--color-background) 55%, transparent);
+    border: 1px solid var(--color-border);
+}
+
+.parent-attendance-page .parent-att-row__bar {
+    width: 0.22rem;
+    height: 2.15rem;
+    flex: none;
+    border-radius: var(--radius-pill);
+    background: var(--color-primary);
+}
+
+.parent-attendance-page .parent-att-row--absent .parent-att-row__bar {
+    background: var(--color-danger);
+}
+
+.parent-attendance-page .parent-att-row__copy {
+    display: grid;
+    gap: 0.15rem;
+    min-width: 0;
+}
+
+.parent-attendance-page .parent-att-row__copy h4 {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-semibold);
+    overflow-wrap: anywhere;
+}
+
+.parent-attendance-page .parent-att-row__copy p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-caption);
+}
+
+.parent-attendance-page .parent-att-row__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.45rem;
+}
+
+.parent-attendance-page .parent-att-row__msg {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.7rem;
+    padding-inline: 0.65rem;
+    border-radius: var(--radius-pill);
+    color: var(--color-accent-orange);
+    font-size: var(--font-size-badge);
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.parent-attendance-page .parent-att-row__msg:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1279px) {
+    .parent-attendance-page .parent-att__layout {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 1199px) {
+    .parent-attendance-page .parent-att__stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .parent-attendance-page .parent-att__layout {
+        grid-template-columns: minmax(14rem, 16rem) minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 1023px) {
+    .parent-attendance-page .parent-att__layout {
+        grid-template-columns: minmax(13rem, 15rem) minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .parent-attendance-page .parent-att__layout {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "day"
+            "total";
+    }
+
+    .parent-attendance-page .parent-att-total {
+        justify-self: start;
+        width: auto;
+        max-width: 17.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .parent-attendance-page .parent-att-stat,
+    .parent-attendance-page .parent-att-total,
+    .parent-attendance-page .parent-att-day {
+        padding: 0.8rem 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .parent-attendance-page .parent-att__tabs {
+        gap: 0.25rem 0.85rem;
+    }
+
+    .parent-attendance-page .parent-att-row {
+        grid-template-columns: auto minmax(0, 1fr);
+    }
+
+    .parent-attendance-page .parent-att-row .parent-badge,
+    .parent-attendance-page .parent-att-row__actions {
+        grid-column: 2;
+        justify-self: start;
+    }
+}
+
+@media (max-width: 380px) {
+    .parent-attendance-page .parent-att-total__ring {
+        width: 7.25rem;
+        height: 7.25rem;
     }
 }
 
