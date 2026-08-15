@@ -134,7 +134,7 @@
             <main class="dash-content teacher-courses-content">
                 <div class="teacher-courses__top">
                     <h2 class="teacher-courses__title">موادي الدراسية</h2>
-                    <button class="btn btn-primary teacher-courses__add" type="button">
+                    <button class="btn btn-primary teacher-courses__add" type="button" data-modal-open="add-course">
                         <i class="ri-add-line" aria-hidden="true"></i>
                         إضافة مقرر جديد
                     </button>
@@ -208,6 +208,51 @@
                     </article>
                 </div>
             </main>
+        </div>
+    </div>
+
+    <div class="modal modal--drawer" data-modal="add-course" data-modal-dismissable hidden>
+        <div class="modal-dialog parent-drawer" role="dialog" aria-modal="true" aria-labelledby="add-course-title">
+            <header class="parent-drawer__head">
+                <div>
+                    <h2 id="add-course-title">إضافة مقرر جديد</h2>
+                    <p>أنشئ مقررًا دراسيًا جديدًا للطلاب</p>
+                </div>
+                <button class="dash-icon-btn" type="button" data-modal-close aria-label="إغلاق">
+                    <i class="ri-close-line" aria-hidden="true"></i>
+                </button>
+            </header>
+            <form class="parent-drawer__form" action="./teacher-courses.html" method="get">
+                <div class="form-group">
+                    <label class="label" for="course-name">اسم المقرر</label>
+                    <input class="field" id="course-name" name="course_name" type="text" placeholder="مثال: الفيزياء المتقدمة" required data-modal-autofocus>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="course-grade">الصف الدراسي</label>
+                    <select class="field" id="course-grade" name="course_grade" required>
+                        <option value="" selected disabled>اختر الصف</option>
+                        <option>الصف العاشر</option>
+                        <option>الصف الحادي عشر</option>
+                        <option>الصف الثاني عشر</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="course-term">الفصل</label>
+                    <select class="field" id="course-term" name="course_term" required>
+                        <option>الفصل الأول</option>
+                        <option selected>الفصل الثاني</option>
+                        <option>الفصل الثالث</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="course-desc">وصف مختصر</label>
+                    <textarea class="textarea" id="course-desc" name="course_desc" placeholder="أهداف المقرر ومحتواه"></textarea>
+                </div>
+                <div class="parent-drawer__actions">
+                    <button class="btn btn-primary btn-md" type="submit">حفظ المقرر</button>
+                    <button class="btn btn-outline btn-md" type="button" data-modal-close>إلغاء</button>
+                </div>
+            </form>
         </div>
     </div>
 

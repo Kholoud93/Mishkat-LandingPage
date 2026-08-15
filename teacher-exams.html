@@ -139,7 +139,7 @@
                             <i class="ri-database-2-line" aria-hidden="true"></i>
                             بنك الأسئلة
                         </button>
-                        <button class="btn btn-primary teacher-exams__create" type="button">
+                        <button class="btn btn-primary teacher-exams__create" type="button" data-modal-open="create-exam">
                             <i class="ri-add-line" aria-hidden="true"></i>
                             إنشاء اختبار
                         </button>
@@ -193,6 +193,56 @@
                     </ul>
                 </section>
             </main>
+        </div>
+    </div>
+
+    <div class="modal modal--drawer" data-modal="create-exam" data-modal-dismissable hidden>
+        <div class="modal-dialog parent-drawer" role="dialog" aria-modal="true" aria-labelledby="create-exam-title">
+            <header class="parent-drawer__head">
+                <div>
+                    <h2 id="create-exam-title">إنشاء اختبار</h2>
+                    <p>حدّد المادة والموعد ومدة الاختبار</p>
+                </div>
+                <button class="dash-icon-btn" type="button" data-modal-close aria-label="إغلاق">
+                    <i class="ri-close-line" aria-hidden="true"></i>
+                </button>
+            </header>
+            <form class="parent-drawer__form" action="./teacher-exams.html" method="get">
+                <div class="form-group">
+                    <label class="label" for="exam-title">عنوان الاختبار</label>
+                    <input class="field" id="exam-title" name="exam_title" type="text" placeholder="مثال: اختبار منتصف الفصل" required data-modal-autofocus>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="exam-course">المادة</label>
+                    <select class="field" id="exam-course" name="exam_course" required>
+                        <option selected>الفيزياء المتقدمة</option>
+                        <option>الرياضيات</option>
+                        <option>الكيمياء</option>
+                    </select>
+                </div>
+                <div class="grid grid-cols-2 parent-drawer__row">
+                    <div class="form-group">
+                        <label class="label" for="exam-date">التاريخ</label>
+                        <input class="field" id="exam-date" name="exam_date" type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="exam-time">الوقت</label>
+                        <input class="field" id="exam-time" name="exam_time" type="time" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="exam-duration">المدة</label>
+                    <select class="field" id="exam-duration" name="exam_duration" required>
+                        <option>30 دقيقة</option>
+                        <option selected>45 دقيقة</option>
+                        <option>60 دقيقة</option>
+                    </select>
+                </div>
+                <div class="parent-drawer__actions">
+                    <button class="btn btn-primary btn-md" type="submit">إنشاء الاختبار</button>
+                    <button class="btn btn-outline btn-md" type="button" data-modal-close>إلغاء</button>
+                </div>
+            </form>
         </div>
     </div>
 

@@ -444,7 +444,7 @@
                                     </span>
                                     الاختبارات
                                 </a>
-                                <a class="dash-action" href="./sessions.html">
+                                <a class="dash-action" href="#" data-modal-open="book-session">
                                     <span class="dash-action__icon dash-action__icon--orange" aria-hidden="true">
                                         <i class="ri-calendar-event-line"></i>
                                     </span>
@@ -629,6 +629,68 @@
                     </div>
                 </div>
             </main>
+        </div>
+    </div>
+
+    <div class="modal modal--drawer" data-modal="book-session" data-modal-dismissable hidden>
+        <div class="modal-dialog parent-drawer" role="dialog" aria-modal="true" aria-labelledby="book-session-title">
+            <header class="parent-drawer__head">
+                <div>
+                    <h2 id="book-session-title">احجز حصة خاصة</h2>
+                    <p>اختر المادة والمعلم وموعد الجلسة</p>
+                </div>
+                <button class="dash-icon-btn" type="button" data-modal-close aria-label="إغلاق">
+                    <i class="ri-close-line" aria-hidden="true"></i>
+                </button>
+            </header>
+            <form class="parent-drawer__form" action="./sessions.html" method="get">
+                <div class="form-group">
+                    <label class="label" for="book-subject">المادة</label>
+                    <select class="field" id="book-subject" name="subject" required data-modal-autofocus>
+                        <option value="" selected disabled>اختر المادة</option>
+                        <option>الرياضيات</option>
+                        <option>الفيزياء</option>
+                        <option>الكيمياء</option>
+                        <option>اللغة العربية</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="book-teacher">المعلم</label>
+                    <select class="field" id="book-teacher" name="teacher" required>
+                        <option value="" selected disabled>اختر المعلم</option>
+                        <option>أ.د. عبد الرحمن آل سعود</option>
+                        <option>أ. إيلينا روستوفا</option>
+                        <option>أ. ياسين التونسي</option>
+                        <option>د. سارة محمود</option>
+                    </select>
+                </div>
+                <div class="grid grid-cols-2 parent-drawer__row">
+                    <div class="form-group">
+                        <label class="label" for="book-date">التاريخ</label>
+                        <input class="field" id="book-date" name="date" type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="book-time">الوقت</label>
+                        <input class="field" id="book-time" name="time" type="time" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="book-duration">المدة</label>
+                    <select class="field" id="book-duration" name="duration" required>
+                        <option value="45">45 دقيقة</option>
+                        <option value="60" selected>60 دقيقة</option>
+                        <option value="90">90 دقيقة</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="book-notes">ملاحظات</label>
+                    <textarea class="textarea" id="book-notes" name="notes" placeholder="مثال: مراجعة المشتقات"></textarea>
+                </div>
+                <div class="parent-drawer__actions">
+                    <button class="btn btn-primary btn-md" type="submit">تأكيد الحجز</button>
+                    <button class="btn btn-outline btn-md" type="button" data-modal-close>إلغاء</button>
+                </div>
+            </form>
         </div>
     </div>
 

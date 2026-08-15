@@ -134,7 +134,7 @@
             <main class="dash-content teacher-assignments-content">
                 <div class="teacher-assignments__top">
                     <h2 class="teacher-assignments__title">الواجبات والتكاليف</h2>
-                    <button class="btn btn-primary teacher-assignments__add" type="button">
+                    <button class="btn btn-primary teacher-assignments__add" type="button" data-modal-open="add-assignment">
                         <i class="ri-add-line" aria-hidden="true"></i>
                         تكليف جديد
                     </button>
@@ -206,6 +206,50 @@
                     </div>
                 </section>
             </main>
+        </div>
+    </div>
+
+    <div class="modal modal--drawer" data-modal="add-assignment" data-modal-dismissable hidden>
+        <div class="modal-dialog parent-drawer" role="dialog" aria-modal="true" aria-labelledby="add-assignment-title">
+            <header class="parent-drawer__head">
+                <div>
+                    <h2 id="add-assignment-title">تكليف جديد</h2>
+                    <p>أنشئ واجبًا جديدًا وحدّد موعد التسليم</p>
+                </div>
+                <button class="dash-icon-btn" type="button" data-modal-close aria-label="إغلاق">
+                    <i class="ri-close-line" aria-hidden="true"></i>
+                </button>
+            </header>
+            <form class="parent-drawer__form" action="./teacher-assignments.html" method="get">
+                <div class="form-group">
+                    <label class="label" for="assignment-title">عنوان التكليف</label>
+                    <input class="field" id="assignment-title" name="assignment_title" type="text" placeholder="مثال: تمارين الفصل الثالث" required data-modal-autofocus>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="assignment-course">المادة</label>
+                    <select class="field" id="assignment-course" name="assignment_course" required>
+                        <option selected>الفيزياء المتقدمة</option>
+                        <option>الرياضيات</option>
+                        <option>الكيمياء</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="assignment-due">تاريخ التسليم</label>
+                    <input class="field" id="assignment-due" name="assignment_due" type="date" required>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="assignment-score">الدرجة الكاملة</label>
+                    <input class="field" id="assignment-score" name="assignment_score" type="number" min="1" max="100" value="100">
+                </div>
+                <div class="form-group">
+                    <label class="label" for="assignment-notes">تعليمات للطلاب</label>
+                    <textarea class="textarea" id="assignment-notes" name="assignment_notes" placeholder="اكتب المطلوب من الطالب"></textarea>
+                </div>
+                <div class="parent-drawer__actions">
+                    <button class="btn btn-primary btn-md" type="submit">نشر التكليف</button>
+                    <button class="btn btn-outline btn-md" type="button" data-modal-close>إلغاء</button>
+                </div>
+            </form>
         </div>
     </div>
 

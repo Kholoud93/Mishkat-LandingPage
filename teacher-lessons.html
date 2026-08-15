@@ -134,7 +134,7 @@
             <main class="dash-content teacher-lessons-content">
                 <div class="teacher-lessons__top">
                     <h2 class="teacher-lessons__title">إدارة الدروس والمحتوى</h2>
-                    <button class="btn btn-primary teacher-lessons__add" type="button">
+                    <button class="btn btn-primary teacher-lessons__add" type="button" data-modal-open="add-lesson">
                         <i class="ri-add-line" aria-hidden="true"></i>
                         إضافة درس جديد
                     </button>
@@ -232,6 +232,52 @@
                     </div>
                 </section>
             </main>
+        </div>
+    </div>
+
+    <div class="modal modal--drawer" data-modal="add-lesson" data-modal-dismissable hidden>
+        <div class="modal-dialog parent-drawer" role="dialog" aria-modal="true" aria-labelledby="add-lesson-title">
+            <header class="parent-drawer__head">
+                <div>
+                    <h2 id="add-lesson-title">إضافة درس جديد</h2>
+                    <p>أضف درسًا مسجلًا أو حصة مباشرة</p>
+                </div>
+                <button class="dash-icon-btn" type="button" data-modal-close aria-label="إغلاق">
+                    <i class="ri-close-line" aria-hidden="true"></i>
+                </button>
+            </header>
+            <form class="parent-drawer__form" action="./teacher-lessons.html" method="get">
+                <div class="form-group">
+                    <label class="label" for="lesson-course">المقرر</label>
+                    <select class="field" id="lesson-course" name="lesson_course" required>
+                        <option selected>الفيزياء المتقدمة (الفصل 3)</option>
+                        <option>الرياضيات (الجبر)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="lesson-title">عنوان الدرس</label>
+                    <input class="field" id="lesson-title" name="lesson_title" type="text" placeholder="مثال: قوانين نيوتن" required data-modal-autofocus>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="lesson-type">نوع الدرس</label>
+                    <select class="field" id="lesson-type" name="lesson_type" required>
+                        <option selected>درس مسجل</option>
+                        <option>حصة مباشرة</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="lesson-duration">المدة</label>
+                    <select class="field" id="lesson-duration" name="lesson_duration">
+                        <option>24 دقيقة</option>
+                        <option selected>45 دقيقة</option>
+                        <option>60 دقيقة</option>
+                    </select>
+                </div>
+                <div class="parent-drawer__actions">
+                    <button class="btn btn-primary btn-md" type="submit">حفظ الدرس</button>
+                    <button class="btn btn-outline btn-md" type="button" data-modal-close>إلغاء</button>
+                </div>
+            </form>
         </div>
     </div>
 

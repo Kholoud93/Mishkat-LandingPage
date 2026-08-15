@@ -134,7 +134,7 @@
             <main class="dash-content teacher-messages-content">
                 <div class="teacher-messages__top">
                     <h2 class="teacher-messages__title">الرسائل والمحادثات</h2>
-                    <button class="btn btn-primary teacher-messages__compose" type="button">
+                    <button class="btn btn-primary teacher-messages__compose" type="button" data-modal-open="compose-message">
                         <i class="ri-edit-box-line" aria-hidden="true"></i>
                         رسالة جديدة
                     </button>
@@ -189,6 +189,43 @@
                     </div>
                 </section>
             </main>
+        </div>
+    </div>
+
+    <div class="modal modal--drawer" data-modal="compose-message" data-modal-dismissable hidden>
+        <div class="modal-dialog parent-drawer" role="dialog" aria-modal="true" aria-labelledby="compose-message-title">
+            <header class="parent-drawer__head">
+                <div>
+                    <h2 id="compose-message-title">رسالة جديدة</h2>
+                    <p>أرسل رسالة لطالب أو ولي أمر</p>
+                </div>
+                <button class="dash-icon-btn" type="button" data-modal-close aria-label="إغلاق">
+                    <i class="ri-close-line" aria-hidden="true"></i>
+                </button>
+            </header>
+            <form class="parent-drawer__form" action="./teacher-messages.html" method="get">
+                <div class="form-group">
+                    <label class="label" for="message-to">إلى</label>
+                    <select class="field" id="message-to" name="message_to" required data-modal-autofocus>
+                        <option value="" selected disabled>اختر المستلم</option>
+                        <option>محمد الدوسري (ولي أمر)</option>
+                        <option>أحمد الشرقاوي (طالب)</option>
+                        <option>سارة الغامدي (طالبة)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="message-subject">الموضوع</label>
+                    <input class="field" id="message-subject" name="message_subject" type="text" placeholder="موضوع الرسالة" required>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="message-body">نص الرسالة</label>
+                    <textarea class="textarea" id="message-body" name="message_body" placeholder="اكتب رسالتك هنا..." required></textarea>
+                </div>
+                <div class="parent-drawer__actions">
+                    <button class="btn btn-primary btn-md" type="submit">إرسال</button>
+                    <button class="btn btn-outline btn-md" type="button" data-modal-close>إلغاء</button>
+                </div>
+            </form>
         </div>
     </div>
 

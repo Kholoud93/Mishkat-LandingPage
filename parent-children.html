@@ -156,10 +156,10 @@
                         <h2>أطفالي</h2>
                         <p>3 أطفال مرتبطون بحسابك</p>
                     </div>
-                    <a class="btn btn-primary btn-sm parent-children__link" href="#">
+                    <button class="btn btn-primary btn-sm parent-children__link" type="button" data-modal-open="add-child">
                         <i class="ri-add-line" aria-hidden="true"></i>
-                        ربط طفل
-                    </a>
+                        إضافة طفل
+                    </button>
                 </div>
 
                 <div class="parent-children__grid">
@@ -351,6 +351,48 @@
                     </article>
                 </div>
             </main>
+        </div>
+    </div>
+
+    <div class="modal modal--drawer" data-modal="add-child" data-modal-dismissable hidden>
+        <div class="modal-dialog parent-drawer" role="dialog" aria-modal="true" aria-labelledby="add-child-title">
+            <header class="parent-drawer__head">
+                <div>
+                    <h2 id="add-child-title">إضافة طفل</h2>
+                    <p>اربط حساب طالب جديد ببوابة ولي الأمر</p>
+                </div>
+                <button class="dash-icon-btn" type="button" data-modal-close aria-label="إغلاق">
+                    <i class="ri-close-line" aria-hidden="true"></i>
+                </button>
+            </header>
+            <form class="parent-drawer__form" action="./parent-children.html" method="get">
+                <div class="form-group">
+                    <label class="label" for="child-name">اسم الطفل</label>
+                    <input class="field" id="child-name" name="child_name" type="text" placeholder="مثال: أحمد الشرقاوي" required data-modal-autofocus>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="child-grade">الصف الدراسي</label>
+                    <select class="field" id="child-grade" name="child_grade" required>
+                        <option value="" selected disabled>اختر الصف</option>
+                        <option>الصف التاسع</option>
+                        <option>الصف العاشر</option>
+                        <option>الصف الحادي عشر</option>
+                        <option>الصف الثاني عشر</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="child-code">رمز الربط</label>
+                    <input class="field" id="child-code" name="child_code" type="text" placeholder="أدخل الرمز المرسل من المنصة" required>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="child-birth">تاريخ الميلاد</label>
+                    <input class="field" id="child-birth" name="child_birth" type="date">
+                </div>
+                <div class="parent-drawer__actions">
+                    <button class="btn btn-primary btn-md" type="submit">حفظ وربط الطفل</button>
+                    <button class="btn btn-outline btn-md" type="button" data-modal-close>إلغاء</button>
+                </div>
+            </form>
         </div>
     </div>
 

@@ -95,7 +95,11 @@ function openModal(modal) {
         return;
     }
 
-    modal.classList.add("is-open");
+    if (modal._drawerHideTimer) {
+        window.clearTimeout(modal._drawerHideTimer);
+        modal._drawerHideTimer = null;
+    }
+
     modal.removeAttribute("hidden");
     modal.setAttribute("aria-hidden", "false");
 
@@ -106,7 +110,10 @@ function openModal(modal) {
         dialog.setAttribute("tabindex", "-1");
     }
 
-    syncModalBodyState();
+    window.requestAnimationFrame(() => {
+        modal.classList.add("is-open");
+        syncModalBodyState();
+    });
 
     window.requestAnimationFrame(() => {
         if (focusTarget) {
@@ -127,6 +134,22 @@ function closeModal(modal) {
 
     modal.classList.remove("is-open");
     modal.setAttribute("aria-hidden", "true");
+
+    const hideModal = () => {
+        if (!modal.classList.contains("is-open")) {
+            modal.setAttribute("hidden", "");
+        }
+
+        modal._drawerHideTimer = null;
+        syncModalBodyState();
+    };
+
+    if (modal.classList.contains("modal--drawer")) {
+        modal._drawerHideTimer = window.setTimeout(hideModal, 420);
+        syncModalBodyState();
+        return;
+    }
+
     modal.setAttribute("hidden", "");
     syncModalBodyState();
 }
@@ -308,7 +331,7 @@ function initDropdowns() {
 const SIDEBAR_BREAKPOINT = 1199;
 
 function isDashboardBottomNav() {
-    return document.body.classList.contains("student-dashboard") && window.innerWidth <= SIDEBAR_BREAKPOINT;
+    return false;
 }
 
 function getSidebar() {
@@ -742,6 +765,12 @@ function initSessionsTeacherPick() {
             }
 
             input.value = name;
+
+            const drawerTeacher = document.getElementById("book-teacher");
+
+            if (drawerTeacher) {
+                drawerTeacher.value = name;
+            }
             document.querySelectorAll(".sessions-teacher").forEach((item) => {
                 item.classList.toggle("is-featured", item === card);
             });
